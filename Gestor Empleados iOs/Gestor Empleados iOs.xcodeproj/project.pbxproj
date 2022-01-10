@@ -83,6 +83,8 @@
 			dependencies = (
 			);
 			name = "Gestor Empleados iOs";
+			packageProductDependencies = (
+			);
 			productName = "Gestor Empleados iOs";
 			productReference = 5EEF71AE278C22C800559D7D /* Gestor Empleados iOs.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +113,10 @@
 				Base,
 			);
 			mainGroup = 5EEF71A5278C22C800559D7D;
+			packageReferences = (
+				5EA41169278C4702006E0C17 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				5EA4116A278C4736006E0C17 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 5EEF71AF278C22C800559D7D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5EA41169278C4702006E0C17 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+		5EA4116A278C4736006E0C17 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 5EEF71A6278C22C800559D7D /* Project object */;
 }
