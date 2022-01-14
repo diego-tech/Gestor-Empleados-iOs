@@ -13,11 +13,11 @@ final class NetworkingProvider {
 	static let shared = NetworkingProvider()
 	
 	private let kBaseURL = "http://localhost:8888/projects/employee-manager/public/api"
-	private let kToken = "$2y$10$KmDge9RxgA2vlAUJnBrH9esAtLBAmkhbLGp4y.qqDvXdKKtoClT6O"
+	private let kToken = "$2y$10$ml8oTez73OvhB..5qG5XieBT7lTpAAoNzcCEhyTGzs2jp5Gl4bKTa"
 	
 	// Update Data Message Error in API
 	
-	func seeProfile(success: @escaping (_ user: User) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int) -> ()) {
+	func seeProfile(success: @escaping (_ user: User) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int, _ prueba: String) -> ()) {
 		let url = "\(kBaseURL)/see_profile"
 		
 		let headers: HTTPHeaders = [.authorization(kToken)]
@@ -30,8 +30,8 @@ final class NetworkingProvider {
 			}
 			
 			// Handle Status Code
-			if let code = response.value?.status {
-				status(code)
+			if let code = response.value?.status, let msg = response.value?.msg {
+				status(code, msg)
 			}
 			
 			// Handle Error

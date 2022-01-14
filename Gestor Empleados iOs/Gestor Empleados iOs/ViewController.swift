@@ -17,8 +17,9 @@ class ViewController: UIViewController {
 			print(user)
 		} failure: { error in
 			print(error.debugDescription)
-		} status: { status in
+		} status: { status, msg  in
 			print(status)
+			print(msg)
 		}
 	}
 }
