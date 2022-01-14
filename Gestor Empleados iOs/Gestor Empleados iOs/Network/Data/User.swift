@@ -19,6 +19,18 @@ struct UserResponse: Decodable {
 	}
 }
 
+struct UserListResponse: Decodable {
+	let status: Int?
+	let data: [User]?
+	let msg : String?
+	
+	enum CodingKeys: String, CodingKey {
+		case status
+		case data
+		case msg
+	}
+}
+
 struct User: Decodable {
 	let id: Int?
 	let name: String?

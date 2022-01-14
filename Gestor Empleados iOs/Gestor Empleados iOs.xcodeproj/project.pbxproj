@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E68F3EA2791DB070033C83E /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E68F3E92791DB070033C83E /* LoginUser.swift */; };
 		5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */; };
 		5E9039DE27917106003CCD3C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5E9039DD27917106003CCD3C /* Alamofire */; };
 		5E9039E1279173AA003CCD3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039E0279173AA003CCD3C /* User.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E68F3E92791DB070033C83E /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		5E9039E0279173AA003CCD3C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5E9039E327917B35003CCD3C /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				5E9039E0279173AA003CCD3C /* User.swift */,
+				5E68F3E92791DB070033C83E /* LoginUser.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E68F3EA2791DB070033C83E /* LoginUser.swift in Sources */,
 				5EEF71B6278C22C800559D7D /* ViewController.swift in Sources */,
 				5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */,
 				5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */,
@@ -342,6 +346,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6CZ8X74CF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gestor Empleados iOs/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -369,6 +374,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6CZ8X74CF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gestor Empleados iOs/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
