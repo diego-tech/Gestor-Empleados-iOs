@@ -12,8 +12,12 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+		
+		NetworkinProvider.shared.seeProfile { user in
+			print(user)
+		} failure: { error in
+			print(error.debugDescription)
+		}
 	}
-
-
 }
 

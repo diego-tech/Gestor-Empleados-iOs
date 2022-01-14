@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */; };
+		5E9039DE27917106003CCD3C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5E9039DD27917106003CCD3C /* Alamofire */; };
+		5E9039E1279173AA003CCD3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039E0279173AA003CCD3C /* User.swift */; };
+		5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039E327917B35003CCD3C /* DateDecoder.swift */; };
 		5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B1278C22C800559D7D /* AppDelegate.swift */; };
 		5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B3278C22C800559D7D /* SceneDelegate.swift */; };
 		5EEF71B6278C22C800559D7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B5278C22C800559D7D /* ViewController.swift */; };
@@ -16,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		5E9039E0279173AA003CCD3C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5E9039E327917B35003CCD3C /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
 		5EEF71AE278C22C800559D7D /* Gestor Empleados iOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gestor Empleados iOs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEF71B1278C22C800559D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EEF71B3278C22C800559D7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +38,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9039DE27917106003CCD3C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E9039D827916DFB003CCD3C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5E9039E227917B23003CCD3C /* Decoder */,
+				5E9039DF27917392003CCD3C /* Data */,
+				5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5E9039D927916E02003CCD3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF71BF278C22C900559D7D /* Info.plist */,
+				5EEF71BA278C22C900559D7D /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E9039DF27917392003CCD3C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5E9039E0279173AA003CCD3C /* User.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5E9039E227917B23003CCD3C /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				5E9039E327917B35003CCD3C /* DateDecoder.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
 		5EEF71A5278C22C800559D7D = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +103,9 @@
 				5EEF71B3278C22C800559D7D /* SceneDelegate.swift */,
 				5EEF71B5278C22C800559D7D /* ViewController.swift */,
 				5EEF71B7278C22C800559D7D /* Main.storyboard */,
-				5EEF71BA278C22C900559D7D /* Assets.xcassets */,
 				5EEF71BC278C22C900559D7D /* LaunchScreen.storyboard */,
-				5EEF71BF278C22C900559D7D /* Info.plist */,
+				5E9039D927916E02003CCD3C /* Supporting Files */,
+				5E9039D827916DFB003CCD3C /* Network */,
 			);
 			path = "Gestor Empleados iOs";
 			sourceTree = "<group>";
@@ -84,6 +127,7 @@
 			);
 			name = "Gestor Empleados iOs";
 			packageProductDependencies = (
+				5E9039DD27917106003CCD3C /* Alamofire */,
 			);
 			productName = "Gestor Empleados iOs";
 			productReference = 5EEF71AE278C22C800559D7D /* Gestor Empleados iOs.app */;
@@ -115,7 +159,7 @@
 			mainGroup = 5EEF71A5278C22C800559D7D;
 			packageReferences = (
 				5EA41169278C4702006E0C17 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				5EA4116A278C4736006E0C17 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5E9039DC27917106003CCD3C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 5EEF71AF278C22C800559D7D /* Products */;
 			projectDirPath = "";
@@ -146,6 +190,9 @@
 			files = (
 				5EEF71B6278C22C800559D7D /* ViewController.swift in Sources */,
 				5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */,
+				5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */,
+				5E9039E1279173AA003CCD3C /* User.swift in Sources */,
+				5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */,
 				5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Gestor Empleados iOs/Info.plist";
+				INFOPLIST_FILE = "Gestor Empleados iOs/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Gestor Empleados iOs/Info.plist";
+				INFOPLIST_FILE = "Gestor Empleados iOs/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -366,6 +413,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5E9039DC27917106003CCD3C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		5EA41169278C4702006E0C17 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
@@ -374,15 +429,15 @@
 				minimumVersion = 6.5.0;
 			};
 		};
-		5EA4116A278C4736006E0C17 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.5.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E9039DD27917106003CCD3C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E9039DC27917106003CCD3C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5EEF71A6278C22C800559D7D /* Project object */;
 }
