@@ -13,10 +13,12 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 		
-		NetworkinProvider.shared.seeProfile { user in
+		NetworkingProvider.shared.seeProfile { user in
 			print(user)
 		} failure: { error in
 			print(error.debugDescription)
+		} status: { status in
+			print(status)
 		}
 	}
 }
