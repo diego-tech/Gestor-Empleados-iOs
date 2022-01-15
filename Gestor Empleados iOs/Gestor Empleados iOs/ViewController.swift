@@ -18,10 +18,9 @@ class ViewController: UIViewController {
 //		NetworkingProvider.shared.seeProfile { user in
 //			print(user)
 //		} failure: { error in
-//			print(error.debugDescription)
-//		} status: { status, msg  in
+//			print(error)
+//		} status: { status  in
 //			print(status)
-//			print(msg)
 //		}
 		
 		// MARK: Employee List
@@ -30,9 +29,8 @@ class ViewController: UIViewController {
 //			print(users)
 //		} failure: { error in
 //			print(error)
-//		} status: { status, message in
+//		} status: { status in
 //			print(status)
-//			print(message)
 //		}
 
 		// MARK: Employee Detail
@@ -41,9 +39,8 @@ class ViewController: UIViewController {
 //			print(user)
 //		} failure: { error in
 //			print(error)
-//		} status: { status, message in
+//		} status: { status in
 //			print(status)
-//			print(message)
 //		}
 		
 		// MARK: Login
@@ -52,9 +49,8 @@ class ViewController: UIViewController {
 //
 //		NetworkingProvider.shared.login(user: userLogin) { error in
 //			print(error)
-//		} status: { status, message in
+//		} status: { status in
 //			print(status)
-//			print(message)
 //		}
 		
 		// MARK: User Register
@@ -63,9 +59,8 @@ class ViewController: UIViewController {
 //
 //		NetworkingProvider.shared.register(user: newUser) { error in
 //			print(error)
-//		} status: { status, message in
+//		} status: { status in
 //			print(status)
-//			print(message)
 //		}
 		
 		// MARK: Retrieve Password
@@ -74,9 +69,8 @@ class ViewController: UIViewController {
 //
 //		NetworkingProvider.shared.retrievePassword(email: email) { error in
 //			print(error)
-//		} status: { status, message in
+//		} status: { status in
 //			print(status)
-//			print(message)
 //		}
 		
 		// MARK: Modify Data
@@ -85,9 +79,8 @@ class ViewController: UIViewController {
 //
 //		NetworkingProvider.shared.modifyData(userId: 8, user: updateUser) { error in
 //			print(error)
-//		} status: { status, message in
+//		} status: { status in
 //			print(status)
-//			print(message)
 //		}
 		
 		// MARK: Modify Password
@@ -96,9 +89,8 @@ class ViewController: UIViewController {
 //
 //		NetworkingProvider.shared.modifyPassword(passwords: newPasswords) { error in
 //			print(error)
-//		} status: { status, message in
+//		} status: { status in
 //			print(status)
-//			print(message)
 //		}
 	}
 }
