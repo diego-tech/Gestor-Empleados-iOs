@@ -13,7 +13,7 @@ final class NetworkingProvider {
 	static let shared = NetworkingProvider()
 	
 	private let kBaseURL = "http://localhost:8888/projects/employee-manager/public/api"
-	private let kToken = "$2y$10$cOnJvXC0QzOk8NCAXN7xN.fDDxCZUfayvTJfJUg0CvdiHxJ8Yeu26"
+	private let kToken = "$2y$10$OaWBjPBZWqIQuj23Kxl8auFCNChWzRk3d9WZrmLwF7rZx0z42EfSa"
 	private let kStatusCode = 200...299
 
 	// Employee List
@@ -94,10 +94,14 @@ final class NetworkingProvider {
 	}
 	
 	// Login
-	func login(user: UserLogin, failure: @escaping (_ error: Error) -> (), status: @escaping (_ status: Int) -> ()) {
+	func login(user: UserLogin, success: @escaping (_ user: Data) -> (), failure: @escaping (_ error: Error) -> (), status: @escaping (_ status: Int) -> ()) {
 		let url = "\(kBaseURL)/login"
 
 		AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).validate(statusCode: kStatusCode).responseDecodable (of: UserResponse.self, decoder: DateDecoder()) { response in
+			
+			if let result = response.value?.data {
+				success(result)
+			}
 
 			if let code = response.value?.status {
 				status(code)

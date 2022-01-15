@@ -41,6 +41,8 @@ struct Data: Decodable {
 	
 	let msg: String?
 	
+	let token: String?
+	
 	enum CodingKeys: String, CodingKey {
 		case id
 		case name
@@ -53,5 +55,6 @@ struct Data: Decodable {
 		case createdAt = "created_at"
 		case updatedAt = "updated_at"
 		case msg
+		case token
 	}
 }

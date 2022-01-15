@@ -45,13 +45,15 @@ class ViewController: UIViewController {
 		
 		// MARK: Login
 		
-//		let userLogin = UserLogin(email: "diegorrhh@gmail.com", password: "Diego123456^")
-//
-//		NetworkingProvider.shared.login(user: userLogin) { error in
-//			print(error)
-//		} status: { status in
-//			print(status)
-//		}
+		let userLogin = UserLogin(email: "diegorrhh@gmail.com", password: "Diego12345.")
+
+		NetworkingProvider.shared.login(user: userLogin) { user in
+			print(user)
+		} failure: { error in
+			print(error)
+		} status: { status in
+			print(status)
+		}
 		
 		// MARK: User Register
 		
