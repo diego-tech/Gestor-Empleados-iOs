@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
+	
+	private let authToken: HTTPHeaders = [.authorization("$2y$10$LXXYQk0NxF93VV30lCVVSuHNh08tFkXAn.dEPk6mgdt8L1K2EoLUq")]
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -15,10 +18,8 @@ class ViewController: UIViewController {
 		
 		// MARK: Employee List
 		
-//		NetworkingProvider.shared.employeeList { users in
-//			for user in users! {
-//				print(user)
-//			}
+//		NetworkingProvider.shared.employeeList(authToken: authToken) { responseData in
+//			print(responseData)
 //		} failure: { error in
 //			print(error)
 //		} status: { status in
@@ -27,8 +28,8 @@ class ViewController: UIViewController {
 
 		// MARK: Employee Detail
 		
-//		NetworkingProvider.shared.employeeDetail(id: 3) { user in
-//			print(user)
+//		NetworkingProvider.shared.employeeDetail(authToken: authToken, id: 3) { responseData in
+//			print(responseData)
 //		} failure: { error in
 //			print(error)
 //		} status: { status in
@@ -51,7 +52,9 @@ class ViewController: UIViewController {
 		
 //		let newUser = NewUser(name: "Diego", email: "diego171200@gmail.com", password: "Prueba12345.", workplace: "Empleado", salary: "1500", biography: "Hola Soy Prueba")
 //
-//		NetworkingProvider.shared.register(user: newUser) { error in
+//		NetworkingProvider.shared.register(authToken: authToken, user: newUser) { responseData in
+//			print(responseData)
+//		} failure: { error in
 //			print(error)
 //		} status: { status in
 //			print(status)
@@ -71,7 +74,9 @@ class ViewController: UIViewController {
 		
 //		let updateUser = NewUser(name: "Pepe", email: nil, password: nil, workplace: nil, salary: nil, biography: nil)
 //
-//		NetworkingProvider.shared.modifyData(userId: 8, user: updateUser) { error in
+//		NetworkingProvider.shared.modifyData(authToken: authToken, userId: 8, user: updateUser) { responseData in
+//			print(responseData)
+//		} failure: { error in
 //			print(error)
 //		} status: { status in
 //			print(status)
@@ -81,7 +86,9 @@ class ViewController: UIViewController {
 		
 //		let newPasswords = NewPasswords(password: "Diego12345.", repeatPassword: "Diego12345.")
 //
-//		NetworkingProvider.shared.modifyPassword(passwords: newPasswords) { error in
+//		NetworkingProvider.shared.modifyPassword(authToken: authToken, passwords: newPasswords) { responseData in
+//			print(responseData)
+//		} failure: { error in
 //			print(error)
 //		} status: { status in
 //			print(status)
