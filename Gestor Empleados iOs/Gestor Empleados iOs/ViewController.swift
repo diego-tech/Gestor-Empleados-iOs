@@ -13,20 +13,12 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 		
-		// MARK: See Profile
-		
-//		NetworkingProvider.shared.seeProfile { user in
-//			print(user)
-//		} failure: { error in
-//			print(error)
-//		} status: { status  in
-//			print(status)
-//		}
-		
 		// MARK: Employee List
 		
 //		NetworkingProvider.shared.employeeList { users in
-//			print(users)
+//			for user in users! {
+//				print(user)
+//			}
 //		} failure: { error in
 //			print(error)
 //		} status: { status in
@@ -45,15 +37,15 @@ class ViewController: UIViewController {
 		
 		// MARK: Login
 		
-		let userLogin = UserLogin(email: "diegorrhh@gmail.com", password: "Diego12345.")
-
-		NetworkingProvider.shared.login(user: userLogin) { user in
-			print(user)
-		} failure: { error in
-			print(error)
-		} status: { status in
-			print(status)
-		}
+//		let userLogin = UserLogin(email: "diegorrhh@gmail.com", password: "Diego12345.")
+//
+//		NetworkingProvider.shared.login(user: userLogin) { user in
+//			print(user)
+//		} failure: { error in
+//			print(error)
+//		} status: { status in
+//			print(status)
+//		}
 		
 		// MARK: User Register
 		

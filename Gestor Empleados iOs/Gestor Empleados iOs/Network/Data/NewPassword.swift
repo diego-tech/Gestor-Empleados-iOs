@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NewPasswords: Encodable {
+struct NewPassword: Encodable {
 	let password: String?
 	let repeatPassword: String?
 	

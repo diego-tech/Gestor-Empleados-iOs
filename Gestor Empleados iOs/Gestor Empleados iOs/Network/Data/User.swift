@@ -7,26 +7,6 @@
 
 import Foundation
 
-struct UserResponse: Decodable {
-	let status: Int?
-	let data: Data?
-	
-	enum CodingKeys: String, CodingKey {
-		case status
-		case data
-	}
-}
-
-struct UserListResponse: Decodable {
-	let status: Int?
-	let data: [Data]?
-	
-	enum CodingKeys: String, CodingKey {
-		case status
-		case data
-	}
-}
-
 struct Data: Decodable {
 	let id: Int?
 	let name: String?
@@ -38,10 +18,7 @@ struct Data: Decodable {
 	let updateToken: String?
 	let createdAt: Date?
 	let updatedAt: Date?
-	
 	let msg: String?
-	
-	let token: String?
 	
 	enum CodingKeys: String, CodingKey {
 		case id
@@ -55,6 +32,5 @@ struct Data: Decodable {
 		case createdAt = "created_at"
 		case updatedAt = "updated_at"
 		case msg
-		case token
 	}
 }

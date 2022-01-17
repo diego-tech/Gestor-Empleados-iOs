@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E061F9C2792D92C000CAE79 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E061F9B2792D92C000CAE79 /* NewUser.swift */; };
-		5E061FA02792E7A2000CAE79 /* NewPasswords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E061F9F2792E7A2000CAE79 /* NewPasswords.swift */; };
+		5E061FA02792E7A2000CAE79 /* NewPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E061F9F2792E7A2000CAE79 /* NewPassword.swift */; };
 		5E68F3EA2791DB070033C83E /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E68F3E92791DB070033C83E /* LoginUser.swift */; };
 		5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */; };
 		5E9039DE27917106003CCD3C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5E9039DD27917106003CCD3C /* Alamofire */; };
@@ -20,11 +20,12 @@
 		5EEF71B9278C22C800559D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71B7278C22C800559D7D /* Main.storyboard */; };
 		5EEF71BB278C22C900559D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71BA278C22C900559D7D /* Assets.xcassets */; };
 		5EEF71BE278C22C900559D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71BC278C22C900559D7D /* LaunchScreen.storyboard */; };
+		5EF85CBF2795710300BB7443 /* DbResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF85CBE2795710300BB7443 /* DbResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E061F9B2792D92C000CAE79 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
-		5E061F9F2792E7A2000CAE79 /* NewPasswords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswords.swift; sourceTree = "<group>"; };
+		5E061F9F2792E7A2000CAE79 /* NewPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPassword.swift; sourceTree = "<group>"; };
 		5E68F3E92791DB070033C83E /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		5E9039E0279173AA003CCD3C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -37,6 +38,7 @@
 		5EEF71BA278C22C900559D7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EEF71BD278C22C900559D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EEF71BF278C22C900559D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF85CBE2795710300BB7443 /* DbResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,8 @@
 				5E9039E0279173AA003CCD3C /* User.swift */,
 				5E68F3E92791DB070033C83E /* LoginUser.swift */,
 				5E061F9B2792D92C000CAE79 /* NewUser.swift */,
-				5E061F9F2792E7A2000CAE79 /* NewPasswords.swift */,
+				5E061F9F2792E7A2000CAE79 /* NewPassword.swift */,
+				5EF85CBE2795710300BB7443 /* DbResponse.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -199,8 +202,9 @@
 			files = (
 				5E68F3EA2791DB070033C83E /* LoginUser.swift in Sources */,
 				5E061F9C2792D92C000CAE79 /* NewUser.swift in Sources */,
+				5EF85CBF2795710300BB7443 /* DbResponse.swift in Sources */,
 				5EEF71B6278C22C800559D7D /* ViewController.swift in Sources */,
-				5E061FA02792E7A2000CAE79 /* NewPasswords.swift in Sources */,
+				5E061FA02792E7A2000CAE79 /* NewPassword.swift in Sources */,
 				5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */,
 				5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */,
 				5E9039E1279173AA003CCD3C /* User.swift in Sources */,
