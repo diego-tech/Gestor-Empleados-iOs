@@ -11,9 +11,10 @@ import Alamofire
 final class NetworkingProvider {
 	
 	static let shared = NetworkingProvider()
-	
+
 	private let kBaseURL = "http://localhost:8888/projects/employee-manager/public/api"
 	private let kStatusCode = 200...299
+	
 	
 	// Employee List
 	func employeeList(authToken: HTTPHeaders, serverResponse: @escaping (_ responseData: [Data]?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
