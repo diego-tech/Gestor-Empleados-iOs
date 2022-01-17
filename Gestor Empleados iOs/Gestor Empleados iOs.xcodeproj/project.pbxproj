@@ -14,9 +14,10 @@
 		5E9039DE27917106003CCD3C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5E9039DD27917106003CCD3C /* Alamofire */; };
 		5E9039E1279173AA003CCD3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039E0279173AA003CCD3C /* User.swift */; };
 		5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039E327917B35003CCD3C /* DateDecoder.swift */; };
+		5EA99EDF279588D600CAEA01 /* UserDefaultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */; };
 		5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B1278C22C800559D7D /* AppDelegate.swift */; };
 		5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B3278C22C800559D7D /* SceneDelegate.swift */; };
-		5EEF71B6278C22C800559D7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B5278C22C800559D7D /* ViewController.swift */; };
+		5EEF71B6278C22C800559D7D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B5278C22C800559D7D /* AuthViewController.swift */; };
 		5EEF71B9278C22C800559D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71B7278C22C800559D7D /* Main.storyboard */; };
 		5EEF71BB278C22C900559D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71BA278C22C900559D7D /* Assets.xcassets */; };
 		5EEF71BE278C22C900559D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71BC278C22C900559D7D /* LaunchScreen.storyboard */; };
@@ -30,10 +31,11 @@
 		5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		5E9039E0279173AA003CCD3C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5E9039E327917B35003CCD3C /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
+		5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProvider.swift; sourceTree = "<group>"; };
 		5EEF71AE278C22C800559D7D /* Gestor Empleados iOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gestor Empleados iOs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEF71B1278C22C800559D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EEF71B3278C22C800559D7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EEF71B5278C22C800559D7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EEF71B5278C22C800559D7D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		5EEF71B8278C22C800559D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EEF71BA278C22C900559D7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EEF71BD278C22C900559D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,14 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E9039D827916DFB003CCD3C /* Network */ = {
+		5E9039D827916DFB003CCD3C /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				5EA99EDD279588C000CAEA01 /* UserDefaults */,
 				5E9039E227917B23003CCD3C /* Decoder */,
-				5E9039DF27917392003CCD3C /* Data */,
 				5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */,
 			);
-			path = Network;
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		5E9039D927916E02003CCD3C /* Supporting Files */ = {
@@ -72,7 +74,7 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5E9039DF27917392003CCD3C /* Data */ = {
+		5E9039DF27917392003CCD3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5E9039E0279173AA003CCD3C /* User.swift */,
@@ -81,7 +83,7 @@
 				5E061F9F2792E7A2000CAE79 /* NewPassword.swift */,
 				5EF85CBE2795710300BB7443 /* DbResponse.swift */,
 			);
-			path = Data;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5E9039E227917B23003CCD3C /* Decoder */ = {
@@ -90,6 +92,54 @@
 				5E9039E327917B35003CCD3C /* DateDecoder.swift */,
 			);
 			path = Decoder;
+			sourceTree = "<group>";
+		};
+		5EA99EDD279588C000CAEA01 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		5EA99EE1279589AA00CAEA01 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5EA99EE5279589E500CAEA01 /* Main */,
+				5EA99EE4279589DA00CAEA01 /* Launch */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5EA99EE2279589B200CAEA01 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5EA99EE3279589BA00CAEA01 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF71B5278C22C800559D7D /* AuthViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5EA99EE4279589DA00CAEA01 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF71BC278C22C900559D7D /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		5EA99EE5279589E500CAEA01 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF71B7278C22C800559D7D /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		5EEF71A5278C22C800559D7D = {
@@ -113,11 +163,12 @@
 			children = (
 				5EEF71B1278C22C800559D7D /* AppDelegate.swift */,
 				5EEF71B3278C22C800559D7D /* SceneDelegate.swift */,
-				5EEF71B5278C22C800559D7D /* ViewController.swift */,
-				5EEF71B7278C22C800559D7D /* Main.storyboard */,
-				5EEF71BC278C22C900559D7D /* LaunchScreen.storyboard */,
+				5EA99EE3279589BA00CAEA01 /* Controllers */,
+				5EA99EE2279589B200CAEA01 /* ViewModels */,
+				5EA99EE1279589AA00CAEA01 /* Views */,
+				5E9039DF27917392003CCD3C /* Model */,
 				5E9039D927916E02003CCD3C /* Supporting Files */,
-				5E9039D827916DFB003CCD3C /* Network */,
+				5E9039D827916DFB003CCD3C /* Provider */,
 			);
 			path = "Gestor Empleados iOs";
 			sourceTree = "<group>";
@@ -203,13 +254,14 @@
 				5E68F3EA2791DB070033C83E /* LoginUser.swift in Sources */,
 				5E061F9C2792D92C000CAE79 /* NewUser.swift in Sources */,
 				5EF85CBF2795710300BB7443 /* DbResponse.swift in Sources */,
-				5EEF71B6278C22C800559D7D /* ViewController.swift in Sources */,
+				5EEF71B6278C22C800559D7D /* AuthViewController.swift in Sources */,
 				5E061FA02792E7A2000CAE79 /* NewPassword.swift in Sources */,
 				5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */,
 				5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */,
 				5E9039E1279173AA003CCD3C /* User.swift in Sources */,
 				5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */,
 				5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */,
+				5EA99EDF279588D600CAEA01 /* UserDefaultsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

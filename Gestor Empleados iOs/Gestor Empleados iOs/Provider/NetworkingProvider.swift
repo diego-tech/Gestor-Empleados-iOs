@@ -15,7 +15,6 @@ final class NetworkingProvider {
 	private let kBaseURL = "http://localhost:8888/projects/employee-manager/public/api"
 	private let kStatusCode = 200...299
 	
-
 	// Employee List
 	func employeeList(authToken: HTTPHeaders, serverResponse: @escaping (_ responseData: [Data]?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
 		let url = "\(kBaseURL)/employee_list"
@@ -45,22 +44,22 @@ final class NetworkingProvider {
 	// Employee Detail
 	func employeeDetail(authToken: HTTPHeaders, id: Int, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
 		let url = "\(kBaseURL)/employee_detail?user_id=\(id)"
-		
+
 		// let headers: HTTPHeaders = [.authorization(kToken)]
-		
+
 		AF.request(url, method: .get, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
-						
+
 			// Handle Response Data
 			if let data = response.value?.data {
 				serverResponse(data)
 			}
-			
+
 			// Handle Status Code
 			if let code = response.value?.status {
 				status(code)
 			}
-			
+
 			// Handle Alamofire Error
 			if let error = response.error {
 				failure(error)

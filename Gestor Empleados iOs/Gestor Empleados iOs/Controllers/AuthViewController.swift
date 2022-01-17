@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AuthViewController.swift
 //  Gestor Empleados iOs
 //
 //  Created by Diego Muñoz Herranz on 10/1/22.
@@ -8,9 +8,9 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class AuthViewController: UIViewController {
 	
-	private let authToken: HTTPHeaders = [.authorization("$2y$10$LXXYQk0NxF93VV30lCVVSuHNh08tFkXAn.dEPk6mgdt8L1K2EoLUq")]
+	private let authToken: HTTPHeaders = [.authorization("$2y$10$DsHj/8JArmFJ.zEKzSqGhuxTuY4EyiQmCh5JPmPsChS9BGl4dlJn6")]
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
 		// MARK: Login
 		
 //		let userLogin = UserLogin(email: "diegorrhh@gmail.com", password: "Diego12345.")
-//
+//		
 //		NetworkingProvider.shared.login(user: userLogin) { user in
 //			print(user)
 //		} failure: { error in
