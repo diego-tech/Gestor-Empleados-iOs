@@ -25,6 +25,8 @@
 		5EB293F927970C49008FF4DE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB293F827970C49008FF4DE /* Home.storyboard */; };
 		5EB293FF2797129F008FF4DE /* RetrievePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */; };
 		5EB2940327971340008FF4DE /* RetrievePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2940227971340008FF4DE /* RetrievePassword.storyboard */; };
+		5EB2940727972706008FF4DE /* EmployeeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2940527972706008FF4DE /* EmployeeListTableViewCell.swift */; };
+		5EB2940827972706008FF4DE /* EmployeeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2940627972706008FF4DE /* EmployeeListTableViewCell.xib */; };
 		5EB6C0762796E57C00013E9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6C0752796E57C00013E9B /* Constants.swift */; };
 		5EB6C0792796E66700013E9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6C0772796E66700013E9B /* HomeViewController.swift */; };
 		5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B1278C22C800559D7D /* AppDelegate.swift */; };
@@ -54,6 +56,8 @@
 		5EB293F827970C49008FF4DE /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrievePasswordViewController.swift; sourceTree = "<group>"; };
 		5EB2940227971340008FF4DE /* RetrievePassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RetrievePassword.storyboard; sourceTree = "<group>"; };
+		5EB2940527972706008FF4DE /* EmployeeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListTableViewCell.swift; sourceTree = "<group>"; };
+		5EB2940627972706008FF4DE /* EmployeeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeListTableViewCell.xib; sourceTree = "<group>"; };
 		5EB6C0752796E57C00013E9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5EB6C0772796E66700013E9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5EEF71AE278C22C800559D7D /* Gestor Empleados iOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gestor Empleados iOs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +98,7 @@
 		5E860BB42795DCBE008B92F3 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				5EB29404279726E0008FF4DE /* CustomViews */,
 				5E860BB52795DCC7008B92F3 /* Extension */,
 				5E2D46DA2796C33B00B68CD7 /* TextStyles.swift */,
 				5EB6C0752796E57C00013E9B /* Constants.swift */,
@@ -210,6 +215,15 @@
 			path = RetrievePassword;
 			sourceTree = "<group>";
 		};
+		5EB29404279726E0008FF4DE /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5EB2940527972706008FF4DE /* EmployeeListTableViewCell.swift */,
+				5EB2940627972706008FF4DE /* EmployeeListTableViewCell.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		5EEF71A5278C22C800559D7D = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E2D46D52796BC0A00B68CD7 /* SF-Pro-Display-Medium.otf in Resources */,
+				5EB2940827972706008FF4DE /* EmployeeListTableViewCell.xib in Resources */,
 				5EB2940327971340008FF4DE /* RetrievePassword.storyboard in Resources */,
 				5EEF71BE278C22C900559D7D /* LaunchScreen.storyboard in Resources */,
 				5E2D46D72796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf in Resources */,
@@ -340,6 +355,7 @@
 				5E2D46DB2796C33B00B68CD7 /* TextStyles.swift in Sources */,
 				5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */,
 				5EB6C0762796E57C00013E9B /* Constants.swift in Sources */,
+				5EB2940727972706008FF4DE /* EmployeeListTableViewCell.swift in Sources */,
 				5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */,
 				5EA99EDF279588D600CAEA01 /* UserDefaultsProvider.swift in Sources */,
 			);
