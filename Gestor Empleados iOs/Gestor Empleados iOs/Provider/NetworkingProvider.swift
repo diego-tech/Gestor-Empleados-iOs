@@ -19,9 +19,7 @@ final class NetworkingProvider {
 	// Employee List
 	func employeeList(authToken: HTTPHeaders, serverResponse: @escaping (_ responseData: [Data]?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
 		let url = "\(kBaseURL)/employee_list"
-		
-		// let headers: HTTPHeaders = [.authorization(authToken)]
-		
+				
 		AF.request(url, method: .get, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: ListResponse.self) {
 			response in
 			
@@ -46,7 +44,6 @@ final class NetworkingProvider {
 	func employeeDetail(authToken: HTTPHeaders, id: Int, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
 		let url = "\(kBaseURL)/employee_detail?user_id=\(id)"
 
-		// let headers: HTTPHeaders = [.authorization(kToken)]
 
 		AF.request(url, method: .get, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
@@ -95,7 +92,6 @@ final class NetworkingProvider {
 	func register(authToken: HTTPHeaders, user: NewUser, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) ->()) {
 		let url = "\(kBaseURL)/register"
 		
-		// let headers: HTTPHeaders = [.authorization(kToken)]
 		
 		AF.request(url, method: .put, parameters: user, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
@@ -145,7 +141,6 @@ final class NetworkingProvider {
 	func modifyData(authToken: HTTPHeaders, userId: Int, user: NewUser, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
 		let url = "\(kBaseURL)/modify_data?user_id=\(userId)"
 		
-		// let headers: HTTPHeaders = [.authorization(kToken)]
 		
 		AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
@@ -171,9 +166,32 @@ final class NetworkingProvider {
 	func modifyPassword(authToken: HTTPHeaders, passwords: NewPassword, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()){
 		let url = "\(kBaseURL)/modify_password"
 		
-//		let headers: HTTPHeaders = [.authorization(kToken)]
 		
 		AF.request(url, method: .post, parameters: passwords, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
+			response in
+			
+			// Handle Response Data
+			if let data = response.value?.data {
+				serverResponse(data)
+			}
+			
+			// Handle Status Code
+			if let code = response.value?.status {
+				status(code)
+			}
+			
+			// Handle Alamofire Error
+			if let error = response.error {
+				failure(error)
+			}
+		}
+	}
+	
+	// Logout
+	func logout(authToken: HTTPHeaders, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
+		let url = "\(kBaseURL)/logout"
+		
+		AF.request(url, method: .post, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
 			// Handle Response Data
