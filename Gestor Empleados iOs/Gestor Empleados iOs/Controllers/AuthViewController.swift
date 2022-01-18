@@ -18,6 +18,8 @@ class AuthViewController: UIViewController {
 	
 	let imageEye = UIImageView()
 	var iconClick = false
+		
+	let storyBoard = UIStoryboard(name: "Home", bundle: nil)
 	
 	// Outlets
 	@IBOutlet weak var emailTextField: UITextField!
@@ -29,7 +31,7 @@ class AuthViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 
-		print(UserDefaultsProvider.string(key: .authUserToken))
+		print(UserDefaultsProvider.string(key: .authUserToken)!)
 		
 		// Styles And Custom Actions
 		textFieldStyle()
@@ -39,6 +41,10 @@ class AuthViewController: UIViewController {
 	
 	// MARK: Action Buttons
 	@IBAction func retrievePasswordAction(_ sender: Any) {
+		let storyBoard = UIStoryboard(name: "RetrievePassword", bundle: nil)
+		let vc = storyBoard.instantiateViewController(withIdentifier: "RetrievePasswordViewController") as! RetrievePasswordViewController
+		self.present(vc, animated: true, completion: nil)
+		
 	}
 	
 	@IBAction func accessButtonAction(_ sender: Any) {
@@ -57,16 +63,18 @@ class AuthViewController: UIViewController {
 	
 	// MARK: API Functions
 	private func login(loginUser: UserLogin) {
-		NetworkingProvider.shared.login(user: loginUser) { responseData in
-			print(responseData!)
-			
+		NetworkingProvider.shared.login(user: loginUser) { responseData, status in
 			if let auth_token = responseData?.apiToken, let auth_email = responseData?.email {
 				self.setUserLoginDefaults(authUserToken: auth_token, authUserEmail: auth_email)
 			}
+			
+			if status != Constants.kErrorStatusCode {
+				self.navigate()
+			} else {
+				print(responseData?.msg)
+			}
 		} failure: { error in
 			print(error!)
-		} status: { status in
-			print(status!)
 		}
 	}
 	
@@ -74,6 +82,12 @@ class AuthViewController: UIViewController {
 	private func setUserLoginDefaults(authUserToken: String, authUserEmail: String) {
 		UserDefaultsProvider.setUserDefaults(key: .authUserToken, value: authUserToken)
 		UserDefaultsProvider.setUserDefaults(key: .authUserEmail, value: authUserEmail)
+	}
+	
+	private func navigate(){
+		let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+		let vc = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+		self.present(vc, animated: true, completion: nil)
 	}
 	
 	// MARK: Styles
@@ -123,8 +137,7 @@ class AuthViewController: UIViewController {
 		imageEye.isUserInteractionEnabled = true
 		imageEye.addGestureRecognizer(tapGestureRecognizer)
 	}
-	
-	
+		
 	@objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
 		let tappedImage = tapGestureRecognizer.view as! UIImageView
 		

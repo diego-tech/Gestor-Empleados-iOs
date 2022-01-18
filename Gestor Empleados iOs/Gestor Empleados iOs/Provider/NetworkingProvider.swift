@@ -13,20 +13,15 @@ final class NetworkingProvider {
 	static let shared = NetworkingProvider()	
 	
 	// Employee List
-	func employeeList(authToken: HTTPHeaders, serverResponse: @escaping (_ responseData: [Data]?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
+	func employeeList(authToken: HTTPHeaders, serverResponse: @escaping (_ responseData: [Data]?, _ status: Int?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/employee_list"
 				
 		AF.request(url, method: .get, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: ListResponse.self) {
 			response in
 			
-			// Handle Response Data
-			if let data = response.value?.data {
-				serverResponse(data)
-			}
-			
-			// Handle Status Code
-			if let code = response.value?.status {
-				status(code)
+			// Handle Response Data & Status Code
+			if let data = response.value?.data, let statusCode = response.value?.status {
+				serverResponse(data, statusCode)
 			}
 			
 			// Handle Alamofire Error
@@ -62,19 +57,14 @@ final class NetworkingProvider {
 	}
 	
 	// Login
-	func login(user: UserLogin, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
+	func login(user: UserLogin, serverResponse: @escaping (_ responseData: Data?, _ status: Int?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/login"
 
 		AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).validate(statusCode: Constants.kStatusCode).responseDecodable (of: Response.self, decoder: DateDecoder()) { response in
 			
-			// Handle Response Data
-			if let data = response.value?.data{
-				serverResponse(data)
-			}
-
-			// Handle Status Code
-			if let code = response.value?.status {
-				status(code)
+			// Handle Response Data & Status Code
+			if let data = response.value?.data, let statusCode = response.value?.status{
+				serverResponse(data, statusCode)
 			}
 
 			// Handle Alamofire Error
