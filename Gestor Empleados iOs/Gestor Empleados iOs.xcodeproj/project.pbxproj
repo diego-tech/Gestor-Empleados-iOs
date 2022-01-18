@@ -22,6 +22,9 @@
 		5E9039E1279173AA003CCD3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039E0279173AA003CCD3C /* User.swift */; };
 		5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039E327917B35003CCD3C /* DateDecoder.swift */; };
 		5EA99EDF279588D600CAEA01 /* UserDefaultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */; };
+		5EB6C0762796E57C00013E9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6C0752796E57C00013E9B /* Constants.swift */; };
+		5EB6C0792796E66700013E9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6C0772796E66700013E9B /* HomeViewController.swift */; };
+		5EB6C07A2796E66700013E9B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB6C0782796E66700013E9B /* HomeViewController.xib */; };
 		5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B1278C22C800559D7D /* AppDelegate.swift */; };
 		5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B3278C22C800559D7D /* SceneDelegate.swift */; };
 		5EEF71B6278C22C800559D7D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B5278C22C800559D7D /* AuthViewController.swift */; };
@@ -46,6 +49,9 @@
 		5E9039E0279173AA003CCD3C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5E9039E327917B35003CCD3C /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
 		5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProvider.swift; sourceTree = "<group>"; };
+		5EB6C0752796E57C00013E9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5EB6C0772796E66700013E9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5EB6C0782796E66700013E9B /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		5EEF71AE278C22C800559D7D /* Gestor Empleados iOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gestor Empleados iOs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEF71B1278C22C800559D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EEF71B3278C22C800559D7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 			children = (
 				5E860BB52795DCC7008B92F3 /* Extension */,
 				5E2D46DA2796C33B00B68CD7 /* TextStyles.swift */,
+				5EB6C0752796E57C00013E9B /* Constants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -151,6 +158,7 @@
 			children = (
 				5EA99EE5279589E500CAEA01 /* Main */,
 				5EA99EE4279589DA00CAEA01 /* Launch */,
+				5EB6C07B2796E66C00013E9B /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 		5EA99EE3279589BA00CAEA01 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EB6C0772796E66700013E9B /* HomeViewController.swift */,
 				5EEF71B5278C22C800559D7D /* AuthViewController.swift */,
 			);
 			path = Controllers;
@@ -177,6 +186,14 @@
 				5EEF71B7278C22C800559D7D /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		5EB6C07B2796E66C00013E9B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5EB6C0782796E66700013E9B /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		5EEF71A5278C22C800559D7D = {
@@ -283,6 +300,7 @@
 				5E2D46D92796BC0A00B68CD7 /* SF-Pro.ttf in Resources */,
 				5E2D46D82796BC0A00B68CD7 /* SF-Pro-Display-Regular.otf in Resources */,
 				5EEF71B9278C22C800559D7D /* Main.storyboard in Resources */,
+				5EB6C07A2796E66700013E9B /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,12 +316,14 @@
 				5EF85CBF2795710300BB7443 /* DbResponse.swift in Sources */,
 				5E860BB72795DCD3008B92F3 /* ColorExtension.swift in Sources */,
 				5EEF71B6278C22C800559D7D /* AuthViewController.swift in Sources */,
+				5EB6C0792796E66700013E9B /* HomeViewController.swift in Sources */,
 				5E061FA02792E7A2000CAE79 /* NewPassword.swift in Sources */,
 				5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */,
 				5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */,
 				5E9039E1279173AA003CCD3C /* User.swift in Sources */,
 				5E2D46DB2796C33B00B68CD7 /* TextStyles.swift in Sources */,
 				5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */,
+				5EB6C0762796E57C00013E9B /* Constants.swift in Sources */,
 				5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */,
 				5EA99EDF279588D600CAEA01 /* UserDefaultsProvider.swift in Sources */,
 			);

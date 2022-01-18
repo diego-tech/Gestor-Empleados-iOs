@@ -16,6 +16,9 @@ class AuthViewController: UIViewController {
 	var email: String?
 	var password: String?
 	
+	let imageEye = UIImageView()
+	var iconClick = false
+	
 	// Outlets
 	@IBOutlet weak var emailTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
@@ -25,9 +28,13 @@ class AuthViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+
+		print(UserDefaultsProvider.string(key: .authUserToken))
 		
+		// Styles And Custom Actions
 		textFieldStyle()
 		accessButtonStyle()
+		showAndHidePassword()
 	}
 	
 	// MARK: Action Buttons
@@ -41,7 +48,6 @@ class AuthViewController: UIViewController {
 		if let email = email, let password = password {
 			if email != "", password != "" {
 				let userLogin = UserLogin(email: email, password: password)
-				
 				login(loginUser: userLogin)
 			} else {
 				print("Introduzca")
@@ -52,13 +58,22 @@ class AuthViewController: UIViewController {
 	// MARK: API Functions
 	private func login(loginUser: UserLogin) {
 		NetworkingProvider.shared.login(user: loginUser) { responseData in
-			print(responseData)
+			print(responseData!)
+			
+			if let auth_token = responseData?.apiToken, let auth_email = responseData?.email {
+				self.setUserLoginDefaults(authUserToken: auth_token, authUserEmail: auth_email)
+			}
 		} failure: { error in
-			print(error)
+			print(error!)
 		} status: { status in
-			print(status)
+			print(status!)
 		}
-
+	}
+	
+	// MARK: Functions
+	private func setUserLoginDefaults(authUserToken: String, authUserEmail: String) {
+		UserDefaultsProvider.setUserDefaults(key: .authUserToken, value: authUserToken)
+		UserDefaultsProvider.setUserDefaults(key: .authUserEmail, value: authUserEmail)
 	}
 	
 	// MARK: Styles
@@ -91,6 +106,38 @@ class AuthViewController: UIViewController {
 		accessButton.layer.cornerRadius = 10
 	}
 	
+	private func showAndHidePassword(){
+		imageEye.image = UIImage(named: "CloseEye")
+		
+		let contentView = UIView()
+		contentView.addSubview(imageEye)
+		
+		contentView.frame = CGRect(x:0, y:0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye")!.size.height)
+		imageEye.frame = CGRect(x:-10, y:0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye" )!.size.height)
+		
+		passwordTextField.rightView = contentView
+		passwordTextField.rightViewMode = .always
+
+		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+		
+		imageEye.isUserInteractionEnabled = true
+		imageEye.addGestureRecognizer(tapGestureRecognizer)
+	}
+	
+	
+	@objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
+		let tappedImage = tapGestureRecognizer.view as! UIImageView
+		
+		if iconClick {
+			iconClick = false
+			tappedImage.image = UIImage(named: "EyeOpen")
+			passwordTextField.isSecureTextEntry = false
+		} else {
+			iconClick = true
+			tappedImage.image = UIImage(named: "CloseEye")
+			passwordTextField.isSecureTextEntry = true
+		}
+	}
 	
 	// MARK: Test Api Routes
 	private func testApiRoutes (){

@@ -10,17 +10,13 @@ import Alamofire
 
 final class NetworkingProvider {
 	
-	static let shared = NetworkingProvider()
-
-	private let kBaseURL = "http://localhost:8888/projects/employee-manager/public/api"
-	private let kStatusCode = 200...299
-	
+	static let shared = NetworkingProvider()	
 	
 	// Employee List
 	func employeeList(authToken: HTTPHeaders, serverResponse: @escaping (_ responseData: [Data]?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
-		let url = "\(kBaseURL)/employee_list"
+		let url = "\(Constants.kBaseURL)/employee_list"
 				
-		AF.request(url, method: .get, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: ListResponse.self) {
+		AF.request(url, method: .get, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: ListResponse.self) {
 			response in
 			
 			// Handle Response Data
@@ -42,10 +38,10 @@ final class NetworkingProvider {
 	
 	// Employee Detail
 	func employeeDetail(authToken: HTTPHeaders, id: Int, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
-		let url = "\(kBaseURL)/employee_detail?user_id=\(id)"
+		let url = "\(Constants.kBaseURL)/employee_detail?user_id=\(id)"
 
 
-		AF.request(url, method: .get, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
+		AF.request(url, method: .get, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 
 			// Handle Response Data
@@ -67,9 +63,9 @@ final class NetworkingProvider {
 	
 	// Login
 	func login(user: UserLogin, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
-		let url = "\(kBaseURL)/login"
+		let url = "\(Constants.kBaseURL)/login"
 
-		AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).validate(statusCode: kStatusCode).responseDecodable (of: Response.self, decoder: DateDecoder()) { response in
+		AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).validate(statusCode: Constants.kStatusCode).responseDecodable (of: Response.self, decoder: DateDecoder()) { response in
 			
 			// Handle Response Data
 			if let data = response.value?.data{
@@ -90,10 +86,10 @@ final class NetworkingProvider {
 	
 	// Register
 	func register(authToken: HTTPHeaders, user: NewUser, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) ->()) {
-		let url = "\(kBaseURL)/register"
+		let url = "\(Constants.kBaseURL)/register"
 		
 		
-		AF.request(url, method: .put, parameters: user, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
+		AF.request(url, method: .put, parameters: user, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
 			// Handle Response Data
@@ -115,9 +111,9 @@ final class NetworkingProvider {
 	
 	// Retrieve Password
 	func retrievePassword(email: String, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()){
-		let url = "\(kBaseURL)/retrieve_password?email=\(email)"
+		let url = "\(Constants.kBaseURL)/retrieve_password?email=\(email)"
 		
-		AF.request(url, method: .post).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
+		AF.request(url, method: .post).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
 			// Handle Response Data
@@ -139,10 +135,10 @@ final class NetworkingProvider {
 	
 	// Modify Data
 	func modifyData(authToken: HTTPHeaders, userId: Int, user: NewUser, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
-		let url = "\(kBaseURL)/modify_data?user_id=\(userId)"
+		let url = "\(Constants.kBaseURL)/modify_data?user_id=\(userId)"
 		
 		
-		AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
+		AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
 			// Handle Response Data
@@ -164,10 +160,10 @@ final class NetworkingProvider {
 	
 	// Modify Password
 	func modifyPassword(authToken: HTTPHeaders, passwords: NewPassword, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()){
-		let url = "\(kBaseURL)/modify_password"
+		let url = "\(Constants.kBaseURL)/modify_password"
 		
 		
-		AF.request(url, method: .post, parameters: passwords, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
+		AF.request(url, method: .post, parameters: passwords, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
 			// Handle Response Data
@@ -189,9 +185,9 @@ final class NetworkingProvider {
 	
 	// Logout
 	func logout(authToken: HTTPHeaders, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
-		let url = "\(kBaseURL)/logout"
+		let url = "\(Constants.kBaseURL)/logout"
 		
-		AF.request(url, method: .post, headers: authToken).validate(statusCode: kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
+		AF.request(url, method: .post, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
 			// Handle Response Data
