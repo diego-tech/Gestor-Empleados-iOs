@@ -94,6 +94,9 @@ hendrerit nibh.
                                 <rect key="frame" x="311" y="659" width="51" height="51"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Password Icon"/>
+                                <connections>
+                                    <action selector="goToChangePasswordAction:" destination="tUk-5n-bTm" eventType="touchUpInside" id="Rwp-57-0AI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-UN-8Y5">
                                 <rect key="frame" x="30" y="587" width="41" height="17"/>

@@ -23,4 +23,15 @@ class ProfileViewController: UIViewController {
 		biographyLabel.text = Constants.kAuthUseBiography
 		salaryLabel.text = Constants.kAuthUserSalary
     }
+	
+	@IBAction func goToChangePasswordAction(_ sender: Any) {
+		 navigate()
+	}
+	
+	// MARK: Function
+	private func navigate() {
+		let storyBoard = UIStoryboard(name: "ChangePassword", bundle: nil)
+		let vc = storyBoard.instantiateViewController(withIdentifier: "ChangePassword") as! ChangePasswordViewController
+		self.present(vc, animated: true, completion: nil)
+	}
 }

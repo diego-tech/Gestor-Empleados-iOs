@@ -158,16 +158,6 @@ class AuthViewController: UIViewController {
 	
 	// MARK: Test Api Routes
 	private func testApiRoutes (){
-		// MARK: Employee List
-		
-//		NetworkingProvider.shared.employeeList(authToken: authToken) { responseData in
-//			print(responseData)
-//		} failure: { error in
-//			print(error)
-//		} status: { status in
-//			print(status)
-//		}
-
 		// MARK: Employee Detail
 		
 //		NetworkingProvider.shared.employeeDetail(authToken: authToken, id: 3) { responseData in

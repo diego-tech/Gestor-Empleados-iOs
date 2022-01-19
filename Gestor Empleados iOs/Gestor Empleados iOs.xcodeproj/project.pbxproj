@@ -26,6 +26,8 @@
 		5E90E2CD2798366800EBE47F /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2CB2798366800EBE47F /* EmployeeDetailViewController.swift */; };
 		5E90E2D027983C5100EBE47F /* EmployeeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E90E2CF27983C5100EBE47F /* EmployeeDetail.storyboard */; };
 		5E90E2D227983EA800EBE47F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2D127983EA800EBE47F /* ProfileViewController.swift */; };
+		5E90E2D62798541100EBE47F /* ChangePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E90E2D52798541100EBE47F /* ChangePassword.storyboard */; };
+		5E90E2D82798541F00EBE47F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2D72798541F00EBE47F /* ChangePasswordViewController.swift */; };
 		5EA99EDF279588D600CAEA01 /* UserDefaultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */; };
 		5EB293F927970C49008FF4DE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB293F827970C49008FF4DE /* Home.storyboard */; };
 		5EB293FF2797129F008FF4DE /* RetrievePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */; };
@@ -62,6 +64,8 @@
 		5E90E2CB2798366800EBE47F /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
 		5E90E2CF27983C5100EBE47F /* EmployeeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeDetail.storyboard; sourceTree = "<group>"; };
 		5E90E2D127983EA800EBE47F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5E90E2D52798541100EBE47F /* ChangePassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePassword.storyboard; sourceTree = "<group>"; };
+		5E90E2D72798541F00EBE47F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProvider.swift; sourceTree = "<group>"; };
 		5EB293F827970C49008FF4DE /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrievePasswordViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +185,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		5E90E2D4279853FD00EBE47F /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				5E90E2D52798541100EBE47F /* ChangePassword.storyboard */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
 		5EA99EDD279588C000CAEA01 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +204,7 @@
 		5EA99EE1279589AA00CAEA01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5E90E2D4279853FD00EBE47F /* ChangePassword */,
 				5E90E2CA2798364B00EBE47F /* Detail */,
 				5EB29401279712A2008FF4DE /* RetrievePassword */,
 				5EB293F727970C3C008FF4DE /* Home */,
@@ -210,6 +223,7 @@
 				5EEF71B5278C22C800559D7D /* AuthViewController.swift */,
 				5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */,
 				5E90E2D127983EA800EBE47F /* ProfileViewController.swift */,
+				5E90E2D72798541F00EBE47F /* ChangePasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -355,6 +369,7 @@
 				5EB2940827972706008FF4DE /* EmployeeListTableViewCell.xib in Resources */,
 				5EB2940327971340008FF4DE /* RetrievePassword.storyboard in Resources */,
 				5EEF71BE278C22C900559D7D /* LaunchScreen.storyboard in Resources */,
+				5E90E2D62798541100EBE47F /* ChangePassword.storyboard in Resources */,
 				5E2D46D72796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf in Resources */,
 				5EB293F927970C49008FF4DE /* Home.storyboard in Resources */,
 				5E2D46D62796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf in Resources */,
@@ -384,6 +399,7 @@
 				5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */,
 				5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */,
 				5E9039E1279173AA003CCD3C /* User.swift in Sources */,
+				5E90E2D82798541F00EBE47F /* ChangePasswordViewController.swift in Sources */,
 				5E2D46DB2796C33B00B68CD7 /* TextStyles.swift in Sources */,
 				5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */,
 				5EB6C0762796E57C00013E9B /* Constants.swift in Sources */,
