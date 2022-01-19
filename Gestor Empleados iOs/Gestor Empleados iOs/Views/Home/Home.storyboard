@@ -3,30 +3,129 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Home View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--Perfil-->
+        <scene sceneID="2J0-CV-83I">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController id="tUk-5n-bTm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LTd-e7-Nqh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="WfI-98-9NM"/>
+                        <color key="backgroundColor" systemColor="tintColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="Profile" selectedImage="Profile" id="gGw-9W-chg">
+                        <color key="badgeColor" name="MainColor"/>
+                    </tabBarItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssh-id-KOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="71"/>
+            <point key="canvasLocation" x="942" y="97"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="5Vx-Bu-t4s">
+            <objects>
+                <viewController restorationIdentifier="Prueba" storyboardIdentifier="HomeViewController" id="Umy-c4-8v3" customClass="HomeViewController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oh1-oe-urx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-gG-JTw">
+                                <rect key="frame" x="30" y="118" width="54" height="27"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TOS-Xe-9o7">
+                                <rect key="frame" x="20" y="176" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="B2R-GS-o0B"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="F0D-Ma-FU8">
+                                <rect key="frame" x="20" y="240" width="374" height="325"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomEmployeeCell" id="ILu-yp-rRe" customClass="EmployeeListTableViewCell" customModule="Gestor_Empleados_iOs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ILu-yp-rRe" id="hns-8n-vcO">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e9a-fT-BEb"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TOS-Xe-9o7" firstAttribute="leading" secondItem="F0D-Ma-FU8" secondAttribute="leading" id="0Gx-2B-lfX"/>
+                            <constraint firstItem="TOS-Xe-9o7" firstAttribute="trailing" secondItem="F0D-Ma-FU8" secondAttribute="trailing" id="8ZS-mo-7b3"/>
+                            <constraint firstItem="F0D-Ma-FU8" firstAttribute="top" secondItem="TOS-Xe-9o7" secondAttribute="bottom" constant="20" id="CZd-9f-Gjz"/>
+                            <constraint firstItem="TOS-Xe-9o7" firstAttribute="top" secondItem="Oh1-oe-urx" secondAttribute="top" constant="176" id="ITH-BL-BCm"/>
+                            <constraint firstItem="F0D-Ma-FU8" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="20" id="Qbt-kd-AIA"/>
+                            <constraint firstItem="e9a-fT-BEb" firstAttribute="bottom" secondItem="F0D-Ma-FU8" secondAttribute="bottom" constant="248" id="RDE-0y-wfZ"/>
+                            <constraint firstItem="TOS-Xe-9o7" firstAttribute="top" secondItem="ISt-gG-JTw" secondAttribute="bottom" constant="31" id="sxc-Fh-baT"/>
+                            <constraint firstItem="ISt-gG-JTw" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="30" id="xT2-Tt-c9K"/>
+                            <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="F0D-Ma-FU8" secondAttribute="trailing" constant="20" id="zkn-l3-iVk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home" id="aNZ-ib-Yga">
+                        <color key="badgeColor" name="MainColor"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="employeeListView" destination="F0D-Ma-FU8" id="95k-DK-JRU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozT-3l-az7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942.02898550724649" y="-777.45535714285711"/>
+        </scene>
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="aHG-3q-dIc">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" modalPresentationStyle="fullScreen" id="oba-OA-RVN" customClass="UICustomTabBarController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sAE-be-9AV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="MainColor"/>
+                        <color key="barTintColor" name="MainColor"/>
+                        <color key="selectedImageTintColor" name="MainColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Umy-c4-8v3" kind="relationship" relationship="viewControllers" id="sTC-Ay-LCd"/>
+                        <segue destination="tUk-5n-bTm" kind="relationship" relationship="viewControllers" id="FPP-2K-mRg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ty-JN-nNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120" y="-526"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Home" width="32" height="26"/>
+        <image name="Profile" width="26" height="26"/>
+        <namedColor name="MainColor">
+            <color red="0.19607843137254902" green="0.26666666666666666" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

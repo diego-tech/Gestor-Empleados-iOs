@@ -10,16 +10,12 @@ import Alamofire
 
 class AuthViewController: UIViewController {
 	
-	private let authToken: HTTPHeaders = [.authorization("$2y$10$Wo6jNnh4Ksx7y8qP7uUR1uiUXJt.RntdqV4mBSj5uXrCMWN9vvWBe")]
-	
 	// Variables
 	var email: String?
 	var password: String?
-	
-	let imageEye = UIImageView()
 	var iconClick = false
-		
-	let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+
+	private let imageEye = UIImageView()
 	
 	// Outlets
 	@IBOutlet weak var emailTextField: UITextField!
@@ -31,7 +27,6 @@ class AuthViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 
-		print(UserDefaultsProvider.string(key: .authUserToken)!)
 		
 		// Styles And Custom Actions
 		textFieldStyle()
@@ -86,7 +81,7 @@ class AuthViewController: UIViewController {
 	
 	private func navigate(){
 		let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-		let vc = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+		let vc = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! UICustomTabBarController
 		self.present(vc, animated: true, completion: nil)
 	}
 	
