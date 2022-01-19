@@ -10,7 +10,7 @@ import Alamofire
 
 class EmployeeViewModel {
 	
-	let authToken: HTTPHeaders = [.authorization(Constants.kAuthToken!)]
+	let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 	private var employeeList = [Data]()
 	
 	func fetchEmployeeList(completion: @escaping () -> ()) {

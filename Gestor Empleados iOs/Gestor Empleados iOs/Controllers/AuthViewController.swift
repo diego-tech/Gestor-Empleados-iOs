@@ -59,10 +59,11 @@ class AuthViewController: UIViewController {
 	// MARK: API Functions
 	private func login(loginUser: UserLogin) {
 		NetworkingProvider.shared.login(user: loginUser) { responseData, status in
-			if let auth_token = responseData?.apiToken, let auth_email = responseData?.email {
-				self.setUserLoginDefaults(authUserToken: auth_token, authUserEmail: auth_email)
+			if let auth_token = responseData?.apiToken, let auth_email = responseData?.email, let auth_name = responseData?.name, let auth_workplace = responseData?.workplace, let auth_salary = responseData?.salary, let auth_biography = responseData?.biography {
+				
+				self.setUserLoginDefaults(authUserToken: auth_token, authUserEmail: auth_email, authUserName: auth_name, authUserWorkplace: auth_workplace, authUserSalary: auth_salary, authUserBiography: auth_biography)
 			}
-			
+	
 			if status != Constants.kErrorStatusCode {
 				self.navigate()
 			} else {
@@ -74,9 +75,17 @@ class AuthViewController: UIViewController {
 	}
 	
 	// MARK: Functions
-	private func setUserLoginDefaults(authUserToken: String, authUserEmail: String) {
-		UserDefaultsProvider.setUserDefaults(key: .authUserToken, value: authUserToken)
-		UserDefaultsProvider.setUserDefaults(key: .authUserEmail, value: authUserEmail)
+	private func setUserLoginDefaults(authUserToken: String?, authUserEmail: String?, authUserName: String?, authUserWorkplace: String?, authUserSalary: String?, authUserBiography: String?) {
+		
+		if let authUserName = authUserName, let authUserToken = authUserToken, let authUserEmail = authUserEmail, let authUserWorkplace = authUserWorkplace, let authUserSalary = authUserSalary, let authUserBiography = authUserBiography {
+			UserDefaultsProvider.setUserDefaults(key: .authUserToken, value: authUserToken)
+			UserDefaultsProvider.setUserDefaults(key: .authUserName, value: authUserName)
+			UserDefaultsProvider.setUserDefaults(key: .authUserEmail, value: authUserEmail)
+			UserDefaultsProvider.setUserDefaults(key: .authUserWorkplace, value: authUserWorkplace)
+			UserDefaultsProvider.setUserDefaults(key: .authUserSalary, value: authUserSalary)
+			UserDefaultsProvider.setUserDefaults(key: .authUserBiography, value: authUserBiography)
+		}
+
 	}
 	
 	private func navigate(){

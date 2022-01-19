@@ -19,5 +19,10 @@ struct Constants {
 	static let kCorrectStatusCode = 1
 	
 	// User Defaults Constants
-	static let kAuthToken = UserDefaultsProvider.string(key: .authUserToken)
+	static let kAuthUserToken = UserDefaultsProvider.string(key: .authUserToken)
+	static let kAuthUserName = UserDefaultsProvider.string(key: .authUserName)
+	static let kAuthUserEmail = UserDefaultsProvider.string(key: .authUserEmail)
+	static let kAuthUserWorkplace = UserDefaultsProvider.string(key: .authUserWorkplace)
+	static let kAuthUserSalary = UserDefaultsProvider.string(key: .authUserSalary)
+	static let kAuthUseBiography = UserDefaultsProvider.string(key: .authUserBiography)
 }

@@ -23,6 +23,9 @@
 		5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039E327917B35003CCD3C /* DateDecoder.swift */; };
 		5E90E2C5279819EB00EBE47F /* UICustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2C4279819EB00EBE47F /* UICustomTabBarController.swift */; };
 		5E90E2C927982AA400EBE47F /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2C827982AA400EBE47F /* EmployeeViewModel.swift */; };
+		5E90E2CD2798366800EBE47F /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2CB2798366800EBE47F /* EmployeeDetailViewController.swift */; };
+		5E90E2D027983C5100EBE47F /* EmployeeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E90E2CF27983C5100EBE47F /* EmployeeDetail.storyboard */; };
+		5E90E2D227983EA800EBE47F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2D127983EA800EBE47F /* ProfileViewController.swift */; };
 		5EA99EDF279588D600CAEA01 /* UserDefaultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */; };
 		5EB293F927970C49008FF4DE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB293F827970C49008FF4DE /* Home.storyboard */; };
 		5EB293FF2797129F008FF4DE /* RetrievePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */; };
@@ -56,6 +59,9 @@
 		5E9039E327917B35003CCD3C /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
 		5E90E2C4279819EB00EBE47F /* UICustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomTabBarController.swift; sourceTree = "<group>"; };
 		5E90E2C827982AA400EBE47F /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		5E90E2CB2798366800EBE47F /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
+		5E90E2CF27983C5100EBE47F /* EmployeeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeDetail.storyboard; sourceTree = "<group>"; };
+		5E90E2D127983EA800EBE47F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProvider.swift; sourceTree = "<group>"; };
 		5EB293F827970C49008FF4DE /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrievePasswordViewController.swift; sourceTree = "<group>"; };
@@ -102,11 +108,11 @@
 		5E860BB42795DCBE008B92F3 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				5E90E2D3279847DE00EBE47F /* ViewModels */,
 				5EB29404279726E0008FF4DE /* CustomViews */,
 				5E860BB52795DCC7008B92F3 /* Extension */,
 				5E2D46DA2796C33B00B68CD7 /* TextStyles.swift */,
 				5EB6C0752796E57C00013E9B /* Constants.swift */,
-				5E90E2C827982AA400EBE47F /* EmployeeViewModel.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -159,6 +165,22 @@
 			path = Decoder;
 			sourceTree = "<group>";
 		};
+		5E90E2CA2798364B00EBE47F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5E90E2CF27983C5100EBE47F /* EmployeeDetail.storyboard */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		5E90E2D3279847DE00EBE47F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5E90E2C827982AA400EBE47F /* EmployeeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		5EA99EDD279588C000CAEA01 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +192,7 @@
 		5EA99EE1279589AA00CAEA01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5E90E2CA2798364B00EBE47F /* Detail */,
 				5EB29401279712A2008FF4DE /* RetrievePassword */,
 				5EB293F727970C3C008FF4DE /* Home */,
 				5EA99EE5279589E500CAEA01 /* Main */,
@@ -181,10 +204,12 @@
 		5EA99EE3279589BA00CAEA01 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E90E2CB2798366800EBE47F /* EmployeeDetailViewController.swift */,
 				5E90E2C4279819EB00EBE47F /* UICustomTabBarController.swift */,
 				5EB6C0772796E66700013E9B /* HomeViewController.swift */,
 				5EEF71B5278C22C800559D7D /* AuthViewController.swift */,
 				5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */,
+				5E90E2D127983EA800EBE47F /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -333,6 +358,7 @@
 				5E2D46D72796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf in Resources */,
 				5EB293F927970C49008FF4DE /* Home.storyboard in Resources */,
 				5E2D46D62796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf in Resources */,
+				5E90E2D027983C5100EBE47F /* EmployeeDetail.storyboard in Resources */,
 				5EEF71BB278C22C900559D7D /* Assets.xcassets in Resources */,
 				5E2D46D92796BC0A00B68CD7 /* SF-Pro.ttf in Resources */,
 				5E2D46D82796BC0A00B68CD7 /* SF-Pro-Display-Regular.otf in Resources */,
@@ -365,7 +391,9 @@
 				5EB2940727972706008FF4DE /* EmployeeListTableViewCell.swift in Sources */,
 				5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */,
 				5EA99EDF279588D600CAEA01 /* UserDefaultsProvider.swift in Sources */,
+				5E90E2D227983EA800EBE47F /* ProfileViewController.swift in Sources */,
 				5E90E2C5279819EB00EBE47F /* UICustomTabBarController.swift in Sources */,
+				5E90E2CD2798366800EBE47F /* EmployeeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

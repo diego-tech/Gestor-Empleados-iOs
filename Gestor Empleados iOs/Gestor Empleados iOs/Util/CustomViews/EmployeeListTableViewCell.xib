@@ -15,7 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomEmployeeCell" rowHeight="50" id="KGk-i7-Jjw" customClass="EmployeeListTableViewCell" customModule="Gestor_Empleados_iOs" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomEmployeeCell" rowHeight="60" id="KGk-i7-Jjw" customClass="EmployeeListTableViewCell" customModule="Gestor_Empleados_iOs" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -48,22 +48,22 @@
                     <constraint firstItem="UdW-Sr-wp4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="3Kk-AI-Opx"/>
                     <constraint firstItem="z7W-le-Xy3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="3Mx-Mv-EyO"/>
                     <constraint firstAttribute="bottom" secondItem="z7W-le-Xy3" secondAttribute="bottom" constant="13" id="Als-JY-2Qr"/>
-                    <constraint firstItem="z7W-le-Xy3" firstAttribute="leading" secondItem="UdW-Sr-wp4" secondAttribute="trailing" constant="215" id="CrB-sl-IRJ"/>
                     <constraint firstAttribute="bottom" secondItem="xbc-xl-cta" secondAttribute="bottom" constant="9" id="ErA-9x-Wlg"/>
                     <constraint firstItem="UdW-Sr-wp4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="Pqu-ox-B5m"/>
                     <constraint firstAttribute="bottom" secondItem="t3W-Xj-4MY" secondAttribute="bottom" constant="9" id="TFw-0F-ORF"/>
                     <constraint firstItem="xbc-xl-cta" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="ax8-eE-IvA"/>
                     <constraint firstItem="t3W-Xj-4MY" firstAttribute="leading" secondItem="xbc-xl-cta" secondAttribute="trailing" constant="87" id="kip-Jt-3uX"/>
-                    <constraint firstItem="z7W-le-Xy3" firstAttribute="leading" secondItem="t3W-Xj-4MY" secondAttribute="trailing" constant="80" id="qy3-KX-0J3"/>
+                    <constraint firstAttribute="trailing" secondItem="z7W-le-Xy3" secondAttribute="trailing" constant="13" id="oLw-gI-rKe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.91764705882352937" green="0.93333333333333335" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="employeeName" destination="UdW-Sr-wp4" id="6KA-Jq-GkO"/>
                 <outlet property="employeeSalary" destination="t3W-Xj-4MY" id="YVy-zc-5Tp"/>
                 <outlet property="employeeWorkplace" destination="xbc-xl-cta" id="Ify-a3-1gv"/>
             </connections>
-            <point key="canvasLocation" x="48" y="82"/>
+            <point key="canvasLocation" x="9" y="36"/>
         </tableViewCell>
     </objects>
     <resources>

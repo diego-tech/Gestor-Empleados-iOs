@@ -9,7 +9,11 @@ import Foundation
 
 enum UserDefaultsKey: String {
 	case authUserToken
+	case authUserName
 	case authUserEmail
+	case authUserWorkplace
+	case authUserSalary
+	case authUserBiography
 }
 
 final class UserDefaultsProvider {
