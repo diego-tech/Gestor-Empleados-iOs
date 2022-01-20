@@ -20,7 +20,7 @@
         <!--Perfil-->
         <scene sceneID="2J0-CV-83I">
             <objects>
-                <viewController id="tUk-5n-bTm" customClass="ProfileViewController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" modalPresentationStyle="fullScreen" id="tUk-5n-bTm" customClass="ProfileViewController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LTd-e7-Nqh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,7 +167,7 @@ hendrerit nibh.
         <!--Home-->
         <scene sceneID="5Vx-Bu-t4s">
             <objects>
-                <viewController restorationIdentifier="Prueba" storyboardIdentifier="HomeViewController" id="Umy-c4-8v3" customClass="HomeViewController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" modalPresentationStyle="fullScreen" id="Umy-c4-8v3" customClass="HomeViewController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oh1-oe-urx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -11,7 +11,6 @@ import Alamofire
 class HomeViewController: UIViewController {
 	
 	// Variables
-	let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 	private var employeeViewModel = EmployeeViewModel()
 	
 	// Outlets

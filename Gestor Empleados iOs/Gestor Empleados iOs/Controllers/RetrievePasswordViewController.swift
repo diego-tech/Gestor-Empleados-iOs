@@ -37,7 +37,7 @@ class RetrievePasswordViewController: UIViewController {
 	}
 	
 	@IBAction func goBackButtonAction(_ sender: Any) {
-		navigate()
+		dismiss(animated: true, completion: nil)
 	}
 	
 	// MARK: API Functions
@@ -59,17 +59,11 @@ class RetrievePasswordViewController: UIViewController {
 	private func alertFunction(title: String, msg: String){
 		let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Volver", style: .default,handler: { action in
-			self.navigate()
+			self.dismiss(animated: true, completion: nil)
 			self.emailTextField.text = ""
 		}))
 		
 		present(alert, animated: true)
-	}
-	
-	private func navigate() {
-		let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-		let vc = storyBoard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
-		self.present(vc, animated: true, completion: nil)
 	}
 	
 	// MARK: Styles

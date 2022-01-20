@@ -10,11 +10,10 @@ import Alamofire
 
 class EmployeeViewModel {
 	
-	let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 	private var employeeList = [Data]()
 	
 	func fetchEmployeeList(completion: @escaping () -> ()) {
-		NetworkingProvider.shared.employeeList(authToken: authToken) { responseData, status in
+		NetworkingProvider.shared.employeeList() { responseData, status in
 			// self.employeeList
 			self.employeeList = responseData!
 			completion()
