@@ -19,7 +19,7 @@ struct Response: Decodable {
 
 struct ListResponse: Decodable {
 	let status: Int?
-	let data: [Data]?
+	var data: [Data]?
 	
 	enum CodingKeys: String, CodingKey {
 		case status

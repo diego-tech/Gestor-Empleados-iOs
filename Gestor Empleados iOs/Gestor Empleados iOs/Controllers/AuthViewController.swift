@@ -67,7 +67,7 @@ class AuthViewController: UIViewController {
 			if status != Constants.kErrorStatusCode {
 				self.navigate()
 			} else {
-				print(responseData?.msg as Any)
+				print(responseData?.msg)
 			}
 		} failure: { error in
 			print(error!)

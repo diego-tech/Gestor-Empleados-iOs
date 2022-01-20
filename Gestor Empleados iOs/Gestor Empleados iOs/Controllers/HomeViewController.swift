@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 	
 	// Variables
 	private var employeeViewModel = EmployeeViewModel()
+	private var employee: Data?
 	
 	// Outlets
 	@IBOutlet weak var employeeListView: UITableView!
@@ -52,14 +53,18 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		employeeListView.deselectRow(at: indexPath, animated: true)
+		employee = employeeViewModel.cellForRowAt(indexPath: indexPath)
+		
+		// Mandar Id Seleccionado
 		
 		navigate()
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = employeeListView.dequeueReusableCell(withIdentifier: "CustomEmployeeCell", for: indexPath) as! EmployeeListTableViewCell
-		let employees = employeeViewModel.cellForRowAt(indexPath: indexPath)
-		cell.setCellWithValueOf(employees)
+		
+		employee = employeeViewModel.cellForRowAt(indexPath: indexPath)
+		cell.setCellWithValueOf(employee!)
 	
 		return cell
 	}

@@ -26,7 +26,6 @@ class EmployeeViewModel {
 		if employeeList.count != 0 {
 			return employeeList.count
 		}
-		
 		return 0
 	}
 	
