@@ -26,7 +26,6 @@ class AuthViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
-
 		
 		// Styles And Custom Actions
 		textFieldStyle()
@@ -60,7 +59,7 @@ class AuthViewController: UIViewController {
 	private func login(loginUser: UserLogin) {
 		NetworkingProvider.shared.login(user: loginUser) { responseData, status in
 			if let auth_token = responseData?.apiToken, let auth_email = responseData?.email, let auth_name = responseData?.name, let auth_workplace = responseData?.workplace, let auth_salary = responseData?.salary, let auth_biography = responseData?.biography {
-				
+								
 				self.setUserLoginDefaults(authUserToken: auth_token, authUserEmail: auth_email, authUserName: auth_name, authUserWorkplace: auth_workplace, authUserSalary: auth_salary, authUserBiography: auth_biography)
 			}
 	
@@ -154,87 +153,6 @@ class AuthViewController: UIViewController {
 			tappedImage.image = UIImage(named: "CloseEye")
 			passwordTextField.isSecureTextEntry = true
 		}
-	}
-	
-	// MARK: Test Api Routes
-	private func testApiRoutes (){
-		// MARK: Employee Detail
-		
-//		NetworkingProvider.shared.employeeDetail(authToken: authToken, id: 3) { responseData in
-//			print(responseData)
-//		} failure: { error in
-//			print(error)
-//		} status: { status in
-//			print(status)
-//		}
-		
-		// MARK: Login
-		
-//		let userLogin = UserLogin(email: "diegorrhh@gmail.com", password: "Diego12345.")
-//
-//		NetworkingProvider.shared.login(user: userLogin) { user in
-//			print(user)
-//		} failure: { error in
-//			print(error)
-//		} status: { status in
-//			print(status)
-//		}
-		
-		// MARK: User Register
-		
-//		let newUser = NewUser(name: "Diego", email: "diego171200@gmail.com", password: "Prueba12345.", workplace: "Empleado", salary: "1500", biography: "Hola Soy Prueba")
-//
-//		NetworkingProvider.shared.register(authToken: authToken, user: newUser) { responseData in
-//			print(responseData)
-//		} failure: { error in
-//			print(error)
-//		} status: { status in
-//			print(status)
-//		}
-		
-		// MARK: Retrieve Password
-		
-//		let email: String = "diego171200@gmail.com"
-//
-//		NetworkingProvider.shared.retrievePassword(email: email) { error in
-//			print(error)
-//		} status: { status in
-//			print(status)
-//		}
-		
-		// MARK: Modify Data
-		
-//		let updateUser = NewUser(name: "Pepe", email: nil, password: nil, workplace: nil, salary: nil, biography: nil)
-//
-//		NetworkingProvider.shared.modifyData(authToken: authToken, userId: 8, user: updateUser) { responseData in
-//			print(responseData)
-//		} failure: { error in
-//			print(error)
-//		} status: { status in
-//			print(status)
-//		}
-		
-		// MARK: Modify Password
-		
-//		let newPasswords = NewPasswords(password: "Diego12345.", repeatPassword: "Diego12345.")
-//
-//		NetworkingProvider.shared.modifyPassword(authToken: authToken, passwords: newPasswords) { responseData in
-//			print(responseData)
-//		} failure: { error in
-//			print(error)
-//		} status: { status in
-//			print(status)
-//		}
-		
-		// MARK: LogOut
-		
-//		NetworkingProvider.shared.logout(authToken: authToken) { responseData in
-//			print(responseData)
-//		} failure: { error in
-//			print(error)
-//		} status: { status in
-//			print(status)
-//		}
 	}
 }
 

@@ -201,5 +201,25 @@ final class NetworkingProvider {
 			}
 		}
 	}
+	
+	// See Profile
+	func seeProfile(serverResponse: @escaping (_ responseData: Data?, _ status: Int?) -> (), failure: @escaping (_ error: Error?) -> ()) {
+		let url = "\(Constants.kBaseURL)/see_profile"
+		
+		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
+		
+		AF.request(url, method: .get, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable (of: Response.self, decoder: DateDecoder()) { response in
+			
+			// Handle Response Data & Status Code
+			if let data = response.value?.data, let statusCode = response.value?.status{
+				serverResponse(data, statusCode)
+			}
+
+			// Handle Alamofire Error
+			if let error = response.error {
+				failure(error)
+			}
+		}
+	}
 }
 

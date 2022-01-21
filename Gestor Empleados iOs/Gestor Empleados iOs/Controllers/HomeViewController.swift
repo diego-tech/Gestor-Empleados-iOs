@@ -25,6 +25,10 @@ class HomeViewController: UIViewController {
 		
 		employeeListView.allowsSelection = true
 		employeeList()
+		
+		// Employee List Styles
+		employeeListView.separatorStyle = .singleLine
+  		employeeListView.showsVerticalScrollIndicator = false
     }
 	
 	// MARK: API Functions
@@ -71,6 +75,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 		
 		employee = employeeViewModel.cellForRowAt(indexPath: indexPath)
 		cell.setCellWithValueOf(employee!)
+		
+		cell.layer.cornerRadius = 8
+		cell.layer.masksToBounds = true
 	
 		return cell
 	}

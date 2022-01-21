@@ -108,6 +108,9 @@ hendrerit nibh.
                                 <rect key="frame" x="326" y="106" width="58" height="50"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="LogOut"/>
+                                <connections>
+                                    <action selector="logOutButtonAction:" destination="tUk-5n-bTm" eventType="touchUpInside" id="6uv-pu-bSo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WfI-98-9NM"/>
@@ -178,15 +181,8 @@ hendrerit nibh.
                                 <color key="textColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TOS-Xe-9o7">
-                                <rect key="frame" x="20" y="176" width="374" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="B2R-GS-o0B"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="F0D-Ma-FU8">
-                                <rect key="frame" x="20" y="240" width="374" height="573"/>
+                                <rect key="frame" x="20" y="175" width="374" height="638"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -204,15 +200,14 @@ hendrerit nibh.
                         <viewLayoutGuide key="safeArea" id="e9a-fT-BEb"/>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="TOS-Xe-9o7" firstAttribute="leading" secondItem="F0D-Ma-FU8" secondAttribute="leading" id="0Gx-2B-lfX"/>
-                            <constraint firstItem="TOS-Xe-9o7" firstAttribute="trailing" secondItem="F0D-Ma-FU8" secondAttribute="trailing" id="8ZS-mo-7b3"/>
-                            <constraint firstItem="F0D-Ma-FU8" firstAttribute="top" secondItem="TOS-Xe-9o7" secondAttribute="bottom" constant="20" id="CZd-9f-Gjz"/>
-                            <constraint firstItem="TOS-Xe-9o7" firstAttribute="top" secondItem="Oh1-oe-urx" secondAttribute="top" constant="176" id="ITH-BL-BCm"/>
-                            <constraint firstItem="F0D-Ma-FU8" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="20" id="Qbt-kd-AIA"/>
-                            <constraint firstItem="F0D-Ma-FU8" firstAttribute="bottom" secondItem="e9a-fT-BEb" secondAttribute="bottom" id="rN4-xz-KX7"/>
-                            <constraint firstItem="TOS-Xe-9o7" firstAttribute="top" secondItem="ISt-gG-JTw" secondAttribute="bottom" constant="31" id="sxc-Fh-baT"/>
-                            <constraint firstItem="ISt-gG-JTw" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="30" id="xT2-Tt-c9K"/>
-                            <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="F0D-Ma-FU8" secondAttribute="trailing" constant="20" id="zkn-l3-iVk"/>
+                            <constraint firstItem="F0D-Ma-FU8" firstAttribute="top" secondItem="ISt-gG-JTw" secondAttribute="bottom" constant="30" id="41Y-qf-8vx"/>
+                            <constraint firstItem="F0D-Ma-FU8" firstAttribute="top" secondItem="ISt-gG-JTw" secondAttribute="bottom" constant="30" id="5II-2P-CKE"/>
+                            <constraint firstItem="ISt-gG-JTw" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="30" id="M9u-ek-ABN"/>
+                            <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="ISt-gG-JTw" secondAttribute="trailing" constant="330" id="TBt-YW-nDK"/>
+                            <constraint firstItem="F0D-Ma-FU8" firstAttribute="bottom" secondItem="e9a-fT-BEb" secondAttribute="bottom" id="Tuk-Ed-NeP"/>
+                            <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="F0D-Ma-FU8" secondAttribute="trailing" constant="20" id="q7b-fJ-GBY"/>
+                            <constraint firstItem="F0D-Ma-FU8" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="20" id="ugb-Ea-NWX"/>
+                            <constraint firstItem="ISt-gG-JTw" firstAttribute="top" secondItem="e9a-fT-BEb" secondAttribute="top" constant="74" id="xjD-oh-FfT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home" id="aNZ-ib-Yga">

@@ -45,6 +45,7 @@ class ChangePasswordViewController: UIViewController {
 		
 		if let firstPassword = firstPassword, let secondPassword = secondPassword {
 			if firstPassword != "", secondPassword != "" {
+				// Comprobar problema tras change password
 				let password = NewPassword(password: firstPassword, repeatPassword: secondPassword)
 				UserDefaultsProvider.remove(key: .authUserToken)
 				changePassword(password: password)
@@ -56,7 +57,7 @@ class ChangePasswordViewController: UIViewController {
 	private func changePassword(password: NewPassword){
 		NetworkingProvider.shared.changePassword(passwords: password) { responseData in
 			let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-			let vc = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! AuthViewController
+			let vc = storyBoard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
 			self.present(vc, animated: true, completion: nil)
 		} failure: { error in
 			print(error)
@@ -64,8 +65,6 @@ class ChangePasswordViewController: UIViewController {
 			print(status)
 		}
 	}
-	
-	// MARK: Functions
 
 	// MARK: Styles
 	private func textFieldStyle(){

@@ -14,7 +14,6 @@ class EmployeeViewModel {
 	
 	func fetchEmployeeList(completion: @escaping () -> ()) {
 		NetworkingProvider.shared.employeeList() { responseData, status in
-			// self.employeeList
 			self.employeeList = responseData!
 			completion()
 		} failure: { error in

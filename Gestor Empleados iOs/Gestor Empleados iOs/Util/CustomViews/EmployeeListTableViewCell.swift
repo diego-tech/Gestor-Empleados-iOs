@@ -12,7 +12,7 @@ class EmployeeListTableViewCell: UITableViewCell {
 	@IBOutlet weak var employeeName: UILabel!
 	@IBOutlet weak var employeeWorkplace: UILabel!
 	@IBOutlet weak var employeeSalary: UILabel!
-	
+		
 	func setCellWithValueOf(_ employee: Data) {
 		updateUI(employeeName: employee.name, employeeWorkplace: employee.workplace, employeeSalary: employee.salary)
 	}
