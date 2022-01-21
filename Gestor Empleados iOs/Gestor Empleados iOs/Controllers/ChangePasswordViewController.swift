@@ -17,7 +17,6 @@ class ChangePasswordViewController: UIViewController {
 	var secondPassword: String?
 	
 	var iconClick = false
-	private let imageEye = UIImageView()
 	
 	// Outlets
 	@IBOutlet weak var firstPasswordTextField: UITextField!
@@ -31,7 +30,7 @@ class ChangePasswordViewController: UIViewController {
 		// Styles And Custom Actions
 		textFieldStyle()
 		acceptButtonStyle()
-		showAndHidePassword()
+		showAndHidePassword(textField: secondPasswordTextField)
     }
     
 	
@@ -56,7 +55,6 @@ class ChangePasswordViewController: UIViewController {
 	// MARK: API Function
 	private func changePassword(password: NewPassword){
 		NetworkingProvider.shared.changePassword(passwords: password) { responseData in
-			print(responseData?.msg)			
 			let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 			let vc = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! AuthViewController
 			self.present(vc, animated: true, completion: nil)
@@ -99,7 +97,8 @@ class ChangePasswordViewController: UIViewController {
 		acceptButton.layer.cornerRadius = 10
 	}
 	
-	private func showAndHidePassword() {
+	private func showAndHidePassword(textField: UITextField) {
+		let imageEye = UIImageView()
 		imageEye.image = UIImage(named: "CloseEye")
 		
 		let contentView = UIView()
@@ -110,11 +109,8 @@ class ChangePasswordViewController: UIViewController {
 
 		imageEye.frame = CGRect(x: -10, y: 0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye")!.size.height)
 		
-		firstPasswordTextField.rightView = contentView
-		firstPasswordTextField.rightViewMode = .always
-		
-//		secondPasswordTextField.rightView = contentView
-//		secondPasswordTextField.rightViewMode = .always
+		textField.rightView = contentView
+		textField.rightViewMode = .always
 
 		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
 		
@@ -122,19 +118,19 @@ class ChangePasswordViewController: UIViewController {
 		imageEye.addGestureRecognizer(tapGestureRecognizer)
 	}
 	
-	@objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+	@objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
 		let tappedImage = tapGestureRecognizer.view as! UIImageView
 		
 		if iconClick {
 			iconClick = false
-			tappedImage.image = UIImage(named: "EyeOpen")
 			firstPasswordTextField.isSecureTextEntry = false
 			secondPasswordTextField.isSecureTextEntry = false
+			tappedImage.image = UIImage(named: "EyeOpen")
 		} else {
 			iconClick = true
-			tappedImage.image = UIImage(named: "CloseEye")
 			firstPasswordTextField.isSecureTextEntry = true
 			secondPasswordTextField.isSecureTextEntry = true
+			tappedImage.image = UIImage(named: "CloseEye")
 		}
 	}
 }

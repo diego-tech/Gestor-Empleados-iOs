@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
 	private func navigate(){
 		let storyBoard = UIStoryboard(name: "EmployeeDetail", bundle: nil)
 		let vc = storyBoard.instantiateViewController(withIdentifier: "EmployeeDetail") as! EmployeeDetailViewController
-		self.present(vc, animated: true, completion: nil)
+		self.present(vc, animated: false, completion: nil)
 	}
 }
 
@@ -62,9 +62,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 		if let id = employee?.id {
 			vc.id = id
 		}
-		self.present(vc, animated: true, completion: nil)
 		
-		navigate()
+		self.present(vc, animated: true, completion: nil)
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
