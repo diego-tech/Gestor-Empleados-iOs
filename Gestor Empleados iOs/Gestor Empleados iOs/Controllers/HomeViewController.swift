@@ -56,6 +56,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 		employee = employeeViewModel.cellForRowAt(indexPath: indexPath)
 		
 		// Mandar Id Seleccionado
+		let storyBoard = UIStoryboard(name: "EmployeeDetail", bundle: nil)
+		let vc = storyBoard.instantiateViewController(withIdentifier: "EmployeeDetail") as! EmployeeDetailViewController
+		
+		if let id = employee?.id {
+			vc.id = id
+		}
+		self.present(vc, animated: true, completion: nil)
 		
 		navigate()
 	}
