@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Medium</string>
+            <string>SFPro-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Register" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="RegisterViewController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0O-lV-Rnd">
+                                <rect key="frame" x="165" y="115" width="84" height="26"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHw-Ci-hyU">
+                                <rect key="frame" x="22" y="106" width="56" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Arrow Back"/>
+                                <connections>
+                                    <action selector="goBackButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="353-ho-F8M"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkb-HT-ZkN">
+                                <rect key="frame" x="36" y="213" width="56" height="14"/>
+                                <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo Electrónico *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXM-wY-4nA">
+                                <rect key="frame" x="36" y="277" width="118" height="14"/>
+                                <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yP-bb-tHf">
+                                <rect key="frame" x="36" y="341" width="76" height="14"/>
+                                <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puesto de Trabajo *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF7-qG-q62">
+                                <rect key="frame" x="36" y="405" width="114" height="14"/>
+                                <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salario *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f20-VX-82I">
+                                <rect key="frame" x="36" y="467" width="49" height="14"/>
+                                <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biografía *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2C-P5-RKz">
+                                <rect key="frame" x="36" y="531" width="61" height="14"/>
+                                <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zH-GC-AQc">
+                                <rect key="frame" x="36" y="235" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oIs-wH-DHL">
+                                <rect key="frame" x="36" y="363" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9s4-kp-XFf">
+                                <rect key="frame" x="36" y="489" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="86s-rW-wYg">
+                                <rect key="frame" x="36" y="299" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HIE-KU-nio">
+                                <rect key="frame" x="36" y="553" width="343" height="170"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" name="MainColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="f5m-Yc-aF6"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpC-TR-jdt">
+                                <rect key="frame" x="111" y="758" width="193" height="36"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                                <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="REGISTRAR">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="u7u-dg-GeO"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2vJ-xF-YyN">
+                                <rect key="frame" x="36" y="432" width="343" height="32"/>
+                                <segments>
+                                    <segment title="Empleado"/>
+                                    <segment title="RRHH"/>
+                                    <segment title="Directivo"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dpC-TR-jdt" firstAttribute="top" secondItem="HIE-KU-nio" secondAttribute="bottom" constant="35" id="4Bd-PV-vH2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HIE-KU-nio" secondAttribute="trailing" constant="35" id="6d0-eE-t3k"/>
+                            <constraint firstItem="oIs-wH-DHL" firstAttribute="top" secondItem="0yP-bb-tHf" secondAttribute="bottom" constant="8" symbolic="YES" id="7V4-Fl-HxD"/>
+                            <constraint firstItem="p0O-lV-Rnd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="71" id="8IJ-Lq-3EB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oIs-wH-DHL" secondAttribute="trailing" constant="35" id="9pq-9U-wO7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="f20-VX-82I" secondAttribute="trailing" constant="329" id="DdA-4P-3yl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="g2C-P5-RKz" secondAttribute="trailing" constant="317" id="EFt-Bh-4dh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xkb-HT-ZkN" secondAttribute="trailing" constant="322" id="FSq-ix-F78"/>
+                            <constraint firstItem="OF7-qG-q62" firstAttribute="top" secondItem="oIs-wH-DHL" secondAttribute="bottom" constant="8" symbolic="YES" id="Fdb-6p-00h"/>
+                            <constraint firstItem="uHw-Ci-hyU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="22" id="G3q-OL-lCi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0yP-bb-tHf" secondAttribute="trailing" constant="302" id="GaA-fJ-wyK"/>
+                            <constraint firstItem="p0O-lV-Rnd" firstAttribute="leading" secondItem="uHw-Ci-hyU" secondAttribute="trailing" constant="87" id="Gys-Pg-gf8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2vJ-xF-YyN" secondAttribute="trailing" constant="35" id="IEW-D7-fHG"/>
+                            <constraint firstItem="YXM-wY-4nA" firstAttribute="top" secondItem="3zH-GC-AQc" secondAttribute="bottom" constant="8" symbolic="YES" id="J9X-0V-Hkc"/>
+                            <constraint firstItem="f20-VX-82I" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="JvH-86-h5p"/>
+                            <constraint firstItem="xkb-HT-ZkN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="KHa-1S-Iap"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="p0O-lV-Rnd" secondAttribute="trailing" constant="165" id="SDI-sw-YhJ"/>
+                            <constraint firstItem="9s4-kp-XFf" firstAttribute="top" secondItem="f20-VX-82I" secondAttribute="bottom" constant="8" symbolic="YES" id="Sen-8q-JSJ"/>
+                            <constraint firstItem="g2C-P5-RKz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="TwE-8h-Xp8"/>
+                            <constraint firstItem="oIs-wH-DHL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="VSk-D3-Jnd"/>
+                            <constraint firstItem="HIE-KU-nio" firstAttribute="top" secondItem="g2C-P5-RKz" secondAttribute="bottom" constant="8" symbolic="YES" id="ZDq-ax-ckC"/>
+                            <constraint firstItem="g2C-P5-RKz" firstAttribute="top" secondItem="9s4-kp-XFf" secondAttribute="bottom" constant="8" symbolic="YES" id="ZHc-r5-tsP"/>
+                            <constraint firstItem="3zH-GC-AQc" firstAttribute="top" secondItem="xkb-HT-ZkN" secondAttribute="bottom" constant="8" symbolic="YES" id="bRP-JH-LFR"/>
+                            <constraint firstItem="2vJ-xF-YyN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="blU-GO-3rY"/>
+                            <constraint firstItem="YXM-wY-4nA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="d1B-yE-Icw"/>
+                            <constraint firstItem="3zH-GC-AQc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="dPv-bo-FNE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YXM-wY-4nA" secondAttribute="trailing" constant="260" id="dRa-Fv-g3f"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="86s-rW-wYg" secondAttribute="trailing" constant="35" id="eQx-Hn-t0J"/>
+                            <constraint firstItem="86s-rW-wYg" firstAttribute="top" secondItem="YXM-wY-4nA" secondAttribute="bottom" constant="8" symbolic="YES" id="h0D-cV-oGv"/>
+                            <constraint firstItem="dpC-TR-jdt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="111" id="hF1-mi-O8x"/>
+                            <constraint firstItem="86s-rW-wYg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="iw7-D2-hWN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dpC-TR-jdt" secondAttribute="trailing" constant="110" id="nFS-Qj-O4N"/>
+                            <constraint firstItem="HIE-KU-nio" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="oI2-6I-q4h"/>
+                            <constraint firstItem="uHw-Ci-hyU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="62" id="qBj-Uh-Tdp"/>
+                            <constraint firstItem="2vJ-xF-YyN" firstAttribute="top" secondItem="OF7-qG-q62" secondAttribute="bottom" constant="13" id="sQx-eD-mBy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dpC-TR-jdt" secondAttribute="bottom" constant="68" id="sSS-Ts-eDS"/>
+                            <constraint firstItem="f20-VX-82I" firstAttribute="top" secondItem="2vJ-xF-YyN" secondAttribute="bottom" constant="4" id="sms-uI-2UD"/>
+                            <constraint firstItem="0yP-bb-tHf" firstAttribute="top" secondItem="86s-rW-wYg" secondAttribute="bottom" constant="8" symbolic="YES" id="tCf-lB-uyy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OF7-qG-q62" secondAttribute="trailing" constant="264" id="tes-F7-Q3q"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9s4-kp-XFf" secondAttribute="trailing" constant="35" id="uAB-Jh-fuw"/>
+                            <constraint firstItem="xkb-HT-ZkN" firstAttribute="top" secondItem="uHw-Ci-hyU" secondAttribute="bottom" constant="63" id="uVY-9p-qav"/>
+                            <constraint firstItem="9s4-kp-XFf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="vSX-ab-4GJ"/>
+                            <constraint firstItem="0yP-bb-tHf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="x5X-J9-1mu"/>
+                            <constraint firstItem="OF7-qG-q62" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="yy8-Kj-6Kc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3zH-GC-AQc" secondAttribute="trailing" constant="35" id="zJ4-Mg-Wig"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="biographyTextView" destination="HIE-KU-nio" id="tjP-Xd-KNe"/>
+                        <outlet property="emailTextField" destination="86s-rW-wYg" id="0OV-2I-66c"/>
+                        <outlet property="nameTextField" destination="3zH-GC-AQc" id="DhH-51-uGA"/>
+                        <outlet property="passwordTextField" destination="oIs-wH-DHL" id="xlf-6c-LGf"/>
+                        <outlet property="registerButton" destination="dpC-TR-jdt" id="IZA-Zc-NBl"/>
+                        <outlet property="salaryTextField" destination="9s4-kp-XFf" id="xz4-VJ-0WH"/>
+                        <outlet property="workplaceSegmentedControls" destination="2vJ-xF-YyN" id="Mcq-l7-Rv5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Arrow Back" width="32" height="30"/>
+        <namedColor name="MainColor">
+            <color red="0.19607843137254902" green="0.26666666666666666" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

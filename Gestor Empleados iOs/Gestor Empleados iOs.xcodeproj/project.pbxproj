@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5E061F9C2792D92C000CAE79 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E061F9B2792D92C000CAE79 /* NewUser.swift */; };
 		5E061FA02792E7A2000CAE79 /* NewPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E061F9F2792E7A2000CAE79 /* NewPassword.swift */; };
+		5E2211F5279BFCE3001CABAA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2211F4279BFCE3001CABAA /* RegisterViewController.swift */; };
+		5E2211F8279BFCF6001CABAA /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2211F7279BFCF6001CABAA /* Register.storyboard */; };
 		5E2D46D52796BC0A00B68CD7 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D46D02796BC0A00B68CD7 /* SF-Pro-Display-Medium.otf */; };
 		5E2D46D62796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D46D12796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf */; };
 		5E2D46D72796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D46D22796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		5E061F9B2792D92C000CAE79 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		5E061F9F2792E7A2000CAE79 /* NewPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPassword.swift; sourceTree = "<group>"; };
+		5E2211F4279BFCE3001CABAA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5E2211F7279BFCF6001CABAA /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		5E2D46D02796BC0A00B68CD7 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		5E2D46D12796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		5E2D46D22796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E2211F6279BFCE7001CABAA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				5E2211F7279BFCF6001CABAA /* Register.storyboard */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		5E2D46CF2796BBD300B68CD7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +216,7 @@
 		5EA99EE1279589AA00CAEA01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5E2211F6279BFCE7001CABAA /* Register */,
 				5E90E2D4279853FD00EBE47F /* ChangePassword */,
 				5E90E2CA2798364B00EBE47F /* Detail */,
 				5EB29401279712A2008FF4DE /* RetrievePassword */,
@@ -224,6 +237,7 @@
 				5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */,
 				5E90E2D127983EA800EBE47F /* ProfileViewController.swift */,
 				5E90E2D72798541F00EBE47F /* ChangePasswordViewController.swift */,
+				5E2211F4279BFCE3001CABAA /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -374,6 +388,7 @@
 				5EB293F927970C49008FF4DE /* Home.storyboard in Resources */,
 				5E2D46D62796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf in Resources */,
 				5E90E2D027983C5100EBE47F /* EmployeeDetail.storyboard in Resources */,
+				5E2211F8279BFCF6001CABAA /* Register.storyboard in Resources */,
 				5EEF71BB278C22C900559D7D /* Assets.xcassets in Resources */,
 				5E2D46D92796BC0A00B68CD7 /* SF-Pro.ttf in Resources */,
 				5E2D46D82796BC0A00B68CD7 /* SF-Pro-Display-Regular.otf in Resources */,
@@ -401,6 +416,7 @@
 				5E9039E1279173AA003CCD3C /* User.swift in Sources */,
 				5E90E2D82798541F00EBE47F /* ChangePasswordViewController.swift in Sources */,
 				5E2D46DB2796C33B00B68CD7 /* TextStyles.swift in Sources */,
+				5E2211F5279BFCE3001CABAA /* RegisterViewController.swift in Sources */,
 				5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */,
 				5EB6C0762796E57C00013E9B /* Constants.swift in Sources */,
 				5E90E2C927982AA400EBE47F /* EmployeeViewModel.swift in Sources */,

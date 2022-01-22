@@ -14,6 +14,23 @@ class HomeViewController: UIViewController {
 	private var employeeViewModel = EmployeeViewModel()
 	private var employee: Data?
 	
+	// Floating Button
+	private let floatingButton: UIButton = {
+		let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+		button.backgroundColor = .mainColor
+		
+		let image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
+		button.setImage(image, for: .normal)
+		button.tintColor = .white
+		button.setTitleColor(.mainColor, for: .normal)
+		button.layer.shadowRadius = 10
+		button.layer.shadowOpacity = 0.3
+		
+		// Corner Radius
+		button.layer.cornerRadius = 30
+		return button
+	}()
+	
 	// Outlets
 	@IBOutlet weak var employeeListView: UITableView!
 	
@@ -24,12 +41,26 @@ class HomeViewController: UIViewController {
 		self.employeeListView.register(UINib(nibName: "EmployeeListTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomEmployeeCell")
 		
 		employeeListView.allowsSelection = true
+		
 		employeeList()
 		
 		// Employee List Styles
 		employeeListView.separatorStyle = .singleLine
   		employeeListView.showsVerticalScrollIndicator = false
+		
+		// Floating Button Initialisation
+		floatingButtonInit()
     }
+	
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		
+		// Floating Button
+		floatingButton.frame = CGRect(x: view.frame.size.width - 120,
+									  y: view.frame.size.height - 200,
+									  width: 60,
+									  height: 60)
+	}
 	
 	// MARK: API Functions
 	private func employeeList(){
@@ -44,6 +75,18 @@ class HomeViewController: UIViewController {
 	private func navigate(){
 		let storyBoard = UIStoryboard(name: "EmployeeDetail", bundle: nil)
 		let vc = storyBoard.instantiateViewController(withIdentifier: "EmployeeDetail") as! EmployeeDetailViewController
+		self.present(vc, animated: false, completion: nil)
+	}
+	
+	// MARK: Floating Button Styles
+	private func floatingButtonInit() {
+		view.addSubview(floatingButton)
+		floatingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+	}
+	
+	@objc private func didTapButton() {
+		let storyBoard = UIStoryboard(name: "Register", bundle: nil)
+		let vc = storyBoard.instantiateViewController(withIdentifier: "Register") as! RegisterViewController
 		self.present(vc, animated: false, completion: nil)
 	}
 }
