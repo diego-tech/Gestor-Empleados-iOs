@@ -113,7 +113,7 @@ final class NetworkingProvider {
 	}
 	
 	// Modify Data
-	func modifyData(userId: Int, user: NewUser, serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
+	func modifyData(userId: Int, user: NewUser, serverResponse: @escaping (_ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/modify_data?user_id=\(userId)"
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 
@@ -121,9 +121,9 @@ final class NetworkingProvider {
 		AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
-			// Handle Response Data && Status Code && Message
-			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg{
-				serverResponse(data, code, msg)
+			// Handle && Status Code && Message
+			if let code = response.value?.status, let msg = response.value?.msg{
+				serverResponse(code, msg)
 			}
 			
 			// Handle Alamofire Error
@@ -134,7 +134,7 @@ final class NetworkingProvider {
 	}
 	
 	// Modify Password
-	func changePassword(passwords: NewPassword, serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()){
+	func changePassword(passwords: NewPassword, serverResponse: @escaping (_ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()){
 		let url = "\(Constants.kBaseURL)/modify_password"
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 		
@@ -142,8 +142,8 @@ final class NetworkingProvider {
 			response in
 			
 			// Handle Response Data && Status Code && Message
-			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg {
-				serverResponse(data, code, msg)
+			if let code = response.value?.status, let msg = response.value?.msg {
+				serverResponse(code, msg)
 			}
 			
 			// Handle Alamofire Error
@@ -154,16 +154,16 @@ final class NetworkingProvider {
 	}
 	
 	// Logout
-	func logout(serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
+	func logout(serverResponse: @escaping (_ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/logout"
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 		
 		AF.request(url, method: .post, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
-			// Handle Response Data && Status Code && Message
-			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg {
-				serverResponse(data, code, msg)
+			// Handle Status Code && Message
+			if let code = response.value?.status, let msg = response.value?.msg {
+				serverResponse(code, msg)
 			}
 			
 			// Handle Alamofire Error

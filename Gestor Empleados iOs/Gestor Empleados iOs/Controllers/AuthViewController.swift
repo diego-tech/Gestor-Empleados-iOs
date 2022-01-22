@@ -44,11 +44,19 @@ class AuthViewController: UIViewController {
 		password = passwordTextField.text
 		
 		if let email = email, let password = password {
-			if email != "", password != "" {
+			if email == "" {
+				emailTextField.layer.borderColor = UIColor.red.cgColor
+				emailTextField.layer.borderWidth = 0.3
+				emailTextField.layer.cornerCurve = .circular
+				emailTextField.layer.cornerRadius = 5
+			} else if password == ""{
+				passwordTextField.layer.borderColor = UIColor.red.cgColor
+				passwordTextField.layer.borderWidth = 0.3
+				passwordTextField.layer.cornerCurve = .circular
+				passwordTextField.layer.cornerRadius = 5
+			} else {
 				let userLogin = UserLogin(email: email, password: password)
 				login(loginUser: userLogin)
-			} else {
-				print("Introduzca")
 			}
 		}
 	}
@@ -64,7 +72,9 @@ class AuthViewController: UIViewController {
 			if status != Constants.kErrorStatusCode {
 				self.navigate()
 			} else {
-				print(msg)
+				if let msg = msg {
+					self.alertFunction(title: "Error", msg: msg)
+				}
 			}
 		} failure: { error in
 			print(error!)
@@ -89,6 +99,15 @@ class AuthViewController: UIViewController {
 		let storyBoard = UIStoryboard(name: "Home", bundle: nil)
 		let vc = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! UICustomTabBarController
 		self.present(vc, animated: true, completion: nil)
+	}
+	
+	private func alertFunction(title: String, msg: String){
+		let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Volver", style: .default,handler: { action in
+			self.dismiss(animated: true, completion: nil)
+		}))
+		
+		present(alert, animated: true)
 	}
 	
 	// MARK: Styles and Custom Actions

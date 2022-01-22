@@ -55,10 +55,8 @@ class ChangePasswordViewController: UIViewController {
 	
 	// MARK: API Function
 	private func changePassword(password: NewPassword){
-		NetworkingProvider.shared.changePassword(passwords: password) { responseData, status, msg in
-			let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-			let vc = storyBoard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
-			self.present(vc, animated: true, completion: nil)
+		NetworkingProvider.shared.changePassword(passwords: password) { status, message in
+			print(message)
 		} failure: { error in
 			print(error)
 		}

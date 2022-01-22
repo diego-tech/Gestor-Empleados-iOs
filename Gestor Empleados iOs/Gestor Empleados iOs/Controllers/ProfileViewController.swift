@@ -6,18 +6,24 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProfileViewController: UIViewController {
-	
+		
 	// Outlets
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var workplaceLabel: UILabel!
 	@IBOutlet weak var biographyLabel: UILabel!
 	@IBOutlet weak var salaryLabel: UILabel!
 	
-    override func viewDidLoad() {
+	override func viewDidLoad() {
         super.viewDidLoad()
-
+		
+		nameLabel.text = ""
+		workplaceLabel.text = ""
+		biographyLabel.text = ""
+		salaryLabel.text = ""
+	
 		getProfileData()
     }
 	
@@ -46,10 +52,10 @@ class ProfileViewController: UIViewController {
 	}
 	
 	private func logOut(){
-		NetworkingProvider.shared.logout { responseData, status, msg in
+		NetworkingProvider.shared.logout { status, msg in
 			self.navigateToAuth()
 			UserDefaultsProvider.remove(key: .authUserToken)
-			print( UserDefaultsProvider.string(key: .authUserToken))
+			print(UserDefaultsProvider.string(key: .authUserToken))
 		} failure: { error in
 			print(error)
 		}
