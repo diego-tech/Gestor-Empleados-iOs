@@ -35,11 +35,11 @@ class ChangePasswordViewController: UIViewController {
     
 	
 	// MARK: Action Buttons
-	@IBAction func goBackButtonAction(_ sender: Any) {
+	@IBAction func goBackButtonAction(_ sender: UIButton) {
 		dismiss(animated: true, completion: nil)
 	}
 	
-	@IBAction func acceptButtonAction(_ sender: Any) {
+	@IBAction func acceptButtonAction(_ sender: UIButton) {
 		firstPassword = firstPasswordTextField.text
 		secondPassword = secondPasswordTextField.text
 		

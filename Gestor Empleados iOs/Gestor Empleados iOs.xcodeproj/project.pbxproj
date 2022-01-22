@@ -38,6 +38,8 @@
 		5EB2940827972706008FF4DE /* EmployeeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2940627972706008FF4DE /* EmployeeListTableViewCell.xib */; };
 		5EB6C0762796E57C00013E9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6C0752796E57C00013E9B /* Constants.swift */; };
 		5EB6C0792796E66700013E9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6C0772796E66700013E9B /* HomeViewController.swift */; };
+		5ECCADAD279C4A9B0039D660 /* ModifyData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCADAC279C4A9B0039D660 /* ModifyData.storyboard */; };
+		5ECCADAF279C4AAE0039D660 /* ModifyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCADAE279C4AAE0039D660 /* ModifyDataViewController.swift */; };
 		5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B1278C22C800559D7D /* AppDelegate.swift */; };
 		5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B3278C22C800559D7D /* SceneDelegate.swift */; };
 		5EEF71B6278C22C800559D7D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B5278C22C800559D7D /* AuthViewController.swift */; };
@@ -78,6 +80,8 @@
 		5EB2940627972706008FF4DE /* EmployeeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeListTableViewCell.xib; sourceTree = "<group>"; };
 		5EB6C0752796E57C00013E9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5EB6C0772796E66700013E9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5ECCADAC279C4A9B0039D660 /* ModifyData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ModifyData.storyboard; sourceTree = "<group>"; };
+		5ECCADAE279C4AAE0039D660 /* ModifyDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDataViewController.swift; sourceTree = "<group>"; };
 		5EEF71AE278C22C800559D7D /* Gestor Empleados iOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gestor Empleados iOs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEF71B1278C22C800559D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EEF71B3278C22C800559D7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 		5EA99EE1279589AA00CAEA01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5ECCADAB279C4A850039D660 /* ModifyData */,
 				5E2211F6279BFCE7001CABAA /* Register */,
 				5E90E2D4279853FD00EBE47F /* ChangePassword */,
 				5E90E2CA2798364B00EBE47F /* Detail */,
@@ -238,6 +243,7 @@
 				5E90E2D127983EA800EBE47F /* ProfileViewController.swift */,
 				5E90E2D72798541F00EBE47F /* ChangePasswordViewController.swift */,
 				5E2211F4279BFCE3001CABAA /* RegisterViewController.swift */,
+				5ECCADAE279C4AAE0039D660 /* ModifyDataViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +287,14 @@
 				5EB2940627972706008FF4DE /* EmployeeListTableViewCell.xib */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		5ECCADAB279C4A850039D660 /* ModifyData */ = {
+			isa = PBXGroup;
+			children = (
+				5ECCADAC279C4A9B0039D660 /* ModifyData.storyboard */,
+			);
+			path = ModifyData;
 			sourceTree = "<group>";
 		};
 		5EEF71A5278C22C800559D7D = {
@@ -382,6 +396,7 @@
 				5E2D46D52796BC0A00B68CD7 /* SF-Pro-Display-Medium.otf in Resources */,
 				5EB2940827972706008FF4DE /* EmployeeListTableViewCell.xib in Resources */,
 				5EB2940327971340008FF4DE /* RetrievePassword.storyboard in Resources */,
+				5ECCADAD279C4A9B0039D660 /* ModifyData.storyboard in Resources */,
 				5EEF71BE278C22C900559D7D /* LaunchScreen.storyboard in Resources */,
 				5E90E2D62798541100EBE47F /* ChangePassword.storyboard in Resources */,
 				5E2D46D72796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf in Resources */,
@@ -405,6 +420,7 @@
 			files = (
 				5E68F3EA2791DB070033C83E /* LoginUser.swift in Sources */,
 				5E061F9C2792D92C000CAE79 /* NewUser.swift in Sources */,
+				5ECCADAF279C4AAE0039D660 /* ModifyDataViewController.swift in Sources */,
 				5EF85CBF2795710300BB7443 /* DbResponse.swift in Sources */,
 				5E860BB72795DCD3008B92F3 /* ColorExtension.swift in Sources */,
 				5EEF71B6278C22C800559D7D /* AuthViewController.swift in Sources */,

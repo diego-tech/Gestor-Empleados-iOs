@@ -28,11 +28,11 @@ class ProfileViewController: UIViewController {
     }
 	
 	// MARK: Button Action Functions
-	@IBAction func goToChangePasswordAction(_ sender: Any) {
+	@IBAction func goToChangePasswordAction(_ sender: UIButton) {
 		navigateToChangePassword()
 	}
 	
-	@IBAction func logOutButtonAction(_ sender: Any) {
+	@IBAction func logOutButtonAction(_ sender: UIButton) {
 		// Comprobar problema tras logout
 		// logOut()
 	}

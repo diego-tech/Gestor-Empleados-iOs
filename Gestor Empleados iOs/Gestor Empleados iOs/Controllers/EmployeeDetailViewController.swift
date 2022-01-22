@@ -46,13 +46,18 @@ class EmployeeDetailViewController: UIViewController {
 	}
 	
 	// MARK: Functions
-	
-	
-	// MARK: Action Buttons
-	@IBAction func editProfileButtonAction(_ sender: Any) {
+	private func navigate(){
+		let storyBoard = UIStoryboard(name: "ModifyData", bundle: nil)
+		let vc = storyBoard.instantiateViewController(withIdentifier: "ModifyData") as! ModifyDataViewController
+		self.present(vc, animated: true, completion: nil)
 	}
 	
-	@IBAction func goBackButtonAction(_ sender: Any) {
+	// MARK: Action Buttons
+	@IBAction func editProfileButtonAction(_ sender: UIButton) {
+		navigate()
+	}
+	
+	@IBAction func goBackButtonAction(_ sender: UIButton) {
 		dismiss(animated: false, completion: nil)
 	}
 	

@@ -26,7 +26,7 @@ class RetrievePasswordViewController: UIViewController {
     }
 	
 	// MARK: Action Buttons
-	@IBAction func retrievePasswordButtonAction(_ sender: Any) {
+	@IBAction func retrievePasswordButtonAction(_ sender: UIButton) {
 		email = emailTextField.text
 		
 		if let userEmail = email {
@@ -36,7 +36,7 @@ class RetrievePasswordViewController: UIViewController {
 		}
 	}
 	
-	@IBAction func goBackButtonAction(_ sender: Any) {
+	@IBAction func goBackButtonAction(_ sender: UIButton) {
 		dismiss(animated: true, completion: nil)
 	}
 	

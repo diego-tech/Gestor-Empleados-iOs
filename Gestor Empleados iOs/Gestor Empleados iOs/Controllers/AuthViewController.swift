@@ -32,14 +32,14 @@ class AuthViewController: UIViewController {
 	}
 	
 	// MARK: Action Buttons
-	@IBAction func retrievePasswordAction(_ sender: Any) {
+	@IBAction func retrievePasswordAction(_ sender: UIButton) {
 		let storyBoard = UIStoryboard(name: "RetrievePassword", bundle: nil)
 		let vc = storyBoard.instantiateViewController(withIdentifier: "RetrievePasswordViewController") as! RetrievePasswordViewController
 		self.present(vc, animated: true, completion: nil)
 		
 	}
 	
-	@IBAction func accessButtonAction(_ sender: Any) {
+	@IBAction func accessButtonAction(_ sender: UIButton) {
 		email = emailTextField.text
 		password = passwordTextField.text
 		
