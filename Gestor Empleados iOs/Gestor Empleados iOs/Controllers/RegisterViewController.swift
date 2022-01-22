@@ -231,11 +231,11 @@ class RegisterViewController: UIViewController {
 	}
 	
 	// MARK: Button Action Functions
-	@IBAction func goBackButtonAction(_ sender: Any) {
+	@IBAction func goBackButtonAction(_ sender: UIButton) {
 		dismiss(animated: true, completion: nil)
 	}
 	
-	@IBAction func registerButtonAction(_ sender: Any) {
+	@IBAction func registerButtonAction(_ sender: UIButton) {
 		if checkFields() {
 			addUser()
 		}

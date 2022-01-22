@@ -11,10 +11,11 @@ class EmployeeDetailViewController: UIViewController {
 
 	// Variables
 	var id: Int = 0
-	private var userName: String?
-	private var userWorkplace: String?
-	private var userBiography: String?
-	private var userSalary: String?
+	var detailUserName: String? = ""
+	var detailUserEmail: String? = ""
+	var detailUserWorkplace: String? = ""
+	var detailUserSalary: String? = ""
+	var detailUserBiography: String? = ""
 	
 	// Outlets
 	@IBOutlet weak var nameLabel: UILabel!
@@ -34,11 +35,17 @@ class EmployeeDetailViewController: UIViewController {
 	// MARK: API Functions
 	private func getUserDetail() {
 		NetworkingProvider.shared.employeeDetail(id: id) { responseData, status, msg in
-			if let userName = responseData?.name, let userWorkplace = responseData?.workplace, let userBiography = responseData?.biography, let userSalary = responseData?.salary {
+			if let userName = responseData?.name, let userWorkplace = responseData?.workplace, let userBiography = responseData?.biography, let userSalary = responseData?.salary, let userEmail = responseData?.email {
 				self.nameLabel.text = userName
 				self.workplaceLabel.text = userWorkplace
 				self.biographyLabel.text = userBiography
 				self.salaryLabel.text = userSalary
+				
+				self.detailUserName = userName
+				self.detailUserEmail = userEmail
+				self.detailUserWorkplace = userWorkplace
+				self.detailUserSalary = userSalary
+				self.detailUserBiography = userBiography
 			}
 		} failure: { error in
 			print(error)
@@ -49,6 +56,13 @@ class EmployeeDetailViewController: UIViewController {
 	private func navigate(){
 		let storyBoard = UIStoryboard(name: "ModifyData", bundle: nil)
 		let vc = storyBoard.instantiateViewController(withIdentifier: "ModifyData") as! ModifyDataViewController
+		vc.id = id
+		vc.name = detailUserName
+		vc.email = detailUserEmail
+		vc.workplace = detailUserWorkplace
+		vc.salary = detailUserSalary
+		vc.biography = detailUserBiography
+		
 		self.present(vc, animated: true, completion: nil)
 	}
 	
