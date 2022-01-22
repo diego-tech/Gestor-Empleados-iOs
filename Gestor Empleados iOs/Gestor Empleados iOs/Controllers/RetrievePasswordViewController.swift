@@ -42,16 +42,14 @@ class RetrievePasswordViewController: UIViewController {
 	
 	// MARK: API Functions
 	private func retrievePassword(userEmail: String) {
-		NetworkingProvider.shared.retrievePassword(email: userEmail) { responseData in
-			if let responseMsg = responseData?.msg {
+		NetworkingProvider.shared.retrievePassword(email: userEmail) { responseData, status, msg in
+			if let responseMsg = msg {
 				self.alertFunction(title: "Contraseña Enviada", msg: responseMsg)
 			}
 		} failure: { error in
 			if let error = error {
 				self.alertFunction(title: "Error", msg: error.localizedDescription)
 			}
-		} status: { status in
-			print("Status Code: \(status!)")
 		}
 	}
 	

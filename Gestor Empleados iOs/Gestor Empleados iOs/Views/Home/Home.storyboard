@@ -14,6 +14,7 @@
         </array>
         <array key="SF-Pro.ttf">
             <string>SFPro-Regular</string>
+            <string>SFPro-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -196,17 +197,26 @@ hendrerit nibh.
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Tienes Permisos Suficientes Para Ver a Otros Usuarios" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zva-ap-akq">
+                                <rect key="frame" x="73" y="427.5" width="268" height="41"/>
+                                <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e9a-fT-BEb"/>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="F0D-Ma-FU8" firstAttribute="top" secondItem="ISt-gG-JTw" secondAttribute="bottom" constant="30" id="41Y-qf-8vx"/>
                             <constraint firstItem="F0D-Ma-FU8" firstAttribute="top" secondItem="ISt-gG-JTw" secondAttribute="bottom" constant="30" id="5II-2P-CKE"/>
+                            <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="Zva-ap-akq" secondAttribute="trailing" constant="73" id="AQh-aG-QBK"/>
                             <constraint firstItem="ISt-gG-JTw" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="30" id="M9u-ek-ABN"/>
                             <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="ISt-gG-JTw" secondAttribute="trailing" constant="330" id="TBt-YW-nDK"/>
                             <constraint firstItem="F0D-Ma-FU8" firstAttribute="bottom" secondItem="e9a-fT-BEb" secondAttribute="bottom" id="Tuk-Ed-NeP"/>
+                            <constraint firstItem="Zva-ap-akq" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="73" id="ox6-Ae-faM"/>
                             <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="F0D-Ma-FU8" secondAttribute="trailing" constant="20" id="q7b-fJ-GBY"/>
                             <constraint firstItem="F0D-Ma-FU8" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="20" id="ugb-Ea-NWX"/>
+                            <constraint firstItem="Zva-ap-akq" firstAttribute="centerY" secondItem="Oh1-oe-urx" secondAttribute="centerY" id="wsw-al-juw"/>
                             <constraint firstItem="ISt-gG-JTw" firstAttribute="top" secondItem="e9a-fT-BEb" secondAttribute="top" constant="74" id="xjD-oh-FfT"/>
                         </constraints>
                     </view>
@@ -214,6 +224,7 @@ hendrerit nibh.
                         <color key="badgeColor" name="MainColor"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="employeeLabel" destination="Zva-ap-akq" id="oIM-CV-PgK"/>
                         <outlet property="employeeListView" destination="F0D-Ma-FU8" id="95k-DK-JRU"/>
                     </connections>
                 </viewController>

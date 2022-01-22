@@ -13,7 +13,7 @@ final class NetworkingProvider {
 	static let shared = NetworkingProvider()	
 	
 	// Employee List
-	func employeeList(serverResponse: @escaping (_ responseData: [Data]?, _ status: Int?) -> (), failure: @escaping (_ error: Error?) -> ()) {
+	func employeeList(serverResponse: @escaping (_ responseData: [Data]?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/employee_list"
 		
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
@@ -21,9 +21,9 @@ final class NetworkingProvider {
 		AF.request(url, method: .get, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: ListResponse.self) {
 			response in
 			
-			// Handle Response Data & Status Code
-			if let data = response.value?.data, let statusCode = response.value?.status {
-				serverResponse(data, statusCode)
+			// Handle Response Data && Status Code && Message
+			if let data = response.value?.data, let statusCode = response.value?.status, let msg = response.value?.msg {
+				serverResponse(data, statusCode, msg)
 			}
 			
 			// Handle Alamofire Error
@@ -34,7 +34,7 @@ final class NetworkingProvider {
 	}
 	
 	// Employee Detail
-	func employeeDetail(id: Int, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
+	func employeeDetail(id: Int, serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/employee_detail?user_id=\(id)"
 
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
@@ -42,14 +42,9 @@ final class NetworkingProvider {
 		AF.request(url, method: .get, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 
-			// Handle Response Data
-			if let data = response.value?.data {
-				serverResponse(data)
-			}
-
-			// Handle Status Code
-			if let code = response.value?.status {
-				status(code)
+			// Handle Response Data && Status Code && Message
+			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg {
+				serverResponse(data, code, msg)
 			}
 
 			// Handle Alamofire Error
@@ -60,14 +55,14 @@ final class NetworkingProvider {
 	}
 	
 	// Login
-	func login(user: UserLogin, serverResponse: @escaping (_ responseData: Data?, _ status: Int?) -> (), failure: @escaping (_ error: Error?) -> ()) {
+	func login(user: UserLogin, serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/login"
 
 		AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).validate(statusCode: Constants.kStatusCode).responseDecodable (of: Response.self, decoder: DateDecoder()) { response in
 			
-			// Handle Response Data & Status Code
-			if let data = response.value?.data, let statusCode = response.value?.status{
-				serverResponse(data, statusCode)
+			// Handle Response Data && Status Code && Message
+			if let data = response.value?.data, let statusCode = response.value?.status, let msg = response.value?.msg {
+				serverResponse(data, statusCode, msg)
 			}
 
 			// Handle Alamofire Error
@@ -78,22 +73,18 @@ final class NetworkingProvider {
 	}
 	
 	// Register
-	func register(user: NewUser, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) ->()) {
+	func register(user: NewUser, serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/register"
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 		
 		AF.request(url, method: .put, parameters: user, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
-			// Handle Response Data
-			if let data = response.value?.data {
-				serverResponse(data)
+			// Handle Response Data && Status Code && Message
+			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg {
+				serverResponse(data, code, msg)
 			}
-			
-			// Handle Status Code
-			if let code = response.value?.status {
-				status(code)
-			}
+
 			
 			// Handle Alamofire Error
 			if let error = response.error {
@@ -103,20 +94,15 @@ final class NetworkingProvider {
 	}
 	
 	// Retrieve Password
-	func retrievePassword(email: String, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()){
+	func retrievePassword(email: String, serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()){
 		let url = "\(Constants.kBaseURL)/retrieve_password?email=\(email)"
 		
 		AF.request(url, method: .post).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
-			// Handle Response Data
-			if let data = response.value?.data {
-				serverResponse(data)
-			}
-			
-			// Handle Statuus Code
-			if let code = response.value?.status {
-				status(code)
+			// Handle Response Data && Status Code && Message
+			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg {
+				serverResponse(data, code, msg)
 			}
 			
 			// Handle Alamofire Error
@@ -127,7 +113,7 @@ final class NetworkingProvider {
 	}
 	
 	// Modify Data
-	func modifyData(userId: Int, user: NewUser, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
+	func modifyData(userId: Int, user: NewUser, serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/modify_data?user_id=\(userId)"
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 
@@ -135,14 +121,9 @@ final class NetworkingProvider {
 		AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
-			// Handle Response Data
-			if let data = response.value?.data {
-				serverResponse(data)
-			}
-			
-			// Handle Status Code
-			if let code = response.value?.status {
-				status(code)
+			// Handle Response Data && Status Code && Message
+			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg{
+				serverResponse(data, code, msg)
 			}
 			
 			// Handle Alamofire Error
@@ -153,21 +134,16 @@ final class NetworkingProvider {
 	}
 	
 	// Modify Password
-	func changePassword(passwords: NewPassword, serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()){
+	func changePassword(passwords: NewPassword, serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()){
 		let url = "\(Constants.kBaseURL)/modify_password"
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 		
 		AF.request(url, method: .post, parameters: passwords, encoder: JSONParameterEncoder.default, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
-			// Handle Response Data
-			if let data = response.value?.data {
-				serverResponse(data)
-			}
-			
-			// Handle Status Code
-			if let code = response.value?.status {
-				status(code)
+			// Handle Response Data && Status Code && Message
+			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg {
+				serverResponse(data, code, msg)
 			}
 			
 			// Handle Alamofire Error
@@ -178,21 +154,16 @@ final class NetworkingProvider {
 	}
 	
 	// Logout
-	func logout(serverResponse: @escaping (_ responseData: Data?) -> (), failure: @escaping (_ error: Error?) -> (), status: @escaping (_ status: Int?) -> ()) {
+	func logout(serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/logout"
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 		
 		AF.request(url, method: .post, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
-			// Handle Response Data
-			if let data = response.value?.data {
-				serverResponse(data)
-			}
-			
-			// Handle Status Code
-			if let code = response.value?.status {
-				status(code)
+			// Handle Response Data && Status Code && Message
+			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg {
+				serverResponse(data, code, msg)
 			}
 			
 			// Handle Alamofire Error
@@ -203,16 +174,16 @@ final class NetworkingProvider {
 	}
 	
 	// See Profile
-	func seeProfile(serverResponse: @escaping (_ responseData: Data?, _ status: Int?) -> (), failure: @escaping (_ error: Error?) -> ()) {
+	func seeProfile(serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/see_profile"
 		
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 		
 		AF.request(url, method: .get, headers: authToken).validate(statusCode: Constants.kStatusCode).responseDecodable (of: Response.self, decoder: DateDecoder()) { response in
 			
-			// Handle Response Data & Status Code
-			if let data = response.value?.data, let statusCode = response.value?.status{
-				serverResponse(data, statusCode)
+			// Handle Response Data && Status Code && Message
+			if let data = response.value?.data, let statusCode = response.value?.status, let msg = response.value?.msg{
+				serverResponse(data, statusCode, msg)
 			}
 
 			// Handle Alamofire Error

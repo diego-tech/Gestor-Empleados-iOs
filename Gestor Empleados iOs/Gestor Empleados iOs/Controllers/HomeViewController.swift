@@ -33,15 +33,18 @@ class HomeViewController: UIViewController {
 	
 	// Outlets
 	@IBOutlet weak var employeeListView: UITableView!
+	@IBOutlet weak var employeeLabel: UILabel!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 		
+		// Check Permissions
+		checkIfHasPermisions()
+		
+		// List View Initialisation
 		self.employeeListView.register(UINib(nibName: "EmployeeListTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomEmployeeCell")
-		
 		employeeListView.allowsSelection = true
-		
 		employeeList()
 		
 		// Employee List Styles
@@ -76,6 +79,20 @@ class HomeViewController: UIViewController {
 		let storyBoard = UIStoryboard(name: "EmployeeDetail", bundle: nil)
 		let vc = storyBoard.instantiateViewController(withIdentifier: "EmployeeDetail") as! EmployeeDetailViewController
 		self.present(vc, animated: false, completion: nil)
+	}
+	
+	private func checkIfHasPermisions() {
+		let userWorkplace = Constants.kAuthUserWorkplace
+		
+		if userWorkplace == "Empleado" {
+			employeeListView.isHidden = true
+			employeeLabel.isHidden = false
+			floatingButton.isHidden = true
+		} else {
+			employeeListView.isHidden = false
+			employeeLabel.isHidden = true
+			floatingButton.isHidden = false
+		}
 	}
 	
 	// MARK: Floating Button Styles

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class RegisterViewController: UIViewController {
 
@@ -16,6 +17,8 @@ class RegisterViewController: UIViewController {
 	var userWorkplace: String?
 	var userSalary: String?
 	var userBiography: String?
+	
+	var iconClick = false
 		
 	// Outlets
 	@IBOutlet weak var nameTextField: UITextField!
@@ -31,7 +34,7 @@ class RegisterViewController: UIViewController {
 		
 		// Do any additional setup after loading the view.
 		
-		// Styles
+		// Styles and Custom Actions
 		textFieldStyles(textField: nameTextField, placeholderText: "Nombre")
 		
 		textFieldStyles(textField: emailTextField, placeholderText: "Correo Electrónico")
@@ -45,6 +48,7 @@ class RegisterViewController: UIViewController {
 		segmentedControlsStyles()
 		textViewStyle()
 		registerButtonStyle()
+		showAndHidePassword()
 	}
 	
 	// MARK: Functions
@@ -82,20 +86,76 @@ class RegisterViewController: UIViewController {
 		present(alert, animated: true)
 	}
 	
+	private func checkFields() -> Bool {
+		if nameTextField.text == "" {
+			nameTextField.layer.borderWidth = 0.3
+			nameTextField.layer.borderColor = UIColor.red.cgColor
+			nameTextField.layer.cornerCurve = .circular
+			nameTextField.layer.cornerRadius = 5
+			
+			return false
+		}
+		
+		if emailTextField.text == "" {
+			emailTextField.layer.borderWidth = 0.3
+			emailTextField.layer.borderColor = UIColor.red.cgColor
+			emailTextField.layer.cornerCurve = .circular
+			emailTextField.layer.cornerRadius = 5
+			
+			return false
+		}
+		
+		if passwordTextField.text == ""{
+			passwordTextField.layer.borderWidth = 0.3
+			passwordTextField.layer.borderColor = UIColor.red.cgColor
+			passwordTextField.layer.cornerCurve = .circular
+			passwordTextField.layer.cornerRadius = 5
+			
+			return false
+		}
+		
+		if salaryTextField.text == "" {
+			salaryTextField.layer.borderWidth = 0.3
+			salaryTextField.layer.borderColor = UIColor.red.cgColor
+			salaryTextField.layer.cornerCurve = .circular
+			salaryTextField.layer.cornerRadius = 5
+			
+			return false
+		}
+		
+		if biographyTextView.text == "" {
+			biographyTextView.layer.borderWidth = 0.3
+			biographyTextView.layer.borderColor = UIColor.red.cgColor
+			biographyTextView.layer.cornerCurve = .circular
+			biographyTextView.layer.cornerRadius = 5
+			
+			return false
+		}
+		
+		return true
+	}
+	
 	// MARK: API Functions
 	private func addUser() {
 		let newUser = getValues()
 		
-		NetworkingProvider.shared.register(user: newUser) { responseData in
-			self.alertFunction(title: "Felicidades", msg: (responseData?.msg)!)
+		NetworkingProvider.shared.register(user: newUser) { responseData, status, msg in
+			let statusCode = status
+			guard let msg = msg else { return }
+			
+			if statusCode == 1 {
+				self.alertFunction(title: "Felicidades", msg: msg)
+			} else if statusCode == 0 {
+				self.alertFunction(title: "Error", msg: msg)
+			}
 		} failure: { error in
-			print(error)
-		} status: { status in
-			print(self)
+			if let error = error {
+				debugPrint(error)
+			}
 		}
 	}
 	
-	// MARK: Styles Functions
+	// MARK: Styles and Custom Actions
 	private func textFieldStyles(textField: UITextField, placeholderText: String) {
 		// Global Input Type Style Atributtes
 		let attributes = [
@@ -136,13 +196,49 @@ class RegisterViewController: UIViewController {
 		registerButton.layer.cornerRadius = 10
 	}
 	
+	
+	private func showAndHidePassword(){
+		let imageEye = UIImageView()
+		imageEye.image = UIImage(named: "CloseEye")
+		
+		let contentView = UIView()
+		contentView.addSubview(imageEye)
+		
+		contentView.frame = CGRect(x:0, y:0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye")!.size.height)
+		imageEye.frame = CGRect(x:-10, y:0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye" )!.size.height)
+		
+		passwordTextField.rightView = contentView
+		passwordTextField.rightViewMode = .always
+
+		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+		
+		imageEye.isUserInteractionEnabled = true
+		imageEye.addGestureRecognizer(tapGestureRecognizer)
+	}
+		
+	@objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
+		let tappedImage = tapGestureRecognizer.view as! UIImageView
+		
+		if iconClick {
+			iconClick = false
+			tappedImage.image = UIImage(named: "EyeOpen")
+			passwordTextField.isSecureTextEntry = false
+		} else {
+			iconClick = true
+			tappedImage.image = UIImage(named: "CloseEye")
+			passwordTextField.isSecureTextEntry = true
+		}
+	}
+	
 	// MARK: Button Action Functions
 	@IBAction func goBackButtonAction(_ sender: Any) {
 		dismiss(animated: true, completion: nil)
 	}
 	
 	@IBAction func registerButtonAction(_ sender: Any) {
-		addUser()
+		if checkFields() {
+			addUser()
+		}
 	}
 }
 

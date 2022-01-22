@@ -33,8 +33,7 @@ class ProfileViewController: UIViewController {
 	
 	// MARK: API Functions
 	private func getProfileData(){
-		NetworkingProvider.shared.seeProfile { responseData, status in
-			
+		NetworkingProvider.shared.seeProfile { responseData, status, msg in
 			if let userName = responseData?.name, let userWorkplace = responseData?.workplace, let userBiography = responseData?.biography, let userSalary = responseData?.salary {
 				self.nameLabel.text = userName
 				self.workplaceLabel.text = userWorkplace
@@ -47,14 +46,12 @@ class ProfileViewController: UIViewController {
 	}
 	
 	private func logOut(){
-		NetworkingProvider.shared.logout { responseData in
+		NetworkingProvider.shared.logout { responseData, status, msg in
 			self.navigateToAuth()
 			UserDefaultsProvider.remove(key: .authUserToken)
 			print( UserDefaultsProvider.string(key: .authUserToken))
 		} failure: { error in
 			print(error)
-		} status: { status in
-			print(status)
 		}
 	}
 	

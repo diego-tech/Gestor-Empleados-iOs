@@ -14,8 +14,6 @@ class AuthViewController: UIViewController {
 	var email: String?
 	var password: String?
 	var iconClick = false
-
-	private let imageEye = UIImageView()
 	
 	// Outlets
 	@IBOutlet weak var emailTextField: UITextField!
@@ -27,7 +25,7 @@ class AuthViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 		
-		// Styles And Custom Actions
+		// Styles and Custom Actions
 		textFieldStyle()
 		accessButtonStyle()
 		showAndHidePassword()
@@ -57,7 +55,7 @@ class AuthViewController: UIViewController {
 	
 	// MARK: API Functions
 	private func login(loginUser: UserLogin) {
-		NetworkingProvider.shared.login(user: loginUser) { responseData, status in
+		NetworkingProvider.shared.login(user: loginUser) { responseData, status, msg  in
 			if let auth_token = responseData?.apiToken, let auth_email = responseData?.email, let auth_name = responseData?.name, let auth_workplace = responseData?.workplace, let auth_salary = responseData?.salary, let auth_biography = responseData?.biography {
 								
 				self.setUserLoginDefaults(authUserToken: auth_token, authUserEmail: auth_email, authUserName: auth_name, authUserWorkplace: auth_workplace, authUserSalary: auth_salary, authUserBiography: auth_biography)
@@ -66,7 +64,7 @@ class AuthViewController: UIViewController {
 			if status != Constants.kErrorStatusCode {
 				self.navigate()
 			} else {
-				print(responseData?.msg)
+				print(msg)
 			}
 		} failure: { error in
 			print(error!)
@@ -93,7 +91,7 @@ class AuthViewController: UIViewController {
 		self.present(vc, animated: true, completion: nil)
 	}
 	
-	// MARK: Styles
+	// MARK: Styles and Custom Actions
 	private func textFieldStyle() {
 		// Global Input Type Style Atributtes
 		let attributes = [
@@ -124,6 +122,7 @@ class AuthViewController: UIViewController {
 	}
 	
 	private func showAndHidePassword(){
+		let imageEye = UIImageView()
 		imageEye.image = UIImage(named: "CloseEye")
 		
 		let contentView = UIView()

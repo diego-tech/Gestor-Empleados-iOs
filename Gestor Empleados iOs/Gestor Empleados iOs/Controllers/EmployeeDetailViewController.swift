@@ -33,7 +33,7 @@ class EmployeeDetailViewController: UIViewController {
 	
 	// MARK: API Functions
 	private func getUserDetail() {
-		NetworkingProvider.shared.employeeDetail(id: id) { responseData in
+		NetworkingProvider.shared.employeeDetail(id: id) { responseData, status, msg in
 			if let userName = responseData?.name, let userWorkplace = responseData?.workplace, let userBiography = responseData?.biography, let userSalary = responseData?.salary {
 				self.nameLabel.text = userName
 				self.workplaceLabel.text = userWorkplace
@@ -42,8 +42,6 @@ class EmployeeDetailViewController: UIViewController {
 			}
 		} failure: { error in
 			print(error)
-		} status: { status in
-			// print(status)
 		}
 	}
 	
