@@ -73,7 +73,7 @@ final class NetworkingProvider {
 	}
 	
 	// Register
-	func register(user: NewUser, serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
+	func register(user: NewUser, serverResponse: @escaping (_ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 		let url = "\(Constants.kBaseURL)/register"
 		let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
 		
@@ -81,8 +81,8 @@ final class NetworkingProvider {
 			response in
 			
 			// Handle Response Data && Status Code && Message
-			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg {
-				serverResponse(data, code, msg)
+			if let code = response.value?.status, let msg = response.value?.msg {
+				serverResponse(code, msg)
 			}
 
 			

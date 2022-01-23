@@ -79,7 +79,7 @@ class RegisterViewController: UIViewController {
 	
 	private func alertFunction(title: String, msg: String){
 		let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "Volver", style: .default,handler: { action in
+		alert.addAction(UIAlertAction(title: "Volver", style: .default, handler: { action in
 			self.navigateWhenCreateUser()
 		}))
 		
@@ -139,14 +139,17 @@ class RegisterViewController: UIViewController {
 	private func addUser() {
 		let newUser = getValues()
 		
-		NetworkingProvider.shared.register(user: newUser) { responseData, status, msg in
+		NetworkingProvider.shared.register(user: newUser) { status, msg in
 			let statusCode = status
 			guard let msg = msg else { return }
 			
 			if statusCode == 1 {
 				self.alertFunction(title: "Felicidades", msg: msg)
 			} else if statusCode == 0 {
-				self.alertFunction(title: "Error", msg: msg)
+				let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Volver", style: .cancel))
+				
+				self.present(alert, animated: true)
 			}
 		} failure: { error in
 			if let error = error {
@@ -174,7 +177,7 @@ class RegisterViewController: UIViewController {
 	
 	private func segmentedControlsStyles(){
 		workplaceSegmentedControls.setTitleTextAttributes([
-			NSAttributedString.Key.foregroundColor : UIColor.white,
+			NSAttributedString.Key.foregroundColor: UIColor.white,
 			NSAttributedString.Key.font: UIFont(name: FontType.SFProSemibold.rawValue, size: 14) as Any
 		], for: .normal)
 		workplaceSegmentedControls.backgroundColor = .mainColorLowOpacity
