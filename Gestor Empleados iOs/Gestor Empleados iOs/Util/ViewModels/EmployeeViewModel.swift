@@ -14,8 +14,10 @@ class EmployeeViewModel {
 	
 	func fetchEmployeeList(completion: @escaping () -> ()) {
 		NetworkingProvider.shared.employeeList() { responseData, status, msg in
-			self.employeeList = responseData!
-			completion()
+			if let responseList = responseData {
+				self.employeeList = responseList
+				completion()
+			}
 		} failure: { error in
 			print(error)
 		}

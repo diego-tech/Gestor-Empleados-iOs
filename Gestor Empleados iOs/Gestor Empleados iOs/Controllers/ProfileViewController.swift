@@ -34,7 +34,7 @@ class ProfileViewController: UIViewController {
 	
 	@IBAction func logOutButtonAction(_ sender: UIButton) {
 		// Comprobar problema tras logout
-		// logOut()
+		 logOut()
 	}
 	
 	// MARK: API Functions
@@ -55,8 +55,7 @@ class ProfileViewController: UIViewController {
 		NetworkingProvider.shared.logout { status, msg in
 			self.navigateToAuth()
 			UserDefaultsProvider.remove(key: .authUserToken)
-			print(UserDefaultsProvider.string(key: .authUserToken))
-		} failure: { error in
+		} failure: { error in 
 			print(error)
 		}
 	}
@@ -73,5 +72,4 @@ class ProfileViewController: UIViewController {
 		let vc = storyBoard.instantiateViewController(withIdentifier: "ChangePassword") as! ChangePasswordViewController
 		self.present(vc, animated: true, completion: nil)
 	}
-	
 }

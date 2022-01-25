@@ -10,9 +10,6 @@ import Alamofire
 
 class ChangePasswordViewController: UIViewController {
 	
-	// Variables
-	let authToken: HTTPHeaders = [.authorization(Constants.kAuthUserToken!)]
-
 	var firstPassword: String?
 	var secondPassword: String?
 	
@@ -49,8 +46,16 @@ class ChangePasswordViewController: UIViewController {
 				let password = NewPassword(password: firstPassword, repeatPassword: secondPassword)
 				UserDefaultsProvider.remove(key: .authUserToken)
 				changePassword(password: password)
+				self.navigateToAuth()
 			}
 		}
+	}
+	
+	// MARK: Functions
+	private func navigateToAuth(){
+		let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+		let vc = storyBoard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+		self.present(vc, animated: true, completion: nil)
 	}
 	
 	// MARK: API Function
