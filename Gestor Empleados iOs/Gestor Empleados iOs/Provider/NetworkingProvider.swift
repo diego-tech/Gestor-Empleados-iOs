@@ -94,15 +94,15 @@ final class NetworkingProvider {
 	}
 	
 	// Retrieve Password
-	func retrievePassword(email: String, serverResponse: @escaping (_ responseData: Data?, _ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()){
+	func retrievePassword(email: String, serverResponse: @escaping (_ status: Int?, _ message: String?) -> (), failure: @escaping (_ error: Error?) -> ()){
 		let url = "\(Constants.kBaseURL)/retrieve_password?email=\(email)"
 		
 		AF.request(url, method: .post).validate(statusCode: Constants.kStatusCode).responseDecodable(of: Response.self, decoder: DateDecoder()) {
 			response in
 			
 			// Handle Response Data && Status Code && Message
-			if let data = response.value?.data, let code = response.value?.status, let msg = response.value?.msg {
-				serverResponse(data, code, msg)
+			if let code = response.value?.status, let msg = response.value?.msg {
+				serverResponse(code, msg)
 			}
 			
 			// Handle Alamofire Error

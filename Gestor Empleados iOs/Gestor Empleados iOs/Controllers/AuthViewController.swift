@@ -24,7 +24,6 @@ class AuthViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
-		print(UserDefaultsProvider.string(key: .authUserToken))
 		
 		// Styles and Custom Actions
 		textFieldStyle()

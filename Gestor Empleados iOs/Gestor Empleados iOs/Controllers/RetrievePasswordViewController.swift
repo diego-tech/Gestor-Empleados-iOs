@@ -28,7 +28,7 @@ class RetrievePasswordViewController: UIViewController {
 	// MARK: Action Buttons
 	@IBAction func retrievePasswordButtonAction(_ sender: UIButton) {
 		email = emailTextField.text
-		
+				
 		if let userEmail = email {
 			if userEmail != "" {
 				retrievePassword(userEmail: userEmail)
@@ -42,7 +42,7 @@ class RetrievePasswordViewController: UIViewController {
 	
 	// MARK: API Functions
 	private func retrievePassword(userEmail: String) {
-		NetworkingProvider.shared.retrievePassword(email: userEmail) { responseData, status, msg in
+		NetworkingProvider.shared.retrievePassword(email: userEmail) {status, msg in
 			if let responseMsg = msg {
 				self.alertFunction(title: "Contraseña Enviada", msg: responseMsg)
 			}

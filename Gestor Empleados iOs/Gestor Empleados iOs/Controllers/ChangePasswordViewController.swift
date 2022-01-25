@@ -46,7 +46,6 @@ class ChangePasswordViewController: UIViewController {
 				let password = NewPassword(password: firstPassword, repeatPassword: secondPassword)
 				UserDefaultsProvider.remove(key: .authUserToken)
 				changePassword(password: password)
-				self.navigateToAuth()
 			}
 		}
 	}
@@ -61,7 +60,8 @@ class ChangePasswordViewController: UIViewController {
 	// MARK: API Function
 	private func changePassword(password: NewPassword){
 		NetworkingProvider.shared.changePassword(passwords: password) { status, message in
-			print(message)
+			self.navigateToAuth()
+			UserDefaultsProvider.remove(key: .authUserToken)
 		} failure: { error in
 			print(error)
 		}
