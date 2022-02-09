@@ -38,7 +38,6 @@ class HomeViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-		print(UserDefaultsProvider.string(key: .authUserToken))
 		
 		// Check Permissions
 		checkIfHasPermisions()
@@ -83,7 +82,7 @@ class HomeViewController: UIViewController {
 	}
 	
 	private func checkIfHasPermisions() {
-		let userWorkplace = Constants.kAuthUserWorkplace
+		let userWorkplace = UserDefaultsProvider.string(key: .authUserWorkplace)
 		
 		if userWorkplace == "Empleado" {
 			employeeListView.isHidden = true

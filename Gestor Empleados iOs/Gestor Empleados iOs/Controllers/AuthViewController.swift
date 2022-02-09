@@ -147,8 +147,8 @@ class AuthViewController: UIViewController {
 		let contentView = UIView()
 		contentView.addSubview(imageEye)
 		
-		contentView.frame = CGRect(x:0, y:0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye")!.size.height)
-		imageEye.frame = CGRect(x:-10, y:0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye" )!.size.height)
+		contentView.frame = CGRect(x: 0, y: 0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye")!.size.height)
+		imageEye.frame = CGRect(x: -10, y: 0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye" )!.size.height)
 		
 		passwordTextField.rightView = contentView
 		passwordTextField.rightViewMode = .always

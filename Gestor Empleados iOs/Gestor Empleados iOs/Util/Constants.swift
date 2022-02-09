@@ -17,7 +17,4 @@ struct Constants {
 	// Custom Status Code
 	static let kErrorStatusCode = 0
 	static let kCorrectStatusCode = 1
-	
-	// User Defaults Constants
-	static let kAuthUserWorkplace = UserDefaultsProvider.string(key: .authUserWorkplace)
 }
