@@ -35,6 +35,12 @@ class HomeViewController: UIViewController {
 	@IBOutlet weak var employeeListView: UITableView!
 	@IBOutlet weak var employeeLabel: UILabel!
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		employeeList()
+	}
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,7 +51,6 @@ class HomeViewController: UIViewController {
 		// List View Initialisation
 		self.employeeListView.register(UINib(nibName: "EmployeeListTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomEmployeeCell")
 		employeeListView.allowsSelection = true
-		employeeList()
 		
 		// Employee List Styles
 		employeeListView.separatorStyle = .singleLine

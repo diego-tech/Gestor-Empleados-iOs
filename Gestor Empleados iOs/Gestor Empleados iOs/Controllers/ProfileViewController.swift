@@ -16,6 +16,12 @@ class ProfileViewController: UIViewController {
 	@IBOutlet weak var biographyLabel: UILabel!
 	@IBOutlet weak var salaryLabel: UILabel!
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		getProfileData()
+	}
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -23,9 +29,7 @@ class ProfileViewController: UIViewController {
 		workplaceLabel.text = ""
 		biographyLabel.text = ""
 		salaryLabel.text = ""
-	
-		getProfileData()
-    }
+	}
 	
 	// MARK: Button Action Functions
 	@IBAction func goToChangePasswordAction(_ sender: UIButton) {
