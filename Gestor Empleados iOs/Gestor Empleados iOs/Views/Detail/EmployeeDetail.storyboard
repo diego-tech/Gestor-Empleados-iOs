@@ -39,13 +39,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1D-P6-pNN">
-                                        <rect key="frame" x="35" y="465" width="60" height="24"/>
+                                        <rect key="frame" x="35" y="465" width="328" height="24"/>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         <color key="textColor" name="MainColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biografía" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wum-85-zku">
-                                        <rect key="frame" x="35" y="248" width="78" height="24"/>
+                                        <rect key="frame" x="35" y="248" width="328" height="24"/>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         <color key="textColor" name="MainColor"/>
                                         <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@ hendrerit nibh.
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puesto de Trabajo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L94-8j-bpe">
-                                        <rect key="frame" x="35" y="178" width="158" height="24"/>
+                                        <rect key="frame" x="35" y="178" width="328" height="24"/>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         <color key="textColor" name="MainColor"/>
                                         <nil key="highlightedColor"/>
@@ -86,30 +86,11 @@ hendrerit nibh.
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbm-7s-zLM">
-                                        <rect key="frame" x="34" y="109" width="71" height="24"/>
+                                        <rect key="frame" x="34" y="109" width="329" height="24"/>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         <color key="textColor" name="MainColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="arN-pl-Nlv">
-                                        <rect key="frame" x="34" y="36" width="281" height="44"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cks-MQ-YNH">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="44"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Arrow Back"/>
-                                                <connections>
-                                                    <action selector="goBackButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6VX-KS-jGf"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalle Empleado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQP-yk-3TZ">
-                                                <rect key="frame" x="106" y="0.0" width="175" height="44"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
-                                                <color key="textColor" name="MainColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-VB-HhH">
                                         <rect key="frame" x="51" y="527" width="312" height="50"/>
                                         <subviews>
@@ -129,24 +110,47 @@ hendrerit nibh.
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="arN-pl-Nlv">
+                                        <rect key="frame" x="21.5" y="36" width="311" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cks-MQ-YNH">
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="44"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Arrow Back"/>
+                                                <connections>
+                                                    <action selector="goBackButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6VX-KS-jGf"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalle Empleado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQP-yk-3TZ">
+                                                <rect key="frame" x="136" y="0.0" width="175" height="44"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="311" id="RFM-RT-Cku"/>
+                                            <constraint firstAttribute="height" constant="44" id="emj-3t-9TT"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="qbm-7s-zLM" secondAttribute="trailing" constant="309" id="16X-P2-ZZP"/>
+                                    <constraint firstAttribute="trailing" secondItem="qbm-7s-zLM" secondAttribute="trailing" constant="51" id="16X-P2-ZZP"/>
                                     <constraint firstItem="4Tb-Sa-gMb" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="3tg-OF-PDd"/>
+                                    <constraint firstItem="arN-pl-Nlv" firstAttribute="top" secondItem="fDo-Kl-a3J" secondAttribute="top" constant="36" id="6Kr-Qe-lBC"/>
                                     <constraint firstItem="E1D-P6-pNN" firstAttribute="top" secondItem="vSh-Ng-B7g" secondAttribute="bottom" constant="17.5" id="7Ac-ac-A2m"/>
+                                    <constraint firstItem="arN-pl-Nlv" firstAttribute="centerX" secondItem="fDo-Kl-a3J" secondAttribute="centerX" constant="-30" id="7dv-Fs-b6Z"/>
                                     <constraint firstAttribute="trailing" secondItem="4Tb-Sa-gMb" secondAttribute="trailing" constant="10" id="93m-eT-RQ0"/>
                                     <constraint firstAttribute="trailing" secondItem="vSh-Ng-B7g" secondAttribute="trailing" constant="25" id="AwJ-gD-pzB"/>
                                     <constraint firstItem="E1D-P6-pNN" firstAttribute="top" secondItem="vSh-Ng-B7g" secondAttribute="bottom" constant="17.5" id="B43-SA-f9i"/>
+                                    <constraint firstItem="DOc-VB-HhH" firstAttribute="top" secondItem="NPC-hT-OB8" secondAttribute="bottom" constant="13" id="D5x-4z-g2Z"/>
                                     <constraint firstItem="E1D-P6-pNN" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="DLf-7i-yFp"/>
-                                    <constraint firstItem="arN-pl-Nlv" firstAttribute="top" secondItem="fDo-Kl-a3J" secondAttribute="top" constant="36" id="FHZ-af-Xjk"/>
                                     <constraint firstItem="vSh-Ng-B7g" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="Fwy-lg-CXX"/>
-                                    <constraint firstAttribute="trailing" secondItem="DOc-VB-HhH" secondAttribute="trailing" constant="51" id="G7e-oA-TuX"/>
-                                    <constraint firstItem="DOc-VB-HhH" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="51" id="O7c-CS-DAN"/>
                                     <constraint firstItem="wum-85-zku" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="Pbj-Vn-aY1"/>
-                                    <constraint firstItem="qbm-7s-zLM" firstAttribute="top" secondItem="arN-pl-Nlv" secondAttribute="bottom" constant="29" id="Tn7-rm-CRa"/>
                                     <constraint firstItem="vSh-Ng-B7g" firstAttribute="top" secondItem="wum-85-zku" secondAttribute="bottom" constant="8" symbolic="YES" id="XzL-8V-QAx"/>
                                     <constraint firstItem="4Tb-Sa-gMb" firstAttribute="top" secondItem="qbm-7s-zLM" secondAttribute="bottom" constant="8" symbolic="YES" id="YTZ-zf-Vlh"/>
+                                    <constraint firstItem="DOc-VB-HhH" firstAttribute="centerX" secondItem="fDo-Kl-a3J" secondAttribute="centerX" id="Yto-rx-Aiv"/>
                                     <constraint firstAttribute="trailing" secondItem="sm4-mw-UDD" secondAttribute="trailing" constant="10" id="Zve-TJ-xFZ"/>
                                     <constraint firstItem="wum-85-zku" firstAttribute="top" secondItem="sm4-mw-UDD" secondAttribute="bottom" constant="24" id="c4t-mP-utS"/>
                                     <constraint firstItem="sm4-mw-UDD" firstAttribute="top" secondItem="L94-8j-bpe" secondAttribute="bottom" constant="5" id="cML-8w-3k5"/>
@@ -154,16 +158,14 @@ hendrerit nibh.
                                     <constraint firstItem="L94-8j-bpe" firstAttribute="top" secondItem="4Tb-Sa-gMb" secondAttribute="bottom" constant="20" id="gKR-xt-Nwk"/>
                                     <constraint firstItem="4Tb-Sa-gMb" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="hzz-PJ-yn5"/>
                                     <constraint firstAttribute="trailing" secondItem="NPC-hT-OB8" secondAttribute="trailing" constant="10" id="ka1-ex-wny"/>
-                                    <constraint firstItem="arN-pl-Nlv" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="34" id="ljb-wN-Jbg"/>
+                                    <constraint firstItem="qbm-7s-zLM" firstAttribute="top" secondItem="arN-pl-Nlv" secondAttribute="bottom" constant="29" id="kzw-Pb-s7A"/>
                                     <constraint firstItem="sm4-mw-UDD" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="lwp-PZ-UPQ"/>
                                     <constraint firstItem="L94-8j-bpe" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="nDb-Si-aFB"/>
                                     <constraint firstItem="NPC-hT-OB8" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="qDB-du-dMo"/>
                                     <constraint firstItem="NPC-hT-OB8" firstAttribute="top" secondItem="E1D-P6-pNN" secondAttribute="bottom" constant="8" symbolic="YES" id="qSe-nd-DIf"/>
-                                    <constraint firstAttribute="bottom" secondItem="DOc-VB-HhH" secondAttribute="bottom" constant="85" id="rCj-wy-sFH"/>
-                                    <constraint firstAttribute="trailing" secondItem="arN-pl-Nlv" secondAttribute="trailing" constant="99" id="rpg-M9-5ZU"/>
-                                    <constraint firstAttribute="trailing" secondItem="wum-85-zku" secondAttribute="trailing" constant="301" id="rvt-Lt-ZAO"/>
-                                    <constraint firstAttribute="trailing" secondItem="E1D-P6-pNN" secondAttribute="trailing" constant="319" id="uNi-Ff-iMa"/>
-                                    <constraint firstAttribute="trailing" secondItem="L94-8j-bpe" secondAttribute="trailing" constant="221" id="vXn-DU-imf"/>
+                                    <constraint firstAttribute="trailing" secondItem="wum-85-zku" secondAttribute="trailing" constant="51" id="rvt-Lt-ZAO"/>
+                                    <constraint firstAttribute="trailing" secondItem="E1D-P6-pNN" secondAttribute="trailing" constant="51" id="uNi-Ff-iMa"/>
+                                    <constraint firstAttribute="trailing" secondItem="L94-8j-bpe" secondAttribute="trailing" constant="51" id="vXn-DU-imf"/>
                                     <constraint firstItem="wum-85-zku" firstAttribute="top" secondItem="sm4-mw-UDD" secondAttribute="bottom" constant="24" id="xbK-Cc-ChJ"/>
                                     <constraint firstItem="qbm-7s-zLM" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="34" id="zyu-S2-HV8"/>
                                 </constraints>

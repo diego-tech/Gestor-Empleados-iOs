@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Perfil-->
+        <!--Profile View Controller-->
         <scene sceneID="2J0-CV-83I">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" modalPresentationStyle="fullScreen" id="tUk-5n-bTm" customClass="ProfileViewController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,55 +27,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0o-jp-ie8">
-                                <rect key="frame" x="30" y="118" width="52" height="27"/>
+                                <rect key="frame" x="30" y="118" width="288" height="26.5"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAC-i5-n4j">
-                                <rect key="frame" x="30" y="213" width="52" height="24"/>
+                                <rect key="frame" x="30" y="212.5" width="288" height="24"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workplace" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5l-Jh-Egv">
-                                <rect key="frame" x="30" y="277" width="94" height="24"/>
+                                <rect key="frame" x="30" y="276.5" width="288" height="24"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ux-za-bc4">
-                                <rect key="frame" x="30" y="350" width="89" height="24"/>
+                                <rect key="frame" x="30" y="349.5" width="288" height="24"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEY-YE-hs0">
-                                <rect key="frame" x="30" y="555" width="55" height="24"/>
+                                <rect key="frame" x="30" y="554.5" width="288" height="24"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Francisco Gonzalez Marcos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2o-7V-85u">
-                                <rect key="frame" x="30" y="245" width="178" height="17"/>
+                                <rect key="frame" x="30" y="244.5" width="288" height="17"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="14"/>
                                 <color key="textColor" name="MainColorLowOpacity"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMPLEADO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhW-YK-cC1">
-                                <rect key="frame" x="30" y="309" width="75" height="17"/>
+                                <rect key="frame" x="30" y="308.5" width="288" height="17"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="14"/>
                                 <color key="textColor" name="MainColorLowOpacity"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKo-AX-Iik">
-                                <rect key="frame" x="67" y="674" width="130" height="20"/>
-                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
-                                <color key="textColor" name="MainColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJa-a3-Xcd">
-                                <rect key="frame" x="30" y="379" width="354" height="167.5"/>
+                                <rect key="frame" x="30" y="378.5" width="354" height="167.5"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing 
 elit. Integer euismod posuere mauris ac fermentum. 
 Proin tincidunt eleifend congue. Suspendisse 
@@ -91,16 +85,8 @@ hendrerit nibh.
                                 <color key="textColor" name="MainColorLowOpacity"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSV-N7-ZlL">
-                                <rect key="frame" x="311" y="659" width="51" height="51"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Password Icon"/>
-                                <connections>
-                                    <action selector="goToChangePasswordAction:" destination="tUk-5n-bTm" eventType="touchUpInside" id="Rwp-57-0AI"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-UN-8Y5">
-                                <rect key="frame" x="30" y="587" width="41" height="17"/>
+                                <rect key="frame" x="30" y="586.5" width="288" height="17"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="14"/>
                                 <color key="textColor" name="MainColorLowOpacity"/>
                                 <nil key="highlightedColor"/>
@@ -113,6 +99,25 @@ hendrerit nibh.
                                     <action selector="logOutButtonAction:" destination="tUk-5n-bTm" eventType="touchUpInside" id="6uv-pu-bSo"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="gQ7-jC-zdO">
+                                <rect key="frame" x="76.5" y="638" width="261" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKo-AX-Iik">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="51"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
+                                        <color key="textColor" name="MainColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSV-N7-ZlL">
+                                        <rect key="frame" x="210" y="0.0" width="51" height="51"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Password Icon"/>
+                                        <connections>
+                                            <action selector="goToChangePasswordAction:" destination="tUk-5n-bTm" eventType="touchUpInside" id="Rwp-57-0AI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WfI-98-9NM"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
@@ -121,40 +126,37 @@ hendrerit nibh.
                             <constraint firstItem="VbQ-UN-8Y5" firstAttribute="leading" secondItem="WfI-98-9NM" secondAttribute="leading" constant="30" id="2om-92-vXo"/>
                             <constraint firstItem="cAC-i5-n4j" firstAttribute="top" secondItem="y0o-jp-ie8" secondAttribute="bottom" constant="68" id="3AF-R4-rie"/>
                             <constraint firstItem="1Ux-za-bc4" firstAttribute="leading" secondItem="WfI-98-9NM" secondAttribute="leading" constant="30" id="41W-JX-cNB"/>
+                            <constraint firstItem="gQ7-jC-zdO" firstAttribute="centerX" secondItem="LTd-e7-Nqh" secondAttribute="centerX" id="7dv-8h-MJp"/>
                             <constraint firstItem="i5l-Jh-Egv" firstAttribute="top" secondItem="x2o-7V-85u" secondAttribute="bottom" constant="15" id="A6k-5r-Txs"/>
-                            <constraint firstItem="NSV-N7-ZlL" firstAttribute="leading" secondItem="LKo-AX-Iik" secondAttribute="trailing" constant="114" id="DXa-qI-diQ"/>
                             <constraint firstItem="UhW-YK-cC1" firstAttribute="top" secondItem="i5l-Jh-Egv" secondAttribute="bottom" constant="8" symbolic="YES" id="Edi-V7-BbV"/>
-                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="i5l-Jh-Egv" secondAttribute="trailing" constant="290" id="FEV-Hb-PEv"/>
+                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="i5l-Jh-Egv" secondAttribute="trailing" constant="96" id="FEV-Hb-PEv"/>
                             <constraint firstItem="y0o-jp-ie8" firstAttribute="top" secondItem="WfI-98-9NM" secondAttribute="top" constant="74" id="FY8-XP-LpM"/>
-                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="y0o-jp-ie8" secondAttribute="trailing" constant="332" id="JZ2-Li-81S"/>
-                            <constraint firstItem="LKo-AX-Iik" firstAttribute="leading" secondItem="WfI-98-9NM" secondAttribute="leading" constant="67" id="KU0-f6-fPH"/>
+                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="y0o-jp-ie8" secondAttribute="trailing" constant="96" id="JZ2-Li-81S"/>
                             <constraint firstItem="rg5-7P-q19" firstAttribute="top" secondItem="WfI-98-9NM" secondAttribute="top" constant="62" id="Sic-ao-PJl"/>
+                            <constraint firstItem="gQ7-jC-zdO" firstAttribute="top" secondItem="VbQ-UN-8Y5" secondAttribute="bottom" constant="34.5" id="Tq3-Dq-nh9"/>
                             <constraint firstItem="fEY-YE-hs0" firstAttribute="leading" secondItem="WfI-98-9NM" secondAttribute="leading" constant="30" id="Vd4-wh-ubS"/>
-                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="UhW-YK-cC1" secondAttribute="trailing" constant="309" id="W0W-YE-bno"/>
+                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="UhW-YK-cC1" secondAttribute="trailing" constant="96" id="W0W-YE-bno"/>
                             <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="rg5-7P-q19" secondAttribute="trailing" constant="30" id="Wej-8K-gYS"/>
-                            <constraint firstItem="rg5-7P-q19" firstAttribute="leading" secondItem="y0o-jp-ie8" secondAttribute="trailing" constant="244" id="Wnu-nd-oBG"/>
+                            <constraint firstItem="rg5-7P-q19" firstAttribute="leading" secondItem="y0o-jp-ie8" secondAttribute="trailing" constant="8" id="Wnu-nd-oBG"/>
                             <constraint firstItem="VbQ-UN-8Y5" firstAttribute="top" secondItem="fEY-YE-hs0" secondAttribute="bottom" constant="8" symbolic="YES" id="aVZ-YA-zxc"/>
                             <constraint firstItem="cAC-i5-n4j" firstAttribute="leading" secondItem="WfI-98-9NM" secondAttribute="leading" constant="30" id="b7T-mF-qx5"/>
-                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="NSV-N7-ZlL" secondAttribute="trailing" constant="52" id="dj7-2q-5OI"/>
                             <constraint firstItem="fEY-YE-hs0" firstAttribute="top" secondItem="cJa-a3-Xcd" secondAttribute="bottom" constant="8.5" id="djP-tY-T7F"/>
                             <constraint firstItem="y0o-jp-ie8" firstAttribute="leading" secondItem="WfI-98-9NM" secondAttribute="leading" constant="30" id="fuV-5d-UjK"/>
-                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="cAC-i5-n4j" secondAttribute="trailing" constant="332" id="gjx-sl-QA7"/>
-                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="VbQ-UN-8Y5" secondAttribute="trailing" constant="343" id="hdB-lb-rNb"/>
-                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="1Ux-za-bc4" secondAttribute="trailing" constant="295" id="hvC-lf-4hq"/>
-                            <constraint firstItem="NSV-N7-ZlL" firstAttribute="top" secondItem="cJa-a3-Xcd" secondAttribute="bottom" constant="112.5" id="hzS-7Q-TgY"/>
+                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="cAC-i5-n4j" secondAttribute="trailing" constant="96" id="gjx-sl-QA7"/>
+                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="VbQ-UN-8Y5" secondAttribute="trailing" constant="96" id="hdB-lb-rNb"/>
+                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="1Ux-za-bc4" secondAttribute="trailing" constant="96" id="hvC-lf-4hq"/>
                             <constraint firstItem="i5l-Jh-Egv" firstAttribute="leading" secondItem="WfI-98-9NM" secondAttribute="leading" constant="30" id="jUj-wP-Xuw"/>
-                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="fEY-YE-hs0" secondAttribute="trailing" constant="329" id="kCa-t5-tXd"/>
+                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="fEY-YE-hs0" secondAttribute="trailing" constant="96" id="kCa-t5-tXd"/>
                             <constraint firstItem="UhW-YK-cC1" firstAttribute="leading" secondItem="WfI-98-9NM" secondAttribute="leading" constant="30" id="l0G-Tg-IKC"/>
                             <constraint firstItem="cJa-a3-Xcd" firstAttribute="top" secondItem="1Ux-za-bc4" secondAttribute="bottom" constant="5" id="mPI-Q2-G5v"/>
                             <constraint firstItem="cJa-a3-Xcd" firstAttribute="leading" secondItem="WfI-98-9NM" secondAttribute="leading" constant="30" id="oIj-Ra-bug"/>
-                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="x2o-7V-85u" secondAttribute="trailing" constant="206" id="ozc-S9-KTy"/>
+                            <constraint firstItem="WfI-98-9NM" firstAttribute="trailing" secondItem="x2o-7V-85u" secondAttribute="trailing" constant="96" id="ozc-S9-KTy"/>
                             <constraint firstItem="x2o-7V-85u" firstAttribute="top" secondItem="cAC-i5-n4j" secondAttribute="bottom" constant="8" symbolic="YES" id="p0A-WI-Xlw"/>
                             <constraint firstItem="x2o-7V-85u" firstAttribute="leading" secondItem="WfI-98-9NM" secondAttribute="leading" constant="30" id="qHU-WV-eXs"/>
                             <constraint firstItem="1Ux-za-bc4" firstAttribute="top" secondItem="UhW-YK-cC1" secondAttribute="bottom" constant="24" id="ski-LX-4Y5"/>
-                            <constraint firstItem="LKo-AX-Iik" firstAttribute="top" secondItem="VbQ-UN-8Y5" secondAttribute="bottom" constant="70" id="wKW-93-1jm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Perfil" image="Profile" selectedImage="Profile" id="gGw-9W-chg">
+                    <tabBarItem key="tabBarItem" title="" image="Profile" selectedImage="Profile" id="gGw-9W-chg">
                         <color key="badgeColor" name="MainColor"/>
                     </tabBarItem>
                     <connections>
@@ -168,7 +170,7 @@ hendrerit nibh.
             </objects>
             <point key="canvasLocation" x="940.57971014492762" y="96.428571428571431"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="5Vx-Bu-t4s">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" modalPresentationStyle="fullScreen" id="Umy-c4-8v3" customClass="HomeViewController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
@@ -177,7 +179,7 @@ hendrerit nibh.
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-gG-JTw">
-                                <rect key="frame" x="30" y="118" width="54" height="27"/>
+                                <rect key="frame" x="30" y="118" width="364" height="27"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -211,7 +213,7 @@ hendrerit nibh.
                             <constraint firstItem="F0D-Ma-FU8" firstAttribute="top" secondItem="ISt-gG-JTw" secondAttribute="bottom" constant="30" id="5II-2P-CKE"/>
                             <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="Zva-ap-akq" secondAttribute="trailing" constant="73" id="AQh-aG-QBK"/>
                             <constraint firstItem="ISt-gG-JTw" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="30" id="M9u-ek-ABN"/>
-                            <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="ISt-gG-JTw" secondAttribute="trailing" constant="330" id="TBt-YW-nDK"/>
+                            <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="ISt-gG-JTw" secondAttribute="trailing" constant="20" id="TBt-YW-nDK"/>
                             <constraint firstItem="F0D-Ma-FU8" firstAttribute="bottom" secondItem="e9a-fT-BEb" secondAttribute="bottom" id="Tuk-Ed-NeP"/>
                             <constraint firstItem="Zva-ap-akq" firstAttribute="leading" secondItem="e9a-fT-BEb" secondAttribute="leading" constant="73" id="ox6-Ae-faM"/>
                             <constraint firstItem="e9a-fT-BEb" firstAttribute="trailing" secondItem="F0D-Ma-FU8" secondAttribute="trailing" constant="20" id="q7b-fJ-GBY"/>
@@ -220,7 +222,7 @@ hendrerit nibh.
                             <constraint firstItem="ISt-gG-JTw" firstAttribute="top" secondItem="e9a-fT-BEb" secondAttribute="top" constant="74" id="xjD-oh-FfT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home" id="aNZ-ib-Yga">
+                    <tabBarItem key="tabBarItem" title="" image="Home" selectedImage="Home" id="aNZ-ib-Yga">
                         <color key="badgeColor" name="MainColor"/>
                     </tabBarItem>
                     <connections>
