@@ -47,6 +47,8 @@
 		5EEF71BB278C22C900559D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71BA278C22C900559D7D /* Assets.xcassets */; };
 		5EEF71BE278C22C900559D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71BC278C22C900559D7D /* LaunchScreen.storyboard */; };
 		5EF85CBF2795710300BB7443 /* DbResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF85CBE2795710300BB7443 /* DbResponse.swift */; };
+		5EFA09A627B51102009240D9 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5EFA09A527B51102009240D9 /* IQKeyboardManagerSwift */; };
+		5EFA09A827B51A65009240D9 /* ShowHideTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFA09A727B51A65009240D9 /* ShowHideTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,7 @@
 		5EEF71BD278C22C900559D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EEF71BF278C22C900559D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EF85CBE2795710300BB7443 /* DbResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbResponse.swift; sourceTree = "<group>"; };
+		5EFA09A727B51A65009240D9 /* ShowHideTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHideTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9039DE27917106003CCD3C /* Alamofire in Frameworks */,
+				5EFA09A627B51102009240D9 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				5E860BB62795DCD3008B92F3 /* ColorExtension.swift */,
+				5EFA09A727B51A65009240D9 /* ShowHideTextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 			name = "Gestor Empleados iOs";
 			packageProductDependencies = (
 				5E9039DD27917106003CCD3C /* Alamofire */,
+				5EFA09A527B51102009240D9 /* IQKeyboardManagerSwift */,
 			);
 			productName = "Gestor Empleados iOs";
 			productReference = 5EEF71AE278C22C800559D7D /* Gestor Empleados iOs.app */;
@@ -376,8 +382,8 @@
 			);
 			mainGroup = 5EEF71A5278C22C800559D7D;
 			packageReferences = (
-				5EA41169278C4702006E0C17 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				5E9039DC27917106003CCD3C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5EFA09A427B51102009240D9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 5EEF71AF278C22C800559D7D /* Products */;
 			projectDirPath = "";
@@ -442,6 +448,7 @@
 				5E90E2D227983EA800EBE47F /* ProfileViewController.swift in Sources */,
 				5E90E2C5279819EB00EBE47F /* UICustomTabBarController.swift in Sources */,
 				5E90E2CD2798366800EBE47F /* EmployeeDetailViewController.swift in Sources */,
+				5EFA09A827B51A65009240D9 /* ShowHideTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,16 +674,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				kind = exactVersion;
+				version = 5.5.0;
 			};
 		};
-		5EA41169278C4702006E0C17 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		5EFA09A427B51102009240D9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.5.0;
+				kind = exactVersion;
+				version = 6.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -686,6 +693,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5E9039DC27917106003CCD3C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		5EFA09A527B51102009240D9 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EFA09A427B51102009240D9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

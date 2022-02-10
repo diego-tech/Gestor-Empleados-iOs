@@ -27,7 +27,6 @@ class ChangePasswordViewController: UIViewController {
 		// Styles And Custom Actions
 		textFieldStyle()
 		acceptButtonStyle()
-		showAndHidePassword(textField: secondPasswordTextField)
     }
     
 	
@@ -82,6 +81,7 @@ class ChangePasswordViewController: UIViewController {
 		)
 		firstPasswordTextField.tintColor = .mainColor
 		firstPasswordTextField.isSecureTextEntry = true
+		firstPasswordTextField.showAndHidePassword()
 		
 		// Second Password Text Field Styles
 		secondPasswordTextField.attributedPlaceholder = NSAttributedString(
@@ -90,6 +90,7 @@ class ChangePasswordViewController: UIViewController {
 		)
 		secondPasswordTextField.tintColor = .mainColor
 		secondPasswordTextField.isSecureTextEntry = true
+		secondPasswordTextField.showAndHidePassword()
 	}
 	
 	private func acceptButtonStyle() {
@@ -97,40 +98,4 @@ class ChangePasswordViewController: UIViewController {
 		acceptButton.layer.cornerRadius = 10
 	}
 	
-	private func showAndHidePassword(textField: UITextField) {
-		let imageEye = UIImageView()
-		imageEye.image = UIImage(named: "CloseEye")
-		
-		let contentView = UIView()
-		
-		contentView.addSubview(imageEye)
-		
-		contentView.frame = CGRect(x: 0, y: 0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye")!.size.height)
-
-		imageEye.frame = CGRect(x: -10, y: 0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye")!.size.height)
-		
-		textField.rightView = contentView
-		textField.rightViewMode = .always
-
-		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-		
-		imageEye.isUserInteractionEnabled = true
-		imageEye.addGestureRecognizer(tapGestureRecognizer)
-	}
-	
-	@objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-		let tappedImage = tapGestureRecognizer.view as! UIImageView
-		
-		if iconClick {
-			iconClick = false
-			firstPasswordTextField.isSecureTextEntry = false
-			secondPasswordTextField.isSecureTextEntry = false
-			tappedImage.image = UIImage(named: "EyeOpen")
-		} else {
-			iconClick = true
-			firstPasswordTextField.isSecureTextEntry = true
-			secondPasswordTextField.isSecureTextEntry = true
-			tappedImage.image = UIImage(named: "CloseEye")
-		}
-	}
 }

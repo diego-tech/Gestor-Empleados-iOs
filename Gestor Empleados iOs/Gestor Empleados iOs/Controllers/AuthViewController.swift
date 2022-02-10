@@ -28,7 +28,6 @@ class AuthViewController: UIViewController {
 		// Styles and Custom Actions
 		textFieldStyle()
 		accessButtonStyle()
-		showAndHidePassword()
 	}
 	
 	// MARK: Action Buttons
@@ -133,6 +132,7 @@ class AuthViewController: UIViewController {
 			attributes: attributes as [NSAttributedString.Key : Any]
 		)
 		passwordTextField.tintColor = .mainColor
+		passwordTextField.showAndHidePassword()
 	}
 	
 	private func accessButtonStyle() {
@@ -140,37 +140,6 @@ class AuthViewController: UIViewController {
 		accessButton.layer.cornerRadius = 10
 	}
 	
-	private func showAndHidePassword(){
-		let imageEye = UIImageView()
-		imageEye.image = UIImage(named: "CloseEye")
-		
-		let contentView = UIView()
-		contentView.addSubview(imageEye)
-		
-		contentView.frame = CGRect(x: 0, y: 0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye")!.size.height)
-		imageEye.frame = CGRect(x: -10, y: 0, width: UIImage(named: "CloseEye")!.size.width, height: UIImage(named: "CloseEye" )!.size.height)
-		
-		passwordTextField.rightView = contentView
-		passwordTextField.rightViewMode = .always
-
-		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-		
-		imageEye.isUserInteractionEnabled = true
-		imageEye.addGestureRecognizer(tapGestureRecognizer)
-	}
-		
-	@objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-		let tappedImage = tapGestureRecognizer.view as! UIImageView
-		
-		if iconClick {
-			iconClick = false
-			tappedImage.image = UIImage(named: "EyeOpen")
-			passwordTextField.isSecureTextEntry = false
-		} else {
-			iconClick = true
-			tappedImage.image = UIImage(named: "CloseEye")
-			passwordTextField.isSecureTextEntry = true
-		}
-	}
+	
 }
 
