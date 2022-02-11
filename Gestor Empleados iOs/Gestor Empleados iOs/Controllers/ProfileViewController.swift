@@ -51,7 +51,9 @@ class ProfileViewController: UIViewController {
 				self.salaryLabel.text = userSalary
 			}
 		} failure: { error in
-			print(error)
+			if let error = error {
+				debugPrint(error)
+			}
 		}
 	}
 	

@@ -21,7 +21,9 @@ class EmployeeViewModel {
 				completion(status)
 			}
 		} failure: { error in
-			print(error)
+			if let error = error {
+				debugPrint(error)
+			}
 		}
 	}
 	

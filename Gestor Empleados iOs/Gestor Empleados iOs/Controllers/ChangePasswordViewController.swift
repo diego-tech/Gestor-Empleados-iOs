@@ -62,7 +62,9 @@ class ChangePasswordViewController: UIViewController {
 			self.navigateToAuth()
 			UserDefaultsProvider.remove(key: .authUserToken)
 		} failure: { error in
-			print(error)
+			if let error = error {
+				debugPrint(error)
+			}
 		}
 	}
 

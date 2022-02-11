@@ -48,7 +48,9 @@ class EmployeeDetailViewController: UIViewController {
 				self.detailUserBiography = userBiography
 			}
 		} failure: { error in
-			print(error)
+			if let error = error {
+				debugPrint(error)
+			}
 		}
 	}
 	
