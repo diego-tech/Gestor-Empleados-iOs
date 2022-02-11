@@ -11,12 +11,14 @@ import Alamofire
 class EmployeeViewModel {
 	
 	private var employeeList = [Data]()
+	private var status = Int()
 	
-	func fetchEmployeeList(completion: @escaping () -> ()) {
+	func fetchEmployeeList(completion: @escaping (_ status: Int?) -> ()) {
 		NetworkingProvider.shared.employeeList() { responseData, status, msg in
-			if let responseList = responseData {
+			if let responseList = responseData, let status = status {
 				self.employeeList = responseList
-				completion()
+				self.status = status
+				completion(status)
 			}
 		} failure: { error in
 			print(error)

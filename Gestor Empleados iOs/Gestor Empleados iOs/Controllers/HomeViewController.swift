@@ -38,23 +38,22 @@ class HomeViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		employeeList()
-	}
-	
-	override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-		
-		// Check Permissions
-		checkIfHasPermisions()
-		
 		// List View Initialisation
 		self.employeeListView.register(UINib(nibName: "EmployeeListTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomEmployeeCell")
 		employeeListView.allowsSelection = true
 		
 		// Employee List Styles
 		employeeListView.separatorStyle = .singleLine
-  		employeeListView.showsVerticalScrollIndicator = false
+		employeeListView.showsVerticalScrollIndicator = false
+		employeeList()
+	}
+	
+	override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+
+		// Check Permissions
+		checkIfHasPermisions()
 		
 		// Floating Button Initialisation
 		floatingButtonInit()
@@ -72,10 +71,14 @@ class HomeViewController: UIViewController {
 	
 	// MARK: API Functions
 	private func employeeList(){
-		employeeViewModel.fetchEmployeeList { [weak self] in
-			self?.employeeListView.dataSource = self
-			self?.employeeListView.delegate = self
-			self?.employeeListView.reloadData()
+		employeeViewModel.fetchEmployeeList { [weak self] status in
+			if status != Constants.kErrorStatusCode {
+				self?.employeeListView.dataSource = self
+				self?.employeeListView.delegate = self
+				self?.employeeListView.reloadData()
+			} else {
+				self!.dismiss(animated: true)
+			}
 		}
 	}
 	

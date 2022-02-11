@@ -56,12 +56,8 @@ class ProfileViewController: UIViewController {
 	}
 	
 	private func logOut(){
-		NetworkingProvider.shared.logout { status, msg in
-			self.navigateToAuth()
-			UserDefaultsProvider.remove(key: .authUserToken)
-		} failure: { error in 
-			print(error)
-		}
+		self.navigateToAuth()
+		UserDefaultsProvider.remove(key: .authUserToken)
 	}
 	
 	// MARK: Functions
