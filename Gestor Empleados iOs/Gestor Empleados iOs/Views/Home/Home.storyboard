@@ -207,7 +207,7 @@ hendrerit nibh.
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e9a-fT-BEb"/>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="F0D-Ma-FU8" firstAttribute="top" secondItem="ISt-gG-JTw" secondAttribute="bottom" constant="30" id="41Y-qf-8vx"/>
                             <constraint firstItem="F0D-Ma-FU8" firstAttribute="top" secondItem="ISt-gG-JTw" secondAttribute="bottom" constant="30" id="5II-2P-CKE"/>

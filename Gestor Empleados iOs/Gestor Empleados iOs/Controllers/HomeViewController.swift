@@ -77,7 +77,10 @@ class HomeViewController: UIViewController {
 				self?.employeeListView.delegate = self
 				self?.employeeListView.reloadData()
 			} else {
-				self!.dismiss(animated: true)
+				guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuthViewController") as? AuthViewController else {
+					fatalError("¡No se pudo instanciar AuthVC!")
+				}
+				self?.present(vc, animated: true, completion: nil)
 			}
 		}
 	}
