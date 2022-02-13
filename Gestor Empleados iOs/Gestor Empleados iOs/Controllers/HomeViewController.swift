@@ -89,7 +89,7 @@ class HomeViewController: UIViewController {
 	private func navigate(){
 		let storyBoard = UIStoryboard(name: "EmployeeDetail", bundle: nil)
 		let vc = storyBoard.instantiateViewController(withIdentifier: "EmployeeDetail") as! EmployeeDetailViewController
-		self.present(vc, animated: false, completion: nil)
+		self.showDetailViewController(vc, sender: self)
 	}
 	
 	private func checkIfHasPermisions() {
