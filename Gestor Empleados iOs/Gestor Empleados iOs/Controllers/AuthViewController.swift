@@ -24,7 +24,7 @@ class AuthViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
-		
+
 		// Styles and Custom Actions
 		textFieldStyle()
 		accessButtonStyle()
@@ -139,7 +139,6 @@ class AuthViewController: UIViewController {
 		accessButton.layer.cornerCurve = .circular
 		accessButton.layer.cornerRadius = 10
 	}
-	
 	
 }
 

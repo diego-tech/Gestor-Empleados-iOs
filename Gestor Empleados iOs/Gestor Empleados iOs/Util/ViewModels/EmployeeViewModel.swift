@@ -17,11 +17,9 @@ class EmployeeViewModel {
 		NetworkingProvider.shared.employeeList() { responseData, status, msg in
 			guard let responseList = responseData else { return }
 			guard let status = status else { return }
-			
-			self.employeeList = responseList
 			self.status = status
+			self.employeeList = responseList
 			completion(status)
-			
 		} failure: { error in
 			if let error = error {
 				debugPrint(error)
