@@ -7,30 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E061F9C2792D92C000CAE79 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E061F9B2792D92C000CAE79 /* NewUser.swift */; };
+		5E061FA02792E7A2000CAE79 /* NewPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E061F9F2792E7A2000CAE79 /* NewPassword.swift */; };
+		5E2211F5279BFCE3001CABAA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2211F4279BFCE3001CABAA /* RegisterViewController.swift */; };
+		5E2211F8279BFCF6001CABAA /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2211F7279BFCF6001CABAA /* Register.storyboard */; };
+		5E2D46D52796BC0A00B68CD7 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D46D02796BC0A00B68CD7 /* SF-Pro-Display-Medium.otf */; };
+		5E2D46D62796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D46D12796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf */; };
+		5E2D46D72796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D46D22796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf */; };
+		5E2D46D82796BC0A00B68CD7 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D46D32796BC0A00B68CD7 /* SF-Pro-Display-Regular.otf */; };
+		5E2D46D92796BC0A00B68CD7 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D46D42796BC0A00B68CD7 /* SF-Pro.ttf */; };
+		5E2D46DB2796C33B00B68CD7 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D46DA2796C33B00B68CD7 /* TextStyles.swift */; };
+		5E68F3EA2791DB070033C83E /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E68F3E92791DB070033C83E /* LoginUser.swift */; };
+		5E860BB72795DCD3008B92F3 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E860BB62795DCD3008B92F3 /* ColorExtension.swift */; };
 		5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */; };
 		5E9039DE27917106003CCD3C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5E9039DD27917106003CCD3C /* Alamofire */; };
 		5E9039E1279173AA003CCD3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039E0279173AA003CCD3C /* User.swift */; };
 		5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9039E327917B35003CCD3C /* DateDecoder.swift */; };
+		5E90E2C5279819EB00EBE47F /* UICustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2C4279819EB00EBE47F /* UICustomTabBarController.swift */; };
+		5E90E2C927982AA400EBE47F /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2C827982AA400EBE47F /* EmployeeViewModel.swift */; };
+		5E90E2CD2798366800EBE47F /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2CB2798366800EBE47F /* EmployeeDetailViewController.swift */; };
+		5E90E2D027983C5100EBE47F /* EmployeeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E90E2CF27983C5100EBE47F /* EmployeeDetail.storyboard */; };
+		5E90E2D227983EA800EBE47F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2D127983EA800EBE47F /* ProfileViewController.swift */; };
+		5E90E2D62798541100EBE47F /* ChangePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E90E2D52798541100EBE47F /* ChangePassword.storyboard */; };
+		5E90E2D82798541F00EBE47F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90E2D72798541F00EBE47F /* ChangePasswordViewController.swift */; };
+		5EA99EDF279588D600CAEA01 /* UserDefaultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */; };
+		5EB293F927970C49008FF4DE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB293F827970C49008FF4DE /* Home.storyboard */; };
+		5EB293FF2797129F008FF4DE /* RetrievePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */; };
+		5EB2940327971340008FF4DE /* RetrievePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2940227971340008FF4DE /* RetrievePassword.storyboard */; };
+		5EB2940727972706008FF4DE /* EmployeeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2940527972706008FF4DE /* EmployeeListTableViewCell.swift */; };
+		5EB2940827972706008FF4DE /* EmployeeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2940627972706008FF4DE /* EmployeeListTableViewCell.xib */; };
+		5EB6C0762796E57C00013E9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6C0752796E57C00013E9B /* Constants.swift */; };
+		5EB6C0792796E66700013E9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6C0772796E66700013E9B /* HomeViewController.swift */; };
+		5ECCADAD279C4A9B0039D660 /* ModifyData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCADAC279C4A9B0039D660 /* ModifyData.storyboard */; };
+		5ECCADAF279C4AAE0039D660 /* ModifyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCADAE279C4AAE0039D660 /* ModifyDataViewController.swift */; };
 		5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B1278C22C800559D7D /* AppDelegate.swift */; };
 		5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B3278C22C800559D7D /* SceneDelegate.swift */; };
-		5EEF71B6278C22C800559D7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B5278C22C800559D7D /* ViewController.swift */; };
+		5EEF71B6278C22C800559D7D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF71B5278C22C800559D7D /* AuthViewController.swift */; };
 		5EEF71B9278C22C800559D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71B7278C22C800559D7D /* Main.storyboard */; };
 		5EEF71BB278C22C900559D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71BA278C22C900559D7D /* Assets.xcassets */; };
 		5EEF71BE278C22C900559D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF71BC278C22C900559D7D /* LaunchScreen.storyboard */; };
+		5EF85CBF2795710300BB7443 /* DbResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF85CBE2795710300BB7443 /* DbResponse.swift */; };
+		5EFA09A627B51102009240D9 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5EFA09A527B51102009240D9 /* IQKeyboardManagerSwift */; };
+		5EFA09A827B51A65009240D9 /* ShowHideTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFA09A727B51A65009240D9 /* ShowHideTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E061F9B2792D92C000CAE79 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
+		5E061F9F2792E7A2000CAE79 /* NewPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPassword.swift; sourceTree = "<group>"; };
+		5E2211F4279BFCE3001CABAA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5E2211F7279BFCF6001CABAA /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		5E2D46D02796BC0A00B68CD7 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		5E2D46D12796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		5E2D46D22796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		5E2D46D32796BC0A00B68CD7 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		5E2D46D42796BC0A00B68CD7 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
+		5E2D46DA2796C33B00B68CD7 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
+		5E68F3E92791DB070033C83E /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		5E860BB62795DCD3008B92F3 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		5E9039E0279173AA003CCD3C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5E9039E327917B35003CCD3C /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
+		5E90E2C4279819EB00EBE47F /* UICustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomTabBarController.swift; sourceTree = "<group>"; };
+		5E90E2C827982AA400EBE47F /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		5E90E2CB2798366800EBE47F /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
+		5E90E2CF27983C5100EBE47F /* EmployeeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeDetail.storyboard; sourceTree = "<group>"; };
+		5E90E2D127983EA800EBE47F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5E90E2D52798541100EBE47F /* ChangePassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePassword.storyboard; sourceTree = "<group>"; };
+		5E90E2D72798541F00EBE47F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProvider.swift; sourceTree = "<group>"; };
+		5EB293F827970C49008FF4DE /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrievePasswordViewController.swift; sourceTree = "<group>"; };
+		5EB2940227971340008FF4DE /* RetrievePassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RetrievePassword.storyboard; sourceTree = "<group>"; };
+		5EB2940527972706008FF4DE /* EmployeeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListTableViewCell.swift; sourceTree = "<group>"; };
+		5EB2940627972706008FF4DE /* EmployeeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeListTableViewCell.xib; sourceTree = "<group>"; };
+		5EB6C0752796E57C00013E9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5EB6C0772796E66700013E9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5ECCADAC279C4A9B0039D660 /* ModifyData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ModifyData.storyboard; sourceTree = "<group>"; };
+		5ECCADAE279C4AAE0039D660 /* ModifyDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDataViewController.swift; sourceTree = "<group>"; };
 		5EEF71AE278C22C800559D7D /* Gestor Empleados iOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gestor Empleados iOs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEF71B1278C22C800559D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EEF71B3278C22C800559D7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EEF71B5278C22C800559D7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EEF71B5278C22C800559D7D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		5EEF71B8278C22C800559D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EEF71BA278C22C900559D7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EEF71BD278C22C900559D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EEF71BF278C22C900559D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF85CBE2795710300BB7443 /* DbResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbResponse.swift; sourceTree = "<group>"; };
+		5EFA09A727B51A65009240D9 /* ShowHideTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHideTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,37 +102,84 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9039DE27917106003CCD3C /* Alamofire in Frameworks */,
+				5EFA09A627B51102009240D9 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E9039D827916DFB003CCD3C /* Network */ = {
+		5E2211F6279BFCE7001CABAA /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				5E2211F7279BFCF6001CABAA /* Register.storyboard */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		5E2D46CF2796BBD300B68CD7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5E2D46D22796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf */,
+				5E2D46D02796BC0A00B68CD7 /* SF-Pro-Display-Medium.otf */,
+				5E2D46D32796BC0A00B68CD7 /* SF-Pro-Display-Regular.otf */,
+				5E2D46D12796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf */,
+				5E2D46D42796BC0A00B68CD7 /* SF-Pro.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5E860BB42795DCBE008B92F3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5E90E2D3279847DE00EBE47F /* ViewModels */,
+				5EB29404279726E0008FF4DE /* CustomViews */,
+				5E860BB52795DCC7008B92F3 /* Extension */,
+				5E2D46DA2796C33B00B68CD7 /* TextStyles.swift */,
+				5EB6C0752796E57C00013E9B /* Constants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		5E860BB52795DCC7008B92F3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5E860BB62795DCD3008B92F3 /* ColorExtension.swift */,
+				5EFA09A727B51A65009240D9 /* ShowHideTextField.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5E9039D827916DFB003CCD3C /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				5EA99EDD279588C000CAEA01 /* UserDefaults */,
 				5E9039E227917B23003CCD3C /* Decoder */,
-				5E9039DF27917392003CCD3C /* Data */,
 				5E9039DA27916FB2003CCD3C /* NetworkingProvider.swift */,
 			);
-			path = Network;
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		5E9039D927916E02003CCD3C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E2D46CF2796BBD300B68CD7 /* Fonts */,
 				5EEF71BF278C22C900559D7D /* Info.plist */,
 				5EEF71BA278C22C900559D7D /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5E9039DF27917392003CCD3C /* Data */ = {
+		5E9039DF27917392003CCD3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5E9039E0279173AA003CCD3C /* User.swift */,
+				5E68F3E92791DB070033C83E /* LoginUser.swift */,
+				5E061F9B2792D92C000CAE79 /* NewUser.swift */,
+				5E061F9F2792E7A2000CAE79 /* NewPassword.swift */,
+				5EF85CBE2795710300BB7443 /* DbResponse.swift */,
 			);
-			path = Data;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5E9039E227917B23003CCD3C /* Decoder */ = {
@@ -78,6 +188,118 @@
 				5E9039E327917B35003CCD3C /* DateDecoder.swift */,
 			);
 			path = Decoder;
+			sourceTree = "<group>";
+		};
+		5E90E2CA2798364B00EBE47F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5E90E2CF27983C5100EBE47F /* EmployeeDetail.storyboard */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		5E90E2D3279847DE00EBE47F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5E90E2C827982AA400EBE47F /* EmployeeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5E90E2D4279853FD00EBE47F /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				5E90E2D52798541100EBE47F /* ChangePassword.storyboard */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		5EA99EDD279588C000CAEA01 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				5EA99EDE279588D600CAEA01 /* UserDefaultsProvider.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		5EA99EE1279589AA00CAEA01 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5ECCADAB279C4A850039D660 /* ModifyData */,
+				5E2211F6279BFCE7001CABAA /* Register */,
+				5E90E2D4279853FD00EBE47F /* ChangePassword */,
+				5E90E2CA2798364B00EBE47F /* Detail */,
+				5EB29401279712A2008FF4DE /* RetrievePassword */,
+				5EB293F727970C3C008FF4DE /* Home */,
+				5EA99EE5279589E500CAEA01 /* Main */,
+				5EA99EE4279589DA00CAEA01 /* Launch */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5EA99EE3279589BA00CAEA01 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E90E2CB2798366800EBE47F /* EmployeeDetailViewController.swift */,
+				5E90E2C4279819EB00EBE47F /* UICustomTabBarController.swift */,
+				5EB6C0772796E66700013E9B /* HomeViewController.swift */,
+				5EEF71B5278C22C800559D7D /* AuthViewController.swift */,
+				5EB293FD2797129F008FF4DE /* RetrievePasswordViewController.swift */,
+				5E90E2D127983EA800EBE47F /* ProfileViewController.swift */,
+				5E90E2D72798541F00EBE47F /* ChangePasswordViewController.swift */,
+				5E2211F4279BFCE3001CABAA /* RegisterViewController.swift */,
+				5ECCADAE279C4AAE0039D660 /* ModifyDataViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5EA99EE4279589DA00CAEA01 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF71BC278C22C900559D7D /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		5EA99EE5279589E500CAEA01 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF71B7278C22C800559D7D /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5EB293F727970C3C008FF4DE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5EB293F827970C49008FF4DE /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5EB29401279712A2008FF4DE /* RetrievePassword */ = {
+			isa = PBXGroup;
+			children = (
+				5EB2940227971340008FF4DE /* RetrievePassword.storyboard */,
+			);
+			path = RetrievePassword;
+			sourceTree = "<group>";
+		};
+		5EB29404279726E0008FF4DE /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5EB2940527972706008FF4DE /* EmployeeListTableViewCell.swift */,
+				5EB2940627972706008FF4DE /* EmployeeListTableViewCell.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		5ECCADAB279C4A850039D660 /* ModifyData */ = {
+			isa = PBXGroup;
+			children = (
+				5ECCADAC279C4A9B0039D660 /* ModifyData.storyboard */,
+			);
+			path = ModifyData;
 			sourceTree = "<group>";
 		};
 		5EEF71A5278C22C800559D7D = {
@@ -101,11 +323,12 @@
 			children = (
 				5EEF71B1278C22C800559D7D /* AppDelegate.swift */,
 				5EEF71B3278C22C800559D7D /* SceneDelegate.swift */,
-				5EEF71B5278C22C800559D7D /* ViewController.swift */,
-				5EEF71B7278C22C800559D7D /* Main.storyboard */,
-				5EEF71BC278C22C900559D7D /* LaunchScreen.storyboard */,
+				5E9039DF27917392003CCD3C /* Model */,
+				5EA99EE3279589BA00CAEA01 /* Controllers */,
+				5EA99EE1279589AA00CAEA01 /* Views */,
 				5E9039D927916E02003CCD3C /* Supporting Files */,
-				5E9039D827916DFB003CCD3C /* Network */,
+				5E9039D827916DFB003CCD3C /* Provider */,
+				5E860BB42795DCBE008B92F3 /* Util */,
 			);
 			path = "Gestor Empleados iOs";
 			sourceTree = "<group>";
@@ -128,6 +351,7 @@
 			name = "Gestor Empleados iOs";
 			packageProductDependencies = (
 				5E9039DD27917106003CCD3C /* Alamofire */,
+				5EFA09A527B51102009240D9 /* IQKeyboardManagerSwift */,
 			);
 			productName = "Gestor Empleados iOs";
 			productReference = 5EEF71AE278C22C800559D7D /* Gestor Empleados iOs.app */;
@@ -158,8 +382,8 @@
 			);
 			mainGroup = 5EEF71A5278C22C800559D7D;
 			packageReferences = (
-				5EA41169278C4702006E0C17 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				5E9039DC27917106003CCD3C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5EFA09A427B51102009240D9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 5EEF71AF278C22C800559D7D /* Products */;
 			projectDirPath = "";
@@ -175,8 +399,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2D46D52796BC0A00B68CD7 /* SF-Pro-Display-Medium.otf in Resources */,
+				5EB2940827972706008FF4DE /* EmployeeListTableViewCell.xib in Resources */,
+				5EB2940327971340008FF4DE /* RetrievePassword.storyboard in Resources */,
+				5ECCADAD279C4A9B0039D660 /* ModifyData.storyboard in Resources */,
 				5EEF71BE278C22C900559D7D /* LaunchScreen.storyboard in Resources */,
+				5E90E2D62798541100EBE47F /* ChangePassword.storyboard in Resources */,
+				5E2D46D72796BC0A00B68CD7 /* SF-Pro-Display-Bold.otf in Resources */,
+				5EB293F927970C49008FF4DE /* Home.storyboard in Resources */,
+				5E2D46D62796BC0A00B68CD7 /* SF-Pro-Display-Semibold.otf in Resources */,
+				5E90E2D027983C5100EBE47F /* EmployeeDetail.storyboard in Resources */,
+				5E2211F8279BFCF6001CABAA /* Register.storyboard in Resources */,
 				5EEF71BB278C22C900559D7D /* Assets.xcassets in Resources */,
+				5E2D46D92796BC0A00B68CD7 /* SF-Pro.ttf in Resources */,
+				5E2D46D82796BC0A00B68CD7 /* SF-Pro-Display-Regular.otf in Resources */,
 				5EEF71B9278C22C800559D7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,12 +424,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EEF71B6278C22C800559D7D /* ViewController.swift in Sources */,
+				5E68F3EA2791DB070033C83E /* LoginUser.swift in Sources */,
+				5E061F9C2792D92C000CAE79 /* NewUser.swift in Sources */,
+				5ECCADAF279C4AAE0039D660 /* ModifyDataViewController.swift in Sources */,
+				5EF85CBF2795710300BB7443 /* DbResponse.swift in Sources */,
+				5E860BB72795DCD3008B92F3 /* ColorExtension.swift in Sources */,
+				5EEF71B6278C22C800559D7D /* AuthViewController.swift in Sources */,
+				5EB6C0792796E66700013E9B /* HomeViewController.swift in Sources */,
+				5E061FA02792E7A2000CAE79 /* NewPassword.swift in Sources */,
+				5EB293FF2797129F008FF4DE /* RetrievePasswordViewController.swift in Sources */,
 				5EEF71B2278C22C800559D7D /* AppDelegate.swift in Sources */,
 				5E9039DB27916FB2003CCD3C /* NetworkingProvider.swift in Sources */,
 				5E9039E1279173AA003CCD3C /* User.swift in Sources */,
+				5E90E2D82798541F00EBE47F /* ChangePasswordViewController.swift in Sources */,
+				5E2D46DB2796C33B00B68CD7 /* TextStyles.swift in Sources */,
+				5E2211F5279BFCE3001CABAA /* RegisterViewController.swift in Sources */,
 				5E9039E427917B35003CCD3C /* DateDecoder.swift in Sources */,
+				5EB6C0762796E57C00013E9B /* Constants.swift in Sources */,
+				5E90E2C927982AA400EBE47F /* EmployeeViewModel.swift in Sources */,
+				5EB2940727972706008FF4DE /* EmployeeListTableViewCell.swift in Sources */,
 				5EEF71B4278C22C800559D7D /* SceneDelegate.swift in Sources */,
+				5EA99EDF279588D600CAEA01 /* UserDefaultsProvider.swift in Sources */,
+				5E90E2D227983EA800EBE47F /* ProfileViewController.swift in Sources */,
+				5E90E2C5279819EB00EBE47F /* UICustomTabBarController.swift in Sources */,
+				5E90E2CD2798366800EBE47F /* EmployeeDetailViewController.swift in Sources */,
+				5EFA09A827B51A65009240D9 /* ShowHideTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,13 +597,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6CZ8X74CF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gestor Empleados iOs/Supporting Files/Info.plist";
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,13 +626,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6CZ8X74CF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gestor Empleados iOs/Supporting Files/Info.plist";
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,16 +676,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				kind = exactVersion;
+				version = 5.5.0;
 			};
 		};
-		5EA41169278C4702006E0C17 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		5EFA09A427B51102009240D9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.5.0;
+				kind = exactVersion;
+				version = 6.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -436,6 +695,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5E9039DC27917106003CCD3C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		5EFA09A527B51102009240D9 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EFA09A427B51102009240D9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomEmployeeCell" rowHeight="60" id="KGk-i7-Jjw" customClass="EmployeeListTableViewCell" customModule="Gestor_Empleados_iOs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdW-Sr-wp4">
+                        <rect key="frame" x="26" y="6" width="43" height="17"/>
+                        <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="14"/>
+                        <color key="textColor" name="MainColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workplace:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbc-xl-cta">
+                        <rect key="frame" x="26" y="29" width="56" height="12"/>
+                        <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="10"/>
+                        <color key="textColor" name="MainColorLowOpacity"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salary:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3W-Xj-4MY">
+                        <rect key="frame" x="169" y="29" width="35" height="12"/>
+                        <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="10"/>
+                        <color key="textColor" name="MainColorLowOpacity"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Detail Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="z7W-le-Xy3">
+                        <rect key="frame" x="284" y="13" width="23" height="24"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UdW-Sr-wp4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="3Kk-AI-Opx"/>
+                    <constraint firstItem="z7W-le-Xy3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="3Mx-Mv-EyO"/>
+                    <constraint firstAttribute="bottom" secondItem="z7W-le-Xy3" secondAttribute="bottom" constant="13" id="Als-JY-2Qr"/>
+                    <constraint firstAttribute="bottom" secondItem="xbc-xl-cta" secondAttribute="bottom" constant="9" id="ErA-9x-Wlg"/>
+                    <constraint firstItem="UdW-Sr-wp4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="Pqu-ox-B5m"/>
+                    <constraint firstAttribute="bottom" secondItem="t3W-Xj-4MY" secondAttribute="bottom" constant="9" id="TFw-0F-ORF"/>
+                    <constraint firstItem="xbc-xl-cta" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="ax8-eE-IvA"/>
+                    <constraint firstItem="t3W-Xj-4MY" firstAttribute="leading" secondItem="xbc-xl-cta" secondAttribute="trailing" constant="87" id="kip-Jt-3uX"/>
+                    <constraint firstAttribute="trailing" secondItem="z7W-le-Xy3" secondAttribute="trailing" constant="13" id="oLw-gI-rKe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.91764705882352937" green="0.93333333333333335" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="employeeName" destination="UdW-Sr-wp4" id="6KA-Jq-GkO"/>
+                <outlet property="employeeSalary" destination="t3W-Xj-4MY" id="YVy-zc-5Tp"/>
+                <outlet property="employeeWorkplace" destination="xbc-xl-cta" id="Ify-a3-1gv"/>
+            </connections>
+            <point key="canvasLocation" x="9" y="36"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Detail Arrow" width="23" height="24"/>
+        <namedColor name="MainColor">
+            <color red="0.19607843137254902" green="0.26666666666666666" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainColorLowOpacity">
+            <color red="0.19607843137254902" green="0.26666666666666666" blue="0.43137254901960786" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

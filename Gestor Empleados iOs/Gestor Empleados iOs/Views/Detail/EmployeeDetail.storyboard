@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Employee Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="EmployeeDetail" modalPresentationStyle="overCurrentContext" id="Y6W-OH-hqX" customClass="EmployeeDetailViewController" customModule="Gestor_Empleados_iOs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Zb-fL-BcE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDo-Kl-a3J">
+                                <rect key="frame" x="0.0" y="234" width="414" height="662"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPC-hT-OB8">
+                                        <rect key="frame" x="35" y="497" width="369" height="17"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="14"/>
+                                        <color key="textColor" name="MainColorLowOpacity"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1D-P6-pNN">
+                                        <rect key="frame" x="35" y="465" width="328" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
+                                        <color key="textColor" name="MainColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biografía" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wum-85-zku">
+                                        <rect key="frame" x="35" y="248" width="328" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
+                                        <color key="textColor" name="MainColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSh-Ng-B7g">
+                                        <rect key="frame" x="35" y="280" width="354" height="167.5"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing 
+elit. Integer euismod posuere mauris ac fermentum. 
+Proin tincidunt eleifend congue. Suspendisse 
+pulvinar nibh urna, ac malesuada velit cursus eu. Sed 
+eget justo quis est sagittis bibendum id ultrices est. 
+Aliquam sodales nulla massa, ut pulvinar tellus 
+semper a. Phasellus porttitor dignissim velit in 
+pretium. Maecenas convallis nulla neque. Cras 
+placerat et est sit amet molestie. Pellentesque id 
+hendrerit nibh.
+</string>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="14"/>
+                                        <color key="textColor" name="MainColorLowOpacity"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puesto de Trabajo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L94-8j-bpe">
+                                        <rect key="frame" x="35" y="178" width="328" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
+                                        <color key="textColor" name="MainColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMPLEADO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sm4-mw-UDD">
+                                        <rect key="frame" x="35" y="207" width="369" height="17"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="14"/>
+                                        <color key="textColor" name="MainColorLowOpacity"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Francisco Gonzalez Marcos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tb-Sa-gMb">
+                                        <rect key="frame" x="35" y="141" width="369" height="17"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="14"/>
+                                        <color key="textColor" name="MainColorLowOpacity"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbm-7s-zLM">
+                                        <rect key="frame" x="34" y="109" width="329" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
+                                        <color key="textColor" name="MainColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-VB-HhH">
+                                        <rect key="frame" x="51" y="527" width="312" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar perfil de Este Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w9-V9-VpO">
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="50"/>
+                                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzq-cG-JCU">
+                                                <rect key="frame" x="252" y="0.0" width="60" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Edit Icon"/>
+                                                <connections>
+                                                    <action selector="editProfileButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Elr-An-xt9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="arN-pl-Nlv">
+                                        <rect key="frame" x="21.5" y="36" width="311" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cks-MQ-YNH">
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="44"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Arrow Back"/>
+                                                <connections>
+                                                    <action selector="goBackButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6VX-KS-jGf"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalle Empleado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQP-yk-3TZ">
+                                                <rect key="frame" x="136" y="0.0" width="175" height="44"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                <color key="textColor" name="MainColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="311" id="RFM-RT-Cku"/>
+                                            <constraint firstAttribute="height" constant="44" id="emj-3t-9TT"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qbm-7s-zLM" secondAttribute="trailing" constant="51" id="16X-P2-ZZP"/>
+                                    <constraint firstItem="4Tb-Sa-gMb" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="3tg-OF-PDd"/>
+                                    <constraint firstItem="arN-pl-Nlv" firstAttribute="top" secondItem="fDo-Kl-a3J" secondAttribute="top" constant="36" id="6Kr-Qe-lBC"/>
+                                    <constraint firstItem="E1D-P6-pNN" firstAttribute="top" secondItem="vSh-Ng-B7g" secondAttribute="bottom" constant="17.5" id="7Ac-ac-A2m"/>
+                                    <constraint firstItem="arN-pl-Nlv" firstAttribute="centerX" secondItem="fDo-Kl-a3J" secondAttribute="centerX" constant="-30" id="7dv-Fs-b6Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Tb-Sa-gMb" secondAttribute="trailing" constant="10" id="93m-eT-RQ0"/>
+                                    <constraint firstAttribute="trailing" secondItem="vSh-Ng-B7g" secondAttribute="trailing" constant="25" id="AwJ-gD-pzB"/>
+                                    <constraint firstItem="E1D-P6-pNN" firstAttribute="top" secondItem="vSh-Ng-B7g" secondAttribute="bottom" constant="17.5" id="B43-SA-f9i"/>
+                                    <constraint firstItem="DOc-VB-HhH" firstAttribute="top" secondItem="NPC-hT-OB8" secondAttribute="bottom" constant="13" id="D5x-4z-g2Z"/>
+                                    <constraint firstItem="E1D-P6-pNN" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="DLf-7i-yFp"/>
+                                    <constraint firstItem="vSh-Ng-B7g" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="Fwy-lg-CXX"/>
+                                    <constraint firstItem="wum-85-zku" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="Pbj-Vn-aY1"/>
+                                    <constraint firstItem="vSh-Ng-B7g" firstAttribute="top" secondItem="wum-85-zku" secondAttribute="bottom" constant="8" symbolic="YES" id="XzL-8V-QAx"/>
+                                    <constraint firstItem="4Tb-Sa-gMb" firstAttribute="top" secondItem="qbm-7s-zLM" secondAttribute="bottom" constant="8" symbolic="YES" id="YTZ-zf-Vlh"/>
+                                    <constraint firstItem="DOc-VB-HhH" firstAttribute="centerX" secondItem="fDo-Kl-a3J" secondAttribute="centerX" id="Yto-rx-Aiv"/>
+                                    <constraint firstAttribute="trailing" secondItem="sm4-mw-UDD" secondAttribute="trailing" constant="10" id="Zve-TJ-xFZ"/>
+                                    <constraint firstItem="wum-85-zku" firstAttribute="top" secondItem="sm4-mw-UDD" secondAttribute="bottom" constant="24" id="c4t-mP-utS"/>
+                                    <constraint firstItem="sm4-mw-UDD" firstAttribute="top" secondItem="L94-8j-bpe" secondAttribute="bottom" constant="5" id="cML-8w-3k5"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Tb-Sa-gMb" secondAttribute="trailing" constant="10" id="far-DE-shq"/>
+                                    <constraint firstItem="L94-8j-bpe" firstAttribute="top" secondItem="4Tb-Sa-gMb" secondAttribute="bottom" constant="20" id="gKR-xt-Nwk"/>
+                                    <constraint firstItem="4Tb-Sa-gMb" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="hzz-PJ-yn5"/>
+                                    <constraint firstAttribute="trailing" secondItem="NPC-hT-OB8" secondAttribute="trailing" constant="10" id="ka1-ex-wny"/>
+                                    <constraint firstItem="qbm-7s-zLM" firstAttribute="top" secondItem="arN-pl-Nlv" secondAttribute="bottom" constant="29" id="kzw-Pb-s7A"/>
+                                    <constraint firstItem="sm4-mw-UDD" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="lwp-PZ-UPQ"/>
+                                    <constraint firstItem="L94-8j-bpe" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="nDb-Si-aFB"/>
+                                    <constraint firstItem="NPC-hT-OB8" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="35" id="qDB-du-dMo"/>
+                                    <constraint firstItem="NPC-hT-OB8" firstAttribute="top" secondItem="E1D-P6-pNN" secondAttribute="bottom" constant="8" symbolic="YES" id="qSe-nd-DIf"/>
+                                    <constraint firstAttribute="trailing" secondItem="wum-85-zku" secondAttribute="trailing" constant="51" id="rvt-Lt-ZAO"/>
+                                    <constraint firstAttribute="trailing" secondItem="E1D-P6-pNN" secondAttribute="trailing" constant="51" id="uNi-Ff-iMa"/>
+                                    <constraint firstAttribute="trailing" secondItem="L94-8j-bpe" secondAttribute="trailing" constant="51" id="vXn-DU-imf"/>
+                                    <constraint firstItem="wum-85-zku" firstAttribute="top" secondItem="sm4-mw-UDD" secondAttribute="bottom" constant="24" id="xbK-Cc-ChJ"/>
+                                    <constraint firstItem="qbm-7s-zLM" firstAttribute="leading" secondItem="fDo-Kl-a3J" secondAttribute="leading" constant="34" id="zyu-S2-HV8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1Zb-fL-BcE" secondAttribute="bottom" id="8RO-ju-mOK"/>
+                            <constraint firstItem="1Zb-fL-BcE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EuQ-sa-x3f"/>
+                            <constraint firstItem="fDo-Kl-a3J" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="RcD-zS-3ib"/>
+                            <constraint firstItem="fDo-Kl-a3J" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="190" id="UIM-cK-zm9"/>
+                            <constraint firstItem="fDo-Kl-a3J" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZeW-X9-ae9"/>
+                            <constraint firstItem="1Zb-fL-BcE" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="dR4-Yv-DNQ"/>
+                            <constraint firstItem="1Zb-fL-BcE" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="kGW-dd-QTV"/>
+                            <constraint firstAttribute="bottom" secondItem="fDo-Kl-a3J" secondAttribute="bottom" id="wS6-OJ-NpE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="biographyLabel" destination="vSh-Ng-B7g" id="2fU-Z9-a9P"/>
+                        <outlet property="detailView" destination="fDo-Kl-a3J" id="H1J-GR-5ZG"/>
+                        <outlet property="editProfileButton" destination="Rzq-cG-JCU" id="xJm-Z9-ji1"/>
+                        <outlet property="nameLabel" destination="4Tb-Sa-gMb" id="2kI-py-3ka"/>
+                        <outlet property="salaryLabel" destination="NPC-hT-OB8" id="uPk-AB-a9r"/>
+                        <outlet property="workplaceLabel" destination="sm4-mw-UDD" id="c5Z-5U-I55"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="64.955357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Arrow Back" width="32" height="30"/>
+        <image name="Edit Icon" width="36" height="36"/>
+        <namedColor name="MainColor">
+            <color red="0.19607843137254902" green="0.26666666666666666" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainColorLowOpacity">
+            <color red="0.19607843137254902" green="0.26666666666666666" blue="0.43137254901960786" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
