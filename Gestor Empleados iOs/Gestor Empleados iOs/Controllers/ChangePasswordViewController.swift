@@ -43,7 +43,6 @@ class ChangePasswordViewController: UIViewController {
 			if firstPassword != "", secondPassword != "" {
 				// Comprobar problema tras change password
 				let password = NewPassword(password: firstPassword, repeatPassword: secondPassword)
-				UserDefaultsProvider.remove(key: .authUserToken)
 				changePassword(password: password)
 			}
 		}
@@ -55,12 +54,25 @@ class ChangePasswordViewController: UIViewController {
 		let vc = storyBoard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
 		self.present(vc, animated: true, completion: nil)
 	}
-	
+
 	// MARK: API Function
 	private func changePassword(password: NewPassword){
 		NetworkingProvider.shared.changePassword(passwords: password) { status, message in
-			self.navigateToAuth()
-			UserDefaultsProvider.remove(key: .authUserToken)
+			guard let msg = message else { return }
+			
+			if status != Constants.kErrorStatusCode {
+				UserDefaultsProvider.remove(key: .authUserToken)
+
+				let alert = UIAlertController(title: "Confirmación", message: msg, preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+					self.navigateToAuth()
+				}))
+				self.present(alert, animated: true)
+			} else {
+				let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+				self.present(alert, animated: true)
+			}
 		} failure: { error in
 			if let error = error {
 				debugPrint(error)
@@ -99,5 +111,4 @@ class ChangePasswordViewController: UIViewController {
 		acceptButton.layer.cornerCurve = .circular
 		acceptButton.layer.cornerRadius = 10
 	}
-	
 }
