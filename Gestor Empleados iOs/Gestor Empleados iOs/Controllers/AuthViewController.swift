@@ -35,7 +35,6 @@ class AuthViewController: UIViewController {
 		let storyBoard = UIStoryboard(name: "RetrievePassword", bundle: nil)
 		let vc = storyBoard.instantiateViewController(withIdentifier: "RetrievePasswordViewController") as! RetrievePasswordViewController
 		self.present(vc, animated: true, completion: nil)
-		
 	}
 	
 	@IBAction func accessButtonAction(_ sender: UIButton) {
